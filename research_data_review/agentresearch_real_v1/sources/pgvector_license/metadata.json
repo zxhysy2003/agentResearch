@@ -1,0 +1,14 @@
+{
+  "id": "pgvector_license",
+  "requested_url": "https://raw.githubusercontent.com/pgvector/pgvector/master/LICENSE",
+  "final_url": "https://raw.githubusercontent.com/pgvector/pgvector/master/LICENSE",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:39:15.288870+00:00",
+  "headers": {
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"de1db966620aeab438b372367a8fbc3bc673de8d4fe396317eab3514ba5e08c7\"",
+    "Date": "Tue, 29 Sep 2026 14:39:15 GMT"
+  },
+  "sha256": "6bba9ebeb73e27477463b05e5ef1bf303bccbddb3db9bbc95905d351604d6a87",
+  "bytes": 1104
+}

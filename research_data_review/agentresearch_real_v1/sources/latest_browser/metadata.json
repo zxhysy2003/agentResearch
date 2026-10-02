@@ -1,0 +1,16 @@
+{
+  "id": "latest_browser",
+  "requested_url": "https://api.github.com/repos/browser-use/browser-use/releases/latest",
+  "final_url": "https://api.github.com/repos/browser-use/browser-use/releases/latest",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:39:15.698010+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:39:16 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"04a727b6d49d0d88cdf0249a01fb2337ee88acd67e068a9be7ffb90ee1bdf264\"",
+    "Last-Modified": "Fri, 04 Sep 2026 03:28:53 GMT",
+    "X-RateLimit-Remaining": "19"
+  },
+  "sha256": "2d5200d16f8574849f65a0c360542944c9eb8cd41aab7682e4e2fbf95c624dfd",
+  "bytes": 2715
+}

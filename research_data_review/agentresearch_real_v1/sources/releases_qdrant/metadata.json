@@ -1,0 +1,16 @@
+{
+  "id": "releases_qdrant",
+  "requested_url": "https://api.github.com/repos/qdrant/qdrant/releases?per_page=10",
+  "final_url": "https://api.github.com/repos/qdrant/qdrant/releases?per_page=10",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:36.377406+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"58da29aa532a3f5eb27bbfa06442bc9c4c710b7f6316c308a4fd51480dbb04a9\"",
+    "Link": "<https://api.github.com/repositories/268163609/releases?per_page=10&page=2>; rel=\"next\", <https://api.github.com/repositories/268163609/releases?per_page=10&page=12>; rel=\"last\"",
+    "X-RateLimit-Remaining": "36"
+  },
+  "sha256": "2b54b4c3c543bcace135b8514db8a0bcd70c2b4b1ede0940bbc0d8aef0baf4d8",
+  "bytes": 193206
+}

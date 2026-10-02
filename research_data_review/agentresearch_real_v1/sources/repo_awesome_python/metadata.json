@@ -1,0 +1,16 @@
+{
+  "id": "repo_awesome_python",
+  "requested_url": "https://api.github.com/repos/vinta/awesome-python",
+  "final_url": "https://api.github.com/repos/vinta/awesome-python",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:35.983765+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:36 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"b4b17ae37934a6611add9dab5881e62b47736a4a0f952c490218616773270233\"",
+    "Last-Modified": "Tue, 29 Sep 2026 14:26:44 GMT",
+    "X-RateLimit-Remaining": "42"
+  },
+  "sha256": "bb91638ef8416643598a1ed3c148ee949d1fda31aa8949d838b150b5a829e97a",
+  "bytes": 5409
+}

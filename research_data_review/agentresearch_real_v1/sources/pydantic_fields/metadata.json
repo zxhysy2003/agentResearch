@@ -1,0 +1,13 @@
+{
+  "id": "pydantic_fields",
+  "requested_url": "https://docs.pydantic.dev/latest/concepts/fields/",
+  "final_url": "https://pydantic.dev/docs/validation/latest/concepts/fields/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:31.263022+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:32 GMT",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "sha256": "4acd53fcf26993a1210374f3162e95e35a32475e7099005596f58562e756e368",
+  "bytes": 155784
+}

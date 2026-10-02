@@ -1,0 +1,13 @@
+{
+  "id": "fastapi_streaming",
+  "requested_url": "https://fastapi.tiangolo.com/advanced/custom-response/",
+  "final_url": "https://fastapi.tiangolo.com/advanced/custom-response/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:30.361537+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:31 GMT",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "sha256": "8c326ca15529240241d4f3a885c2ffd085c04a0a056aefdbdaa0e4c708efbd6a",
+  "bytes": 153549
+}

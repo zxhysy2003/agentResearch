@@ -1,0 +1,16 @@
+{
+  "id": "repo_celery",
+  "requested_url": "https://api.github.com/repos/celery/celery",
+  "final_url": "https://api.github.com/repos/celery/celery",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:35.805073+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:36 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"cb038c6d2d1998c7f4f37a990fa9e24773b116f07e84b7b4db0395c16e216ea1\"",
+    "Last-Modified": "Tue, 29 Sep 2026 14:20:27 GMT",
+    "X-RateLimit-Remaining": "44"
+  },
+  "sha256": "599aa4850cf5b6acfd851d86454e644a7e9b63f96dce87430dbebe771e0ee90c",
+  "bytes": 6118
+}

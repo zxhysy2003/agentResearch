@@ -1,0 +1,17 @@
+{
+  "repository": "example-org/demo-agent",
+  "releases": [
+    {
+      "version": "v1.4.0",
+      "published_at": "2026-08-20T08:00:00Z",
+      "prerelease": false,
+      "draft": false
+    },
+    {
+      "version": "v1.5.0rc1",
+      "published_at": "2026-08-25T08:00:00Z",
+      "prerelease": true,
+      "draft": false
+    }
+  ]
+}

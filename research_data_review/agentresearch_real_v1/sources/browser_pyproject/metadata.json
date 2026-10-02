@@ -1,0 +1,14 @@
+{
+  "id": "browser_pyproject",
+  "requested_url": "https://raw.githubusercontent.com/browser-use/browser-use/main/pyproject.toml",
+  "final_url": "https://raw.githubusercontent.com/browser-use/browser-use/main/pyproject.toml",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:39:15.288543+00:00",
+  "headers": {
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"608db402699ed8cb7e42886e50e21c46a5e6f31e36bd94853ec60c36361834ef\"",
+    "Date": "Tue, 29 Sep 2026 14:39:15 GMT"
+  },
+  "sha256": "f06f598f90b6b71f6509013174fab0e7c625e8aa59797ef97430043f3c1dec82",
+  "bytes": 7648
+}

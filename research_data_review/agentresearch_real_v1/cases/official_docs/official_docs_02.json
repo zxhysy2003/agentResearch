@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "id": "official_docs_02",
+  "revision": 1,
+  "category": "official_docs",
+  "difficulty": "medium",
+  "tags": [
+    "real_sources",
+    "review_candidate"
+  ],
+  "split": "dev",
+  "task": {
+    "prompt": "FastAPI BackgroundTasks 在什么时候执行？任务函数能否使用 async def？何时应考虑 Celery？",
+    "as_of": "2026-09-29T14:35:30.361903Z",
+    "context": {
+      "time_scope": "仅依据此任务的采集快照回答；当前、最新及统计值均指各来源记录的采集时刻，不代表未来实时状态。"
+    },
+    "requirements": [
+      "引用可核验的一手来源。",
+      "区分材料直接记载、推断和不确定性；不编造。"
+    ]
+  },
+  "environment": {
+    "mode": "snapshot",
+    "snapshot_id": "agentresearch-real-review-v1",
+    "allowed_tools": [
+      "web_search",
+      "fetch_page",
+      "github_read"
+    ],
+    "limits": {
+      "max_tool_calls": 30,
+      "timeout_seconds": 180.0
+    },
+    "fault_scenario_id": null
+  },
+  "ground_truth": {
+    "expected_outcome": "answered",
+    "facts": [],
+    "evidence": [
+      {
+        "id": "e_1",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+        "artifact_id": "fastapi_background",
+        "locator": "text.txt:L231-L232; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361903Z"
+      },
+      {
+        "id": "e_2",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+        "artifact_id": "fastapi_background",
+        "locator": "text.txt:L348-L349; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361903Z"
+      },
+      {
+        "id": "e_3",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+        "artifact_id": "fastapi_background",
+        "locator": "text.txt:L889-L889; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361903Z"
+      },
+      {
+        "id": "e_4",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+        "artifact_id": "fastapi_background",
+        "locator": "text.txt:L892-L892; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361903Z"
+      }
+    ],
+    "rubrics": [
+      {
+        "id": "r_1",
+        "criterion": "任务在返回响应之后运行，任务函数支持普通 def 和 async def。",
+        "evidence_ids": [
+          "e_1",
+          "e_2"
+        ],
+        "anchors": {
+          "0": "未回答或与原始证据矛盾。",
+          "0.5": "部分正确，但遗漏该评分项中的条件或限制。",
+          "1": "完整且正确地表述该评分项，保留适用范围与限制。"
+        }
+      },
+      {
+        "id": "r_2",
+        "criterion": "小型、需共享进程对象的后台工作可使用 BackgroundTasks；跨进程或跨服务器的重型计算可考虑 Celery 等队列工具。",
+        "evidence_ids": [
+          "e_3",
+          "e_4"
+        ],
+        "anchors": {
+          "0": "未回答或与原始证据矛盾。",
+          "0.5": "部分正确，但遗漏该评分项中的条件或限制。",
+          "1": "完整且正确地表述该评分项，保留适用范围与限制。"
+        }
+      }
+    ],
+    "entity_requirements": null
+  },
+  "evaluation_rule": {
+    "checks": [
+      {
+        "id": "c_r_1",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_1"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_r_2",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_citations",
+        "dimension": "evidence",
+        "evaluator": "citation_support",
+        "target": [
+          "r_1",
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_trace",
+        "dimension": "process",
+        "evaluator": "trace_assertion",
+        "target": [
+          "r_1",
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": "supporting_source_observed"
+      }
+    ],
+    "dimension_weights": {
+      "correctness": 0.7,
+      "evidence": 0.2,
+      "process": 0.1
+    },
+    "pass_threshold": 0.8
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "python_asyncio",
+  "requested_url": "https://docs.python.org/3.12/library/asyncio-task.html",
+  "final_url": "https://docs.python.org/3.12/library/asyncio-task.html",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:30.359917+00:00",
+  "headers": {
+    "content-type": "text/html",
+    "last-modified": "Wed, 16 Sep 2026 13:40:14 GMT",
+    "etag": "\"6aaa9c3e-26295\"",
+    "Date": "Tue, 29 Sep 2026 14:35:31 GMT"
+  },
+  "sha256": "a72188652dcb97af84b7e6ab3d2187ba9d5f02ff903e80aa8b29bf566d414301",
+  "bytes": 156309
+}

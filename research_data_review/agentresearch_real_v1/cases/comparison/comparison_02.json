@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "id": "comparison_02",
+  "revision": 1,
+  "category": "comparison",
+  "difficulty": "hard",
+  "tags": [
+    "real_sources",
+    "review_candidate"
+  ],
+  "split": "dev",
+  "task": {
+    "prompt": "比较 FastAPI BackgroundTasks 与 Celery，场景分别是轻量通知与跨服务器后台任务；说明部署和消息确认的限制。",
+    "as_of": "2026-09-29T14:35:33.814837Z",
+    "context": {
+      "time_scope": "仅依据此任务的采集快照回答；当前、最新及统计值均指各来源记录的采集时刻，不代表未来实时状态。"
+    },
+    "requirements": [
+      "引用可核验的一手来源。",
+      "区分材料直接记载、推断和不确定性；不编造。"
+    ]
+  },
+  "environment": {
+    "mode": "snapshot",
+    "snapshot_id": "agentresearch-real-review-v1",
+    "allowed_tools": [
+      "web_search",
+      "fetch_page",
+      "github_read"
+    ],
+    "limits": {
+      "max_tool_calls": 30,
+      "timeout_seconds": 180.0
+    },
+    "fault_scenario_id": null
+  },
+  "ground_truth": {
+    "expected_outcome": "answered",
+    "facts": [],
+    "evidence": [
+      {
+        "id": "e_1",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+        "artifact_id": "fastapi_background",
+        "locator": "text.txt:L887-L887; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361903Z"
+      },
+      {
+        "id": "e_2",
+        "source_type": "official_docs",
+        "url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+        "artifact_id": "celery_tasks",
+        "locator": "text.txt:L24-L24; locate nearby section",
+        "captured_at": "2026-09-29T14:35:33.814837Z"
+      },
+      {
+        "id": "e_3",
+        "source_type": "official_docs",
+        "url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+        "artifact_id": "celery_tasks",
+        "locator": "text.txt:L34-L34; locate nearby section",
+        "captured_at": "2026-09-29T14:35:33.814837Z"
+      },
+      {
+        "id": "e_4",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+        "artifact_id": "fastapi_background",
+        "locator": "text.txt:L889-L889; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361903Z"
+      }
+    ],
+    "rubrics": [
+      {
+        "id": "r_1",
+        "criterion": "BackgroundTasks 适合轻量、同应用对象访问；Celery 需要消息队列等配置并支持跨进程或服务器工作。",
+        "evidence_ids": [
+          "e_1",
+          "e_2"
+        ],
+        "anchors": {
+          "0": "未回答或与原始证据矛盾。",
+          "0.5": "部分正确，但遗漏该评分项中的条件或限制。",
+          "1": "完整且正确地表述该评分项，保留适用范围与限制。"
+        }
+      },
+      {
+        "id": "r_2",
+        "criterion": "不能将 Celery 描述为天然 exactly-once；文档强调幂等任务，acks_late 与重试有不同语义。",
+        "evidence_ids": [
+          "e_3",
+          "e_4"
+        ],
+        "anchors": {
+          "0": "未回答或与原始证据矛盾。",
+          "0.5": "部分正确，但遗漏该评分项中的条件或限制。",
+          "1": "完整且正确地表述该评分项，保留适用范围与限制。"
+        }
+      }
+    ],
+    "entity_requirements": null
+  },
+  "evaluation_rule": {
+    "checks": [
+      {
+        "id": "c_r_1",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_1"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_r_2",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_citations",
+        "dimension": "evidence",
+        "evaluator": "citation_support",
+        "target": [
+          "r_1",
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_trace",
+        "dimension": "process",
+        "evaluator": "trace_assertion",
+        "target": [
+          "r_1",
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": "supporting_source_observed"
+      }
+    ],
+    "dimension_weights": {
+      "correctness": 0.6,
+      "evidence": 0.25,
+      "process": 0.15
+    },
+    "pass_threshold": 0.8
+  }
+}

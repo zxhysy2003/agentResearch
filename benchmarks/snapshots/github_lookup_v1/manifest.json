@@ -1,0 +1,77 @@
+{
+  "id": "github_lookup_v1",
+  "synthetic": false,
+  "artifacts": [
+    {
+      "id": "browser_readme",
+      "url": "https://raw.githubusercontent.com/browser-use/browser-use/main/README.md",
+      "path": "sources/browser_readme/body",
+      "sha256": "0cf61424017e5d88361b33dcbc6e1326c9eb52a1501e857caebe92b80f78f64f",
+      "captured_at": "2026-09-29T14:35:34.768675+00:00"
+    },
+    {
+      "id": "issues_httpx",
+      "url": "https://api.github.com/repos/encode/httpx/issues?state=closed&labels=bug&sort=updated&direction=desc&per_page=10",
+      "path": "sources/issues_httpx/body",
+      "sha256": "993891c2e3aeb8b77063e0c64da2bde8969b21a609e2480ba4017e6d5c3f1460",
+      "captured_at": "2026-09-29T14:35:37.798713+00:00"
+    },
+    {
+      "id": "langgraph_readme",
+      "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/main/README.md",
+      "path": "sources/langgraph_readme/body",
+      "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+      "captured_at": "2026-09-29T14:35:34.389368+00:00"
+    },
+    {
+      "id": "latest_browser",
+      "url": "https://api.github.com/repos/browser-use/browser-use/releases/latest",
+      "path": "sources/latest_browser/body",
+      "sha256": "2d5200d16f8574849f65a0c360542944c9eb8cd41aab7682e4e2fbf95c624dfd",
+      "captured_at": "2026-09-29T14:39:15.698010+00:00"
+    },
+    {
+      "id": "latest_pydantic",
+      "url": "https://api.github.com/repos/pydantic/pydantic/releases/latest",
+      "path": "sources/latest_pydantic/body",
+      "sha256": "fd92ffb8c5b571262728215ad19b9a9caa40a81b04f2ca2acb5683cd5d6d46c2",
+      "captured_at": "2026-09-29T14:39:15.735090+00:00"
+    },
+    {
+      "id": "latest_qdrant",
+      "url": "https://api.github.com/repos/qdrant/qdrant/releases/latest",
+      "path": "sources/latest_qdrant/body",
+      "sha256": "1af03d2c805e3883e88fe9ce69e00a2b8e398b6db589c4b8fde8265b3f499650",
+      "captured_at": "2026-09-29T14:39:16.135835+00:00"
+    },
+    {
+      "id": "repo_crewai",
+      "url": "https://api.github.com/repos/crewAIInc/crewAI",
+      "path": "sources/repo_crewai/body",
+      "sha256": "7d709af0cf7e718778a51744f7eb2180319f82aee1f1237f3dcaefbabe54a792",
+      "captured_at": "2026-09-29T14:35:35.428989+00:00"
+    },
+    {
+      "id": "repo_fastapi",
+      "url": "https://api.github.com/repos/fastapi/fastapi",
+      "path": "sources/repo_fastapi/body",
+      "sha256": "54d177c076e63cf3ad62feb5c3f54398aeb796de9c57ae6c6dfd9a05d1bac5e4",
+      "captured_at": "2026-09-29T14:35:35.237227+00:00"
+    },
+    {
+      "id": "repo_httpx",
+      "url": "https://api.github.com/repos/encode/httpx",
+      "path": "sources/repo_httpx/body",
+      "sha256": "537c7ec813a6e0aefe62caa97ea206a405b8a153242da88f0489c541e167b09d",
+      "captured_at": "2026-09-29T14:35:35.421495+00:00"
+    },
+    {
+      "id": "repo_qdrant",
+      "url": "https://api.github.com/repos/qdrant/qdrant",
+      "path": "sources/repo_qdrant/body",
+      "sha256": "bf843e66acb60290944c70ba89e0ff77696ded366802d40bfe23b8f1a711054a",
+      "captured_at": "2026-09-29T14:35:34.926097+00:00"
+    }
+  ],
+  "faults": []
+}

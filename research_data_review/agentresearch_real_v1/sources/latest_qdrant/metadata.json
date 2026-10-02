@@ -1,0 +1,16 @@
+{
+  "id": "latest_qdrant",
+  "requested_url": "https://api.github.com/repos/qdrant/qdrant/releases/latest",
+  "final_url": "https://api.github.com/repos/qdrant/qdrant/releases/latest",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:39:16.135835+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:39:16 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"47866af1f6774d832171adf11edbec9415af0de8e9c9f1a80f3b52939bbb71f4\"",
+    "Last-Modified": "Fri, 04 Sep 2026 08:42:33 GMT",
+    "X-RateLimit-Remaining": "17"
+  },
+  "sha256": "1af03d2c805e3883e88fe9ce69e00a2b8e398b6db589c4b8fde8265b3f499650",
+  "bytes": 19605
+}

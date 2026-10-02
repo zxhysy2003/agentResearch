@@ -1,0 +1,15 @@
+{
+  "id": "httpx_async",
+  "requested_url": "https://www.python-httpx.org/async/",
+  "final_url": "https://www.python-httpx.org/async/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:32.857896+00:00",
+  "headers": {
+    "Content-Type": "text/html; charset=utf-8",
+    "Last-Modified": "Thu, 11 Sep 2025 11:03:01 GMT",
+    "ETag": "\"68c2ac65-aeb6\"",
+    "Date": "Tue, 29 Sep 2026 14:35:33 GMT"
+  },
+  "sha256": "bf8c86824c36c21bf9ecada79e8a8527a1ad2fd08b6142b2a8ffaceddf0e0992",
+  "bytes": 44726
+}

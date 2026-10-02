@@ -1,0 +1,1481 @@
+WebSockets - FastAPI
+Skip to content
+Deploy on
+FastAPI Cloud
+🚀
+FastAPI Conf '26
+— Oct 28, 2026, Amsterdam 🎤
+Follow
+@fastapi
+on
+X (Twitter)
+to stay updated
+Follow
+FastAPI
+on
+LinkedIn
+to stay updated
+Subscribe to the
+FastAPI and friends
+newsletter 🎉
+sponsor
+sponsor
+sponsor
+sponsor
+sponsor
+sponsor
+sponsor
+sponsor
+FastAPI
+WebSockets
+en - English
+de - Deutsch
+es - español
+fr - français
+hi - हिन्दी
+ja - 日本語
+ko - 한국어
+pt - português
+ru - русский язык
+tr - Türkçe
+uk - українська мова
+zh - 简体中文
+zh-hant - 繁體中文
+Search
+fastapi/fastapi
+FastAPI
+Features
+Learn
+Reference
+Resources
+About
+Release Notes
+FastAPI
+fastapi/fastapi
+FastAPI
+Features
+Learn
+Python Types Intro
+Concurrency and async / await
+Tutorial - User Guide
+First Steps
+Path Parameters
+Query Parameters
+Request Body
+Query Parameters and String Validations
+Path Parameters and Numeric Validations
+Query Parameter Models
+Body - Multiple Parameters
+Body - Fields
+Body - Nested Models
+Declare Request Example Data
+Extra Data Types
+Cookie Parameters
+Header Parameters
+Cookie Parameter Models
+Header Parameter Models
+Response Model - Return Type
+Extra Models
+Response Status Code
+Form Data
+Form Models
+Request Files
+Request Forms and Files
+Handling Errors
+Path Operation Configuration
+JSON Compatible Encoder
+Body - Updates
+Dependencies
+Classes as Dependencies
+Sub-dependencies
+Dependencies in path operation decorators
+Global Dependencies
+Dependencies with yield
+Security
+Security - First Steps
+Get Current User
+Simple OAuth2 with Password and Bearer
+OAuth2 with Password (and hashing), Bearer with JWT tokens
+Middleware
+CORS (Cross-Origin Resource Sharing)
+SQL (Relational) Databases
+Bigger Applications - Multiple Files
+Stream JSON Lines
+Server-Sent Events (SSE)
+Background Tasks
+Metadata and Docs URLs
+Frontend
+Static Files
+Testing
+Debugging
+Advanced User Guide
+Stream Data
+Path Operation Advanced Configuration
+Additional Status Codes
+Return a Response Directly
+Custom Response - HTML, Stream, File, others
+Additional Responses in OpenAPI
+Response Cookies
+Response Headers
+Response - Change Status Code
+Advanced Dependencies
+Advanced Security
+OAuth2 scopes
+HTTP Basic Auth
+Using the Request Directly
+Using Dataclasses
+Advanced Middleware
+Sub Applications - Mounts
+Behind a Proxy
+Templates
+WebSockets
+WebSockets
+On this page
+Install
+websockets
+WebSockets client
+In production
+Create a
+websocket
+Await for messages and send messages
+Try it
+Using
+Depends
+and others
+Try the WebSockets with dependencies
+Handling disconnections and multiple clients
+More info
+Lifespan Events
+Testing WebSockets
+Testing Events: lifespan and startup - shutdown
+Testing Dependencies with Overrides
+Async Tests
+Settings and Environment Variables
+OpenAPI Callbacks
+OpenAPI Webhooks
+Including WSGI - Flask, Django, others
+Generating SDKs
+Advanced Python Types
+JSON with Bytes as Base64
+Strict Content-Type Checking
+FastAPI CLI
+Editor Support
+Deployment
+About FastAPI versions
+FastAPI Cloud
+About HTTPS
+Run a Server Manually
+Deployments Concepts
+Deploy FastAPI on Cloud Providers
+Server Workers - Uvicorn with Workers
+FastAPI in Containers - Docker
+How To - Recipes
+General - How To - Recipes
+Migrate from Pydantic v1 to Pydantic v2
+GraphQL
+Custom Request and APIRoute class
+Conditional OpenAPI
+Extending OpenAPI
+Separate OpenAPI Schemas for Input and Output or Not
+Custom Docs UI Static Assets (Self-Hosting)
+Configure Swagger UI
+Testing a Database
+Use Old 403 Authentication Error Status Codes
+Reference
+FastAPI class
+Request Parameters
+Status Codes
+UploadFile class
+Exceptions - HTTPException and WebSocketException
+Dependencies - Depends() and Security()
+APIRouter class
+Background Tasks - BackgroundTasks
+Request class
+WebSockets
+HTTPConnection class
+Response class
+Custom Response Classes - File, HTML, Redirect, Streaming, etc.
+Server-Sent Events - EventSourceResponse and ServerSentEvent
+Middleware
+OpenAPI
+OpenAPI docs
+OpenAPI models
+Security Tools
+Encoders - jsonable_encoder
+Static Files - StaticFiles
+Templating - Jinja2Templates
+Test Client - TestClient
+Resources
+FastAPI People
+Help
+Contributing
+Translations
+Full Stack FastAPI Template
+External Links
+FastAPI and friends newsletter
+About
+Alternatives, Inspiration and Comparisons
+History, Design and Future
+Benchmarks
+Repository Management
+Release Notes
+On this page
+Install
+websockets
+WebSockets client
+In production
+Create a
+websocket
+Await for messages and send messages
+Try it
+Using
+Depends
+and others
+Try the WebSockets with dependencies
+Handling disconnections and multiple clients
+More info
+FastAPI
+Learn
+Advanced User Guide
+WebSockets
+¶
+You can use
+WebSockets
+with
+FastAPI
+.
+Install
+websockets
+¶
+Add
+websockets
+(a Python library that makes it easy to use the "WebSocket" protocol) to your project:
+$
+uv
+add
+websockets
+---> 100%
+WebSockets client
+¶
+In production
+¶
+In your production system, you probably have a frontend created with a modern framework like React, Vue.js or Angular.
+And to communicate using WebSockets with your backend you would probably use your frontend's utilities.
+Or you might have a native mobile application that communicates with your WebSocket backend directly, in native code.
+Or you might have any other way to communicate with the WebSocket endpoint.
+But for this example, we'll use a very simple HTML document with some JavaScript, all inside a long string.
+This, of course, is not optimal and you wouldn't use it for production.
+In production you would have one of the options above.
+But it's the simplest way to focus on the server-side of WebSockets and have a working example:
+Python 3.10+
+from
+fastapi
+import
+FastAPI
+,
+WebSocket
+from
+fastapi.responses
+import
+HTMLResponse
+app
+=
+FastAPI
+()
+html
+=
+"""
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat</title>
+</head>
+<body>
+<h1>WebSocket Chat</h1>
+<form action="" onsubmit="sendMessage(event)">
+<input type="text" id="messageText" autocomplete="off"/>
+<button>Send</button>
+</form>
+<ul id='messages'>
+</ul>
+<script>
+var ws = new WebSocket("ws://localhost:8000/ws");
+ws.onmessage = function(event) {
+var messages = document.getElementById('messages')
+var message = document.createElement('li')
+var content = document.createTextNode(event.data)
+message.appendChild(content)
+messages.appendChild(message)
+};
+function sendMessage(event) {
+var input = document.getElementById("messageText")
+ws.send(input.value)
+input.value = ''
+event.preventDefault()
+}
+</script>
+</body>
+</html>
+"""
+@app
+.
+get
+(
+"/"
+)
+async
+def
+get
+():
+return
+HTMLResponse
+(
+html
+)
+@app
+.
+websocket
+(
+"/ws"
+)
+async
+def
+websocket_endpoint
+(
+websocket
+:
+WebSocket
+):
+await
+websocket
+.
+accept
+()
+while
+True
+:
+data
+=
+await
+websocket
+.
+receive_text
+()
+await
+websocket
+.
+send_text
+(
+f
+"Message text was:
+{
+data
+}
+"
+)
+Create a
+websocket
+¶
+In your
+FastAPI
+application, create a
+websocket
+:
+Python 3.10+
+from
+fastapi
+import
+FastAPI
+,
+WebSocket
+from
+fastapi.responses
+import
+HTMLResponse
+app
+=
+FastAPI
+()
+html
+=
+"""
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat</title>
+</head>
+<body>
+<h1>WebSocket Chat</h1>
+<form action="" onsubmit="sendMessage(event)">
+<input type="text" id="messageText" autocomplete="off"/>
+<button>Send</button>
+</form>
+<ul id='messages'>
+</ul>
+<script>
+var ws = new WebSocket("ws://localhost:8000/ws");
+ws.onmessage = function(event) {
+var messages = document.getElementById('messages')
+var message = document.createElement('li')
+var content = document.createTextNode(event.data)
+message.appendChild(content)
+messages.appendChild(message)
+};
+function sendMessage(event) {
+var input = document.getElementById("messageText")
+ws.send(input.value)
+input.value = ''
+event.preventDefault()
+}
+</script>
+</body>
+</html>
+"""
+@app
+.
+get
+(
+"/"
+)
+async
+def
+get
+():
+return
+HTMLResponse
+(
+html
+)
+@app
+.
+websocket
+(
+"/ws"
+)
+async
+def
+websocket_endpoint
+(
+websocket
+:
+WebSocket
+):
+await
+websocket
+.
+accept
+()
+while
+True
+:
+data
+=
+await
+websocket
+.
+receive_text
+()
+await
+websocket
+.
+send_text
+(
+f
+"Message text was:
+{
+data
+}
+"
+)
+Technical Details
+You could also use
+from starlette.websockets import WebSocket
+.
+FastAPI
+provides the same
+WebSocket
+directly just as a convenience for you, the developer. But it comes directly from Starlette.
+Await for messages and send messages
+¶
+In your WebSocket route you can
+await
+for messages and send messages.
+Python 3.10+
+from
+fastapi
+import
+FastAPI
+,
+WebSocket
+from
+fastapi.responses
+import
+HTMLResponse
+app
+=
+FastAPI
+()
+html
+=
+"""
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat</title>
+</head>
+<body>
+<h1>WebSocket Chat</h1>
+<form action="" onsubmit="sendMessage(event)">
+<input type="text" id="messageText" autocomplete="off"/>
+<button>Send</button>
+</form>
+<ul id='messages'>
+</ul>
+<script>
+var ws = new WebSocket("ws://localhost:8000/ws");
+ws.onmessage = function(event) {
+var messages = document.getElementById('messages')
+var message = document.createElement('li')
+var content = document.createTextNode(event.data)
+message.appendChild(content)
+messages.appendChild(message)
+};
+function sendMessage(event) {
+var input = document.getElementById("messageText")
+ws.send(input.value)
+input.value = ''
+event.preventDefault()
+}
+</script>
+</body>
+</html>
+"""
+@app
+.
+get
+(
+"/"
+)
+async
+def
+get
+():
+return
+HTMLResponse
+(
+html
+)
+@app
+.
+websocket
+(
+"/ws"
+)
+async
+def
+websocket_endpoint
+(
+websocket
+:
+WebSocket
+):
+await
+websocket
+.
+accept
+()
+while
+True
+:
+data
+=
+await
+websocket
+.
+receive_text
+()
+await
+websocket
+.
+send_text
+(
+f
+"Message text was:
+{
+data
+}
+"
+)
+You can receive and send binary, text, and JSON data.
+Try it
+¶
+Put your code in a file
+main.py
+and then run your application:
+$
+uv
+run
+fastapi
+dev
+<span style="color: green;">INFO</span>:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Open your browser at
+http://127.0.0.1:8000
+.
+You will see a simple page like:
+You can type messages in the input box, and send them:
+And your
+FastAPI
+application with WebSockets will respond back:
+You can send (and receive) many messages:
+And all of them will use the same WebSocket connection.
+Using
+Depends
+and others
+¶
+In WebSocket endpoints you can import from
+fastapi
+and use:
+Depends
+Security
+Cookie
+Header
+Path
+Query
+They work the same way as for other FastAPI endpoints/
+path operations
+:
+Python 3.10+
+from
+typing
+import
+Annotated
+from
+fastapi
+import
+(
+Cookie
+,
+Depends
+,
+FastAPI
+,
+Query
+,
+WebSocket
+,
+WebSocketException
+,
+status
+,
+)
+from
+fastapi.responses
+import
+HTMLResponse
+app
+=
+FastAPI
+()
+html
+=
+"""
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat</title>
+</head>
+<body>
+<h1>WebSocket Chat</h1>
+<form action="" onsubmit="sendMessage(event)">
+<label>Item ID: <input type="text" id="itemId" autocomplete="off" value="foo"/></label>
+<label>Token: <input type="text" id="token" autocomplete="off" value="some-key-token"/></label>
+<button onclick="connect(event)">Connect</button>
+<hr>
+<label>Message: <input type="text" id="messageText" autocomplete="off"/></label>
+<button>Send</button>
+</form>
+<ul id='messages'>
+</ul>
+<script>
+var ws = null;
+function connect(event) {
+var itemId = document.getElementById("itemId")
+var token = document.getElementById("token")
+ws = new WebSocket("ws://localhost:8000/items/" + itemId.value + "/ws?token=" + token.value);
+ws.onmessage = function(event) {
+var messages = document.getElementById('messages')
+var message = document.createElement('li')
+var content = document.createTextNode(event.data)
+message.appendChild(content)
+messages.appendChild(message)
+};
+event.preventDefault()
+}
+function sendMessage(event) {
+var input = document.getElementById("messageText")
+ws.send(input.value)
+input.value = ''
+event.preventDefault()
+}
+</script>
+</body>
+</html>
+"""
+@app
+.
+get
+(
+"/"
+)
+async
+def
+get
+():
+return
+HTMLResponse
+(
+html
+)
+async
+def
+get_cookie_or_token
+(
+websocket
+:
+WebSocket
+,
+session
+:
+Annotated
+[
+str
+|
+None
+,
+Cookie
+()]
+=
+None
+,
+token
+:
+Annotated
+[
+str
+|
+None
+,
+Query
+()]
+=
+None
+,
+):
+if
+session
+is
+None
+and
+token
+is
+None
+:
+raise
+WebSocketException
+(
+code
+=
+status
+.
+WS_1008_POLICY_VIOLATION
+)
+return
+session
+or
+token
+@app
+.
+websocket
+(
+"/items/
+{item_id}
+/ws"
+)
+async
+def
+websocket_endpoint
+(
+*
+,
+websocket
+:
+WebSocket
+,
+item_id
+:
+str
+,
+q
+:
+int
+|
+None
+=
+None
+,
+cookie_or_token
+:
+Annotated
+[
+str
+,
+Depends
+(
+get_cookie_or_token
+)],
+):
+await
+websocket
+.
+accept
+()
+while
+True
+:
+data
+=
+await
+websocket
+.
+receive_text
+()
+await
+websocket
+.
+send_text
+(
+f
+"Session cookie or query token value is:
+{
+cookie_or_token
+}
+"
+)
+if
+q
+is
+not
+None
+:
+await
+websocket
+.
+send_text
+(
+f
+"Query parameter q is:
+{
+q
+}
+"
+)
+await
+websocket
+.
+send_text
+(
+f
+"Message text was:
+{
+data
+}
+, for item ID:
+{
+item_id
+}
+"
+)
+🤓 Other versions and variants
+Python 3.10+ - non-Annotated
+Tip
+Prefer to use the
+Annotated
+version if possible.
+from
+fastapi
+import
+(
+Cookie
+,
+Depends
+,
+FastAPI
+,
+Query
+,
+WebSocket
+,
+WebSocketException
+,
+status
+,
+)
+from
+fastapi.responses
+import
+HTMLResponse
+app
+=
+FastAPI
+()
+html
+=
+"""
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat</title>
+</head>
+<body>
+<h1>WebSocket Chat</h1>
+<form action="" onsubmit="sendMessage(event)">
+<label>Item ID: <input type="text" id="itemId" autocomplete="off" value="foo"/></label>
+<label>Token: <input type="text" id="token" autocomplete="off" value="some-key-token"/></label>
+<button onclick="connect(event)">Connect</button>
+<hr>
+<label>Message: <input type="text" id="messageText" autocomplete="off"/></label>
+<button>Send</button>
+</form>
+<ul id='messages'>
+</ul>
+<script>
+var ws = null;
+function connect(event) {
+var itemId = document.getElementById("itemId")
+var token = document.getElementById("token")
+ws = new WebSocket("ws://localhost:8000/items/" + itemId.value + "/ws?token=" + token.value);
+ws.onmessage = function(event) {
+var messages = document.getElementById('messages')
+var message = document.createElement('li')
+var content = document.createTextNode(event.data)
+message.appendChild(content)
+messages.appendChild(message)
+};
+event.preventDefault()
+}
+function sendMessage(event) {
+var input = document.getElementById("messageText")
+ws.send(input.value)
+input.value = ''
+event.preventDefault()
+}
+</script>
+</body>
+</html>
+"""
+@app
+.
+get
+(
+"/"
+)
+async
+def
+get
+():
+return
+HTMLResponse
+(
+html
+)
+async
+def
+get_cookie_or_token
+(
+websocket
+:
+WebSocket
+,
+session
+:
+str
+|
+None
+=
+Cookie
+(
+default
+=
+None
+),
+token
+:
+str
+|
+None
+=
+Query
+(
+default
+=
+None
+),
+):
+if
+session
+is
+None
+and
+token
+is
+None
+:
+raise
+WebSocketException
+(
+code
+=
+status
+.
+WS_1008_POLICY_VIOLATION
+)
+return
+session
+or
+token
+@app
+.
+websocket
+(
+"/items/
+{item_id}
+/ws"
+)
+async
+def
+websocket_endpoint
+(
+websocket
+:
+WebSocket
+,
+item_id
+:
+str
+,
+q
+:
+int
+|
+None
+=
+None
+,
+cookie_or_token
+:
+str
+=
+Depends
+(
+get_cookie_or_token
+),
+):
+await
+websocket
+.
+accept
+()
+while
+True
+:
+data
+=
+await
+websocket
+.
+receive_text
+()
+await
+websocket
+.
+send_text
+(
+f
+"Session cookie or query token value is:
+{
+cookie_or_token
+}
+"
+)
+if
+q
+is
+not
+None
+:
+await
+websocket
+.
+send_text
+(
+f
+"Query parameter q is:
+{
+q
+}
+"
+)
+await
+websocket
+.
+send_text
+(
+f
+"Message text was:
+{
+data
+}
+, for item ID:
+{
+item_id
+}
+"
+)
+Note
+As this is a WebSocket it doesn't really make sense to raise an
+HTTPException
+, instead we raise a
+WebSocketException
+.
+You can use a closing code from the
+valid codes defined in the specification
+.
+Try the WebSockets with dependencies
+¶
+Run your application:
+$
+uv
+run
+fastapi
+dev
+<span style="color: green;">INFO</span>:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Open your browser at
+http://127.0.0.1:8000
+.
+There you can set:
+The "Item ID", used in the path.
+The "Token" used as a query parameter.
+Tip
+Notice that the query
+token
+will be handled by a dependency.
+With that you can connect the WebSocket and then send and receive messages:
+Handling disconnections and multiple clients
+¶
+When a WebSocket connection is closed, the
+await websocket.receive_text()
+will raise a
+WebSocketDisconnect
+exception, which you can then catch and handle like in this example.
+Python 3.10+
+from
+fastapi
+import
+FastAPI
+,
+WebSocket
+,
+WebSocketDisconnect
+from
+fastapi.responses
+import
+HTMLResponse
+app
+=
+FastAPI
+()
+html
+=
+"""
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat</title>
+</head>
+<body>
+<h1>WebSocket Chat</h1>
+<h2>Your ID: <span id="ws-id"></span></h2>
+<form action="" onsubmit="sendMessage(event)">
+<input type="text" id="messageText" autocomplete="off"/>
+<button>Send</button>
+</form>
+<ul id='messages'>
+</ul>
+<script>
+var client_id = Date.now()
+document.querySelector("#ws-id").textContent = client_id;
+var ws = new WebSocket(`ws://localhost:8000/ws/$
+{client_id}
+`);
+ws.onmessage = function(event) {
+var messages = document.getElementById('messages')
+var message = document.createElement('li')
+var content = document.createTextNode(event.data)
+message.appendChild(content)
+messages.appendChild(message)
+};
+function sendMessage(event) {
+var input = document.getElementById("messageText")
+ws.send(input.value)
+input.value = ''
+event.preventDefault()
+}
+</script>
+</body>
+</html>
+"""
+class
+ConnectionManager
+:
+def
+__init__
+(
+self
+):
+self
+.
+active_connections
+:
+list
+[
+WebSocket
+]
+=
+[]
+async
+def
+connect
+(
+self
+,
+websocket
+:
+WebSocket
+):
+await
+websocket
+.
+accept
+()
+self
+.
+active_connections
+.
+append
+(
+websocket
+)
+def
+disconnect
+(
+self
+,
+websocket
+:
+WebSocket
+):
+self
+.
+active_connections
+.
+remove
+(
+websocket
+)
+async
+def
+send_personal_message
+(
+self
+,
+message
+:
+str
+,
+websocket
+:
+WebSocket
+):
+await
+websocket
+.
+send_text
+(
+message
+)
+async
+def
+broadcast
+(
+self
+,
+message
+:
+str
+):
+for
+connection
+in
+self
+.
+active_connections
+:
+await
+connection
+.
+send_text
+(
+message
+)
+manager
+=
+ConnectionManager
+()
+@app
+.
+get
+(
+"/"
+)
+async
+def
+get
+():
+return
+HTMLResponse
+(
+html
+)
+@app
+.
+websocket
+(
+"/ws/
+{client_id}
+"
+)
+async
+def
+websocket_endpoint
+(
+websocket
+:
+WebSocket
+,
+client_id
+:
+int
+):
+await
+manager
+.
+connect
+(
+websocket
+)
+try
+:
+while
+True
+:
+data
+=
+await
+websocket
+.
+receive_text
+()
+await
+manager
+.
+send_personal_message
+(
+f
+"You wrote:
+{
+data
+}
+"
+,
+websocket
+)
+await
+manager
+.
+broadcast
+(
+f
+"Client #
+{
+client_id
+}
+says:
+{
+data
+}
+"
+)
+except
+WebSocketDisconnect
+:
+manager
+.
+disconnect
+(
+websocket
+)
+await
+manager
+.
+broadcast
+(
+f
+"Client #
+{
+client_id
+}
+left the chat"
+)
+To try it out:
+Open the app with several browser tabs.
+Write messages from them.
+Then close one of the tabs.
+That will raise the
+WebSocketDisconnect
+exception, and all the other clients will receive a message like:
+Client #1596980209979 left the chat
+Tip
+The app above is a minimal and simple example to demonstrate how to handle and broadcast messages to several WebSocket connections.
+But keep in mind that, as everything is handled in memory, in a single list, it will only work while the process is running, and will only work with a single process.
+If you need something easy to integrate with FastAPI but that is more robust, supported by Redis, PostgreSQL or others, check
+encode/broadcaster
+.
+More info
+¶
+To learn more about the options, check Starlette's documentation for:
+The
+WebSocket
+class
+.
+Class-based WebSocket handling
+.
+Back to top
+Previous
+Templates
+Next
+Lifespan Events
+The FastAPI trademark is owned by
+@tiangolo
+and is registered in the US and across other regions
+Made with
+Zensical

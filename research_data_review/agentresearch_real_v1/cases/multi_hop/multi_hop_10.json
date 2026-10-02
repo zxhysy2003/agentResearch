@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0",
+  "id": "multi_hop_10",
+  "revision": 1,
+  "category": "multi_hop",
+  "difficulty": "hard",
+  "tags": [
+    "real_sources",
+    "review_candidate"
+  ],
+  "split": "dev",
+  "task": {
+    "prompt": "从旧地址 tiangolo/fastapi 定位当前规范仓库，再查询该仓库 latest Release，并用官方文档说明 BackgroundTasks 可接受哪些函数形式。",
+    "as_of": "2026-09-29T14:39:16.232056Z",
+    "context": {
+      "time_scope": "仅依据此任务的采集快照回答；当前、最新及统计值均指各来源记录的采集时刻，不代表未来实时状态。"
+    },
+    "requirements": [
+      "引用可核验的一手来源。",
+      "区分材料直接记载、推断和不确定性；不编造。"
+    ]
+  },
+  "environment": {
+    "mode": "snapshot",
+    "snapshot_id": "agentresearch-real-review-v1",
+    "allowed_tools": [
+      "web_search",
+      "fetch_page",
+      "github_read"
+    ],
+    "limits": {
+      "max_tool_calls": 30,
+      "timeout_seconds": 180.0
+    },
+    "fault_scenario_id": null
+  },
+  "ground_truth": {
+    "expected_outcome": "answered",
+    "facts": [
+      {
+        "id": "f_1",
+        "subject": "repo_old_fastapi",
+        "predicate": "canonical_repository",
+        "expected": {
+          "type": "string",
+          "value": "fastapi/fastapi"
+        },
+        "evidence_ids": [
+          "e_1"
+        ]
+      },
+      {
+        "id": "f_2",
+        "subject": "latest_fastapi",
+        "predicate": "github_latest_tag",
+        "expected": {
+          "type": "string",
+          "value": "0.141.1"
+        },
+        "evidence_ids": [
+          "e_2"
+        ]
+      },
+      {
+        "id": "f_3",
+        "subject": "latest_fastapi",
+        "predicate": "published_at",
+        "expected": {
+          "type": "datetime",
+          "value": "2026-07-29T17:17:26Z"
+        },
+        "evidence_ids": [
+          "e_3"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e_1",
+        "source_type": "github_api",
+        "url": "https://api.github.com/repos/tiangolo/fastapi",
+        "artifact_id": "repo_old_fastapi",
+        "locator": "JSON Pointer: /full_name",
+        "captured_at": "2026-09-29T14:35:36.255739Z"
+      },
+      {
+        "id": "e_2",
+        "source_type": "github_api",
+        "url": "https://api.github.com/repos/fastapi/fastapi/releases/latest",
+        "artifact_id": "latest_fastapi",
+        "locator": "JSON Pointer: /tag_name",
+        "captured_at": "2026-09-29T14:39:16.232056Z"
+      },
+      {
+        "id": "e_3",
+        "source_type": "github_api",
+        "url": "https://api.github.com/repos/fastapi/fastapi/releases/latest",
+        "artifact_id": "latest_fastapi",
+        "locator": "JSON Pointer: /published_at",
+        "captured_at": "2026-09-29T14:39:16.232056Z"
+      },
+      {
+        "id": "e_4",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+        "artifact_id": "fastapi_background",
+        "locator": "text.txt:L348-L349; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361903Z"
+      }
+    ],
+    "rubrics": [
+      {
+        "id": "r_1",
+        "criterion": "BackgroundTasks 接受普通 def 与 async def 函数，FastAPI 会处理相应调用。",
+        "evidence_ids": [
+          "e_4"
+        ],
+        "anchors": {
+          "0": "未回答或与原始证据矛盾。",
+          "0.5": "部分正确，但遗漏该评分项中的条件或限制。",
+          "1": "完整且正确地表述该评分项，保留适用范围与限制。"
+        }
+      }
+    ],
+    "entity_requirements": null
+  },
+  "evaluation_rule": {
+    "checks": [
+      {
+        "id": "c_f_1",
+        "dimension": "correctness",
+        "evaluator": "fact_match",
+        "target": [
+          "f_1"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_f_2",
+        "dimension": "correctness",
+        "evaluator": "fact_match",
+        "target": [
+          "f_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_f_3",
+        "dimension": "correctness",
+        "evaluator": "fact_match",
+        "target": [
+          "f_3"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_r_1",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_1"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_citations",
+        "dimension": "evidence",
+        "evaluator": "citation_support",
+        "target": [
+          "f_1",
+          "f_2",
+          "f_3",
+          "r_1"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_trace",
+        "dimension": "process",
+        "evaluator": "trace_assertion",
+        "target": [
+          "f_1",
+          "f_2",
+          "f_3",
+          "r_1"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": "supporting_source_observed"
+      }
+    ],
+    "dimension_weights": {
+      "correctness": 0.6,
+      "evidence": 0.25,
+      "process": 0.15
+    },
+    "pass_threshold": 0.8
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "repo_awesome",
+  "requested_url": "https://api.github.com/repos/sindresorhus/awesome",
+  "final_url": "https://api.github.com/repos/sindresorhus/awesome",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:35.992196+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:36 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"5f0e8548eb7c1dce581a9c35902753b84fc54936e0fc11fe06b5ba19380768f8\"",
+    "Last-Modified": "Tue, 29 Sep 2026 14:35:12 GMT",
+    "X-RateLimit-Remaining": "40"
+  },
+  "sha256": "77f5e1a8a113cb669b24d08a5c6ccc3f0b9aa44bc3e74cd15ebe62d7a099484a",
+  "bytes": 5576
+}

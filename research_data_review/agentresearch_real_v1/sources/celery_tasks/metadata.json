@@ -1,0 +1,15 @@
+{
+  "id": "celery_tasks",
+  "requested_url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+  "final_url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:33.814837+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:34 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "ETag": "W/\"e76e2ec497f8c5b6464bfa2473cd1f4e\"",
+    "Last-Modified": "Thu, 26 Mar 2026 12:21:52 GMT"
+  },
+  "sha256": "ab191fa175e75f0a382f91dd31689712b0b21b6ffd4df679c0cec56c6539aa5d",
+  "bytes": 215046
+}

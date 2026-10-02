@@ -1,0 +1,420 @@
+{
+  "id": "agentresearch-real-review-v1",
+  "synthetic": false,
+  "artifacts": [
+    {
+      "id": "browser_pyproject",
+      "url": "https://raw.githubusercontent.com/browser-use/browser-use/main/pyproject.toml",
+      "path": "sources/browser_pyproject/body",
+      "sha256": "f06f598f90b6b71f6509013174fab0e7c625e8aa59797ef97430043f3c1dec82",
+      "captured_at": "2026-09-29T14:39:15.288543+00:00"
+    },
+    {
+      "id": "browser_readme",
+      "url": "https://raw.githubusercontent.com/browser-use/browser-use/main/README.md",
+      "path": "sources/browser_readme/body",
+      "sha256": "0cf61424017e5d88361b33dcbc6e1326c9eb52a1501e857caebe92b80f78f64f",
+      "captured_at": "2026-09-29T14:35:34.768675+00:00"
+    },
+    {
+      "id": "celery_tasks",
+      "url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+      "path": "sources/celery_tasks/body",
+      "sha256": "ab191fa175e75f0a382f91dd31689712b0b21b6ffd4df679c0cec56c6539aa5d",
+      "captured_at": "2026-09-29T14:35:33.814837+00:00"
+    },
+    {
+      "id": "crewai_mcp",
+      "url": "https://docs.crewai.com/en/mcp/overview",
+      "path": "sources/crewai_mcp/body",
+      "sha256": "ffb53235928538fba3c964a1d414b0412067dd47d5e3dc844fc908b7ee7cdfb0",
+      "captured_at": "2026-09-29T14:39:15.507814+00:00"
+    },
+    {
+      "id": "crewai_readme",
+      "url": "https://raw.githubusercontent.com/crewAIInc/crewAI/main/README.md",
+      "path": "sources/crewai_readme/body",
+      "sha256": "b0f39843f93676b12883d5821a34555e2146e62bd2c42dc12733fc41222de013",
+      "captured_at": "2026-09-29T14:35:34.768256+00:00"
+    },
+    {
+      "id": "docker_bind",
+      "url": "https://docs.docker.com/engine/storage/bind-mounts/",
+      "path": "sources/docker_bind/body",
+      "sha256": "1bf7670016fb827992a59cc57b9b4d7faa6bc7bd9e57dbd6452b11b92861c969",
+      "captured_at": "2026-09-29T14:35:31.440616+00:00"
+    },
+    {
+      "id": "docker_depends",
+      "url": "https://docs.docker.com/compose/how-tos/startup-order/",
+      "path": "sources/docker_depends/body",
+      "sha256": "325929791ba27752b5838b7bed4509107b5c7f2a76135512ee87b29f686176a0",
+      "captured_at": "2026-09-29T14:35:31.383306+00:00"
+    },
+    {
+      "id": "docker_volumes",
+      "url": "https://docs.docker.com/engine/storage/volumes/",
+      "path": "sources/docker_volumes/body",
+      "sha256": "274dc8568ffa1599513a1b4656facfca027d997e82dc3b85cd7410839dc997b8",
+      "captured_at": "2026-09-29T14:35:31.410332+00:00"
+    },
+    {
+      "id": "fastapi_background",
+      "url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+      "path": "sources/fastapi_background/body",
+      "sha256": "54fa5fe46d5898e9215e54a8f672caf624f7bc4e9dd6deba487e64e4c248ef01",
+      "captured_at": "2026-09-29T14:35:30.361903+00:00"
+    },
+    {
+      "id": "fastapi_streaming",
+      "url": "https://fastapi.tiangolo.com/advanced/custom-response/",
+      "path": "sources/fastapi_streaming/body",
+      "sha256": "8c326ca15529240241d4f3a885c2ffd085c04a0a056aefdbdaa0e4c708efbd6a",
+      "captured_at": "2026-09-29T14:35:30.361537+00:00"
+    },
+    {
+      "id": "fastapi_websockets",
+      "url": "https://fastapi.tiangolo.com/advanced/websockets/",
+      "path": "sources/fastapi_websockets/body",
+      "sha256": "783e071d2e983523edbf2e805075cf501cbc051d87aeedbb084f772a7fa8b889",
+      "captured_at": "2026-09-29T14:35:30.361291+00:00"
+    },
+    {
+      "id": "flask_async",
+      "url": "https://flask.palletsprojects.com/en/stable/async-await/",
+      "path": "sources/flask_async/body",
+      "sha256": "f794743946f033730f2a434258fadfa35dd2f925c505b38ed97743bd16c4f886",
+      "captured_at": "2026-09-29T14:35:33.567348+00:00"
+    },
+    {
+      "id": "httpx_async",
+      "url": "https://www.python-httpx.org/async/",
+      "path": "sources/httpx_async/body",
+      "sha256": "bf8c86824c36c21bf9ecada79e8a8527a1ad2fd08b6142b2a8ffaceddf0e0992",
+      "captured_at": "2026-09-29T14:35:32.857896+00:00"
+    },
+    {
+      "id": "issues_httpx",
+      "url": "https://api.github.com/repos/encode/httpx/issues?state=closed&labels=bug&sort=updated&direction=desc&per_page=10",
+      "path": "sources/issues_httpx/body",
+      "sha256": "993891c2e3aeb8b77063e0c64da2bde8969b21a609e2480ba4017e6d5c3f1460",
+      "captured_at": "2026-09-29T14:35:37.798713+00:00"
+    },
+    {
+      "id": "langgraph_persistence",
+      "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "path": "sources/langgraph_persistence/body",
+      "sha256": "377cc3cf0c7ac17344978e0731462f2344ba9cb34f10483e7ed51fe7d09bff2c",
+      "captured_at": "2026-09-29T14:39:15.674898+00:00"
+    },
+    {
+      "id": "langgraph_readme",
+      "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/main/README.md",
+      "path": "sources/langgraph_readme/body",
+      "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+      "captured_at": "2026-09-29T14:35:34.389368+00:00"
+    },
+    {
+      "id": "latest_browser",
+      "url": "https://api.github.com/repos/browser-use/browser-use/releases/latest",
+      "path": "sources/latest_browser/body",
+      "sha256": "2d5200d16f8574849f65a0c360542944c9eb8cd41aab7682e4e2fbf95c624dfd",
+      "captured_at": "2026-09-29T14:39:15.698010+00:00"
+    },
+    {
+      "id": "latest_celery",
+      "url": "https://api.github.com/repos/celery/celery/releases/latest",
+      "path": "sources/latest_celery/body",
+      "sha256": "123dd5ba2bb92b85f9f669c2a432c4ad6f47d26dda1dc89485c61312e548f9ac",
+      "captured_at": "2026-09-29T14:39:16.567688+00:00"
+    },
+    {
+      "id": "latest_crewai",
+      "url": "https://api.github.com/repos/crewAIInc/crewAI/releases/latest",
+      "path": "sources/latest_crewai/body",
+      "sha256": "e77b847fa3fa3a54d9c72d107ae208ffa78c027f7fba8a340d76043dd2443917",
+      "captured_at": "2026-09-29T14:39:15.793222+00:00"
+    },
+    {
+      "id": "latest_fastapi",
+      "url": "https://api.github.com/repos/fastapi/fastapi/releases/latest",
+      "path": "sources/latest_fastapi/body",
+      "sha256": "746ff2040f95f5b6f18242ac0956d5a332f45af540412d45574967159bce5348",
+      "captured_at": "2026-09-29T14:39:16.232056+00:00"
+    },
+    {
+      "id": "latest_httpx",
+      "url": "https://api.github.com/repos/encode/httpx/releases/latest",
+      "path": "sources/latest_httpx/body",
+      "sha256": "4ec57adff158620528be946fd7da2855b874522fdde5bde785296c2f8ffdbc58",
+      "captured_at": "2026-09-29T14:39:16.189405+00:00"
+    },
+    {
+      "id": "latest_pydantic",
+      "url": "https://api.github.com/repos/pydantic/pydantic/releases/latest",
+      "path": "sources/latest_pydantic/body",
+      "sha256": "fd92ffb8c5b571262728215ad19b9a9caa40a81b04f2ca2acb5683cd5d6d46c2",
+      "captured_at": "2026-09-29T14:39:15.735090+00:00"
+    },
+    {
+      "id": "latest_pydantic_ai",
+      "url": "https://api.github.com/repos/pydantic/pydantic-ai/releases/latest",
+      "path": "sources/latest_pydantic_ai/body",
+      "sha256": "ff4dc6ed8c624edc649f24e7f22334bee173a662719cbcf0415854a2ece29d05",
+      "captured_at": "2026-09-29T14:39:16.671847+00:00"
+    },
+    {
+      "id": "latest_qdrant",
+      "url": "https://api.github.com/repos/qdrant/qdrant/releases/latest",
+      "path": "sources/latest_qdrant/body",
+      "sha256": "1af03d2c805e3883e88fe9ce69e00a2b8e398b6db589c4b8fde8265b3f499650",
+      "captured_at": "2026-09-29T14:39:16.135835+00:00"
+    },
+    {
+      "id": "pgvector_license",
+      "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/LICENSE",
+      "path": "sources/pgvector_license/body",
+      "sha256": "6bba9ebeb73e27477463b05e5ef1bf303bccbddb3db9bbc95905d351604d6a87",
+      "captured_at": "2026-09-29T14:39:15.288870+00:00"
+    },
+    {
+      "id": "pgvector_readme",
+      "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+      "path": "sources/pgvector_readme/body",
+      "sha256": "54cb3a5f4344308476cb2378469ac77d10fbff415d1b5be66608bb386ce8f527",
+      "captured_at": "2026-09-29T14:35:32.158204+00:00"
+    },
+    {
+      "id": "pgvector_tags",
+      "url": "https://api.github.com/repos/pgvector/pgvector/tags?per_page=10",
+      "path": "sources/pgvector_tags/body",
+      "sha256": "ea120bb581ac0c852ca0f4bca31ffc314b3a746962b91db588572407e7caa3a6",
+      "captured_at": "2026-09-29T14:39:15.289837+00:00"
+    },
+    {
+      "id": "postgres_indexes",
+      "url": "https://www.postgresql.org/docs/17/indexes-types.html",
+      "path": "sources/postgres_indexes/body",
+      "sha256": "cbb93e57a87799bc9cebb933204bfd48923ab2085ad3b98daf0d7c08dc6ef6f2",
+      "captured_at": "2026-09-29T14:35:32.658607+00:00"
+    },
+    {
+      "id": "pydantic_ai_mcp",
+      "url": "https://ai.pydantic.dev/mcp/overview/",
+      "path": "sources/pydantic_ai_mcp/body",
+      "sha256": "c4b05904c16e00cb5dade56841f025f38755eadffd2b77e8e564cd54f1f3910e",
+      "captured_at": "2026-09-29T14:39:15.466217+00:00"
+    },
+    {
+      "id": "pydantic_ai_readme",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/main/README.md",
+      "path": "sources/pydantic_ai_readme/body",
+      "sha256": "518369670ea0a105252618e453e6f14462dcfa179ce9c391ea7f3f764830a5bf",
+      "captured_at": "2026-09-29T14:35:34.902186+00:00"
+    },
+    {
+      "id": "pydantic_fields",
+      "url": "https://docs.pydantic.dev/latest/concepts/fields/",
+      "path": "sources/pydantic_fields/body",
+      "sha256": "4acd53fcf26993a1210374f3162e95e35a32475e7099005596f58562e756e368",
+      "captured_at": "2026-09-29T14:35:31.263022+00:00"
+    },
+    {
+      "id": "pydantic_strict",
+      "url": "https://docs.pydantic.dev/latest/concepts/strict_mode/",
+      "path": "sources/pydantic_strict/body",
+      "sha256": "3cc2f1b8004d578229e12ec25b50e3ac41c9decaf52dc4e1869d0bd5f0819fb2",
+      "captured_at": "2026-09-29T14:35:31.347816+00:00"
+    },
+    {
+      "id": "python_asyncio",
+      "url": "https://docs.python.org/3.12/library/asyncio-task.html",
+      "path": "sources/python_asyncio/body",
+      "sha256": "a72188652dcb97af84b7e6ab3d2187ba9d5f02ff903e80aa8b29bf566d414301",
+      "captured_at": "2026-09-29T14:35:30.359917+00:00"
+    },
+    {
+      "id": "python_futures",
+      "url": "https://docs.python.org/3.12/library/concurrent.futures.html",
+      "path": "sources/python_futures/body",
+      "sha256": "ae2b7586bdeab585ebab7e1b1dd2f6de415789f95800b310fd8ec6ad5308e401",
+      "captured_at": "2026-09-29T14:35:30.360506+00:00"
+    },
+    {
+      "id": "python_queue",
+      "url": "https://docs.python.org/3.12/library/asyncio-queue.html",
+      "path": "sources/python_queue/body",
+      "sha256": "0b550c0dc38e42d424087ba0a75179c1d7435b20d84a577d7bccc6cc11e3bf0a",
+      "captured_at": "2026-09-29T14:35:30.361062+00:00"
+    },
+    {
+      "id": "python_queue_313",
+      "url": "https://docs.python.org/3.13/library/asyncio-queue.html",
+      "path": "sources/python_queue_313/body",
+      "sha256": "f287708e8513e410659b8c4973e9658c351221226001c999f7c49bd28b8d224f",
+      "captured_at": "2026-09-29T14:39:15.288137+00:00"
+    },
+    {
+      "id": "qdrant_collections",
+      "url": "https://qdrant.tech/documentation/concepts/collections/",
+      "path": "sources/qdrant_collections/body",
+      "sha256": "3011e002fd2c92f6aa2802eaa3992e2e7a00c266fa4756a61b43a36fa048fcfe",
+      "captured_at": "2026-09-29T14:35:31.503138+00:00"
+    },
+    {
+      "id": "qdrant_filtering",
+      "url": "https://qdrant.tech/documentation/concepts/filtering/",
+      "path": "sources/qdrant_filtering/body",
+      "sha256": "5942d3f242d24d6f1455f9bbde33e0587d92b9e3c960430b14ca6c6f13f6de97",
+      "captured_at": "2026-09-29T14:35:32.096213+00:00"
+    },
+    {
+      "id": "redis_persistence",
+      "url": "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/",
+      "path": "sources/redis_persistence/body",
+      "sha256": "3f09e798c1fda2079fe59f27b67befdc15c152057149c8a8d7714745a0784eb0",
+      "captured_at": "2026-09-29T14:35:32.226015+00:00"
+    },
+    {
+      "id": "releases_awesome_python",
+      "url": "https://api.github.com/repos/vinta/awesome-python/releases?per_page=10",
+      "path": "sources/releases_awesome_python/body",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "captured_at": "2026-09-29T14:35:37.460606+00:00"
+    },
+    {
+      "id": "releases_celery",
+      "url": "https://api.github.com/repos/celery/celery/releases?per_page=10",
+      "path": "sources/releases_celery/body",
+      "sha256": "4c785215dd5b1ce3aab04d7c57b4e320e33caee588184272e975f4e3bbf521bb",
+      "captured_at": "2026-09-29T14:35:37.291850+00:00"
+    },
+    {
+      "id": "releases_langgraph",
+      "url": "https://api.github.com/repos/langchain-ai/langgraph/releases?per_page=10",
+      "path": "sources/releases_langgraph/body",
+      "sha256": "eb89af064170fc915e20412c45e44e2f6f705580132d4c93526983d4e28423a8",
+      "captured_at": "2026-09-29T14:35:36.376406+00:00"
+    },
+    {
+      "id": "releases_pgvector",
+      "url": "https://api.github.com/repos/pgvector/pgvector/releases?per_page=10",
+      "path": "sources/releases_pgvector/body",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "captured_at": "2026-09-29T14:35:37.096965+00:00"
+    },
+    {
+      "id": "repo_autogpt_plugins",
+      "url": "https://api.github.com/repos/Significant-Gravitas/Auto-GPT-Plugins",
+      "path": "sources/repo_autogpt_plugins/body",
+      "sha256": "971b46d3084319096e9b1eaa640f8fe4b132284e54eab79f5d9251ffe5442223",
+      "captured_at": "2026-09-29T14:35:35.880432+00:00"
+    },
+    {
+      "id": "repo_awesome_python",
+      "url": "https://api.github.com/repos/vinta/awesome-python",
+      "path": "sources/repo_awesome_python/body",
+      "sha256": "bb91638ef8416643598a1ed3c148ee949d1fda31aa8949d838b150b5a829e97a",
+      "captured_at": "2026-09-29T14:35:35.983765+00:00"
+    },
+    {
+      "id": "repo_browser",
+      "url": "https://api.github.com/repos/browser-use/browser-use",
+      "path": "sources/repo_browser/body",
+      "sha256": "a99f1ac25e7265ddc33edab04df7ac5968a04cae508664a0920acb9a5a39ac12",
+      "captured_at": "2026-09-29T14:35:35.142178+00:00"
+    },
+    {
+      "id": "repo_crewai",
+      "url": "https://api.github.com/repos/crewAIInc/crewAI",
+      "path": "sources/repo_crewai/body",
+      "sha256": "7d709af0cf7e718778a51744f7eb2180319f82aee1f1237f3dcaefbabe54a792",
+      "captured_at": "2026-09-29T14:35:35.428989+00:00"
+    },
+    {
+      "id": "repo_fastapi",
+      "url": "https://api.github.com/repos/fastapi/fastapi",
+      "path": "sources/repo_fastapi/body",
+      "sha256": "54d177c076e63cf3ad62feb5c3f54398aeb796de9c57ae6c6dfd9a05d1bac5e4",
+      "captured_at": "2026-09-29T14:35:35.237227+00:00"
+    },
+    {
+      "id": "repo_httpx",
+      "url": "https://api.github.com/repos/encode/httpx",
+      "path": "sources/repo_httpx/body",
+      "sha256": "537c7ec813a6e0aefe62caa97ea206a405b8a153242da88f0489c541e167b09d",
+      "captured_at": "2026-09-29T14:35:35.421495+00:00"
+    },
+    {
+      "id": "repo_langgraph",
+      "url": "https://api.github.com/repos/langchain-ai/langgraph",
+      "path": "sources/repo_langgraph/body",
+      "sha256": "bfbedf5c97e0d110573933d12ab3c1076ea24ac95748b36aa6a94662f89d2f37",
+      "captured_at": "2026-09-29T14:35:34.907820+00:00"
+    },
+    {
+      "id": "repo_old_fastapi",
+      "url": "https://api.github.com/repos/tiangolo/fastapi",
+      "path": "sources/repo_old_fastapi/body",
+      "sha256": "54d177c076e63cf3ad62feb5c3f54398aeb796de9c57ae6c6dfd9a05d1bac5e4",
+      "captured_at": "2026-09-29T14:35:36.255739+00:00"
+    },
+    {
+      "id": "repo_old_langchain",
+      "url": "https://api.github.com/repos/hwchase17/langchain",
+      "path": "sources/repo_old_langchain/body",
+      "sha256": "d3dabbe51783c424369a3d720d28b5eba5a952214006916bdba12be351398495",
+      "captured_at": "2026-09-29T14:35:36.284111+00:00"
+    },
+    {
+      "id": "repo_pgvector",
+      "url": "https://api.github.com/repos/pgvector/pgvector",
+      "path": "sources/repo_pgvector/body",
+      "sha256": "878d6e01d9ad144b4e81b03cbe21cfcb42eb0672744f3fa564c6498671c583e1",
+      "captured_at": "2026-09-29T14:35:35.410943+00:00"
+    },
+    {
+      "id": "repo_pydantic_ai",
+      "url": "https://api.github.com/repos/pydantic/pydantic-ai",
+      "path": "sources/repo_pydantic_ai/body",
+      "sha256": "96826edf69c78d39be29349a90376e74558301753f41ec9537ecfbe66891769d",
+      "captured_at": "2026-09-29T14:35:35.706995+00:00"
+    },
+    {
+      "id": "repo_qdrant",
+      "url": "https://api.github.com/repos/qdrant/qdrant",
+      "path": "sources/repo_qdrant/body",
+      "sha256": "bf843e66acb60290944c70ba89e0ff77696ded366802d40bfe23b8f1a711054a",
+      "captured_at": "2026-09-29T14:35:34.926097+00:00"
+    },
+    {
+      "id": "repo_requests_async",
+      "url": "https://api.github.com/repos/encode/requests-async",
+      "path": "sources/repo_requests_async/body",
+      "sha256": "3800b7cbbfe4ba0ef457300f1cdc7cfff07bb3a51e54f25404b7ecc6eb22ebd3",
+      "captured_at": "2026-09-29T14:35:35.878929+00:00"
+    },
+    {
+      "id": "requests_advanced",
+      "url": "https://requests.readthedocs.io/en/latest/user/advanced/",
+      "path": "sources/requests_advanced/body",
+      "sha256": "c9d568cbdf1700ffcb91e2c20bfab7583a964d51e64cbd27c5e50cf93eed1056",
+      "captured_at": "2026-09-29T14:35:32.987545+00:00"
+    },
+    {
+      "id": "requests_async_readme",
+      "url": "https://raw.githubusercontent.com/encode/requests-async/master/README.md",
+      "path": "sources/requests_async_readme/body",
+      "sha256": "ef174ee1266ca05fe6983a31ae59f6505e85c25a9fb33051ef80fc9735525e2c",
+      "captured_at": "2026-09-29T14:35:34.294892+00:00"
+    },
+    {
+      "id": "sqlite_wal",
+      "url": "https://www.sqlite.org/wal.html",
+      "path": "sources/sqlite_wal/body",
+      "sha256": "f3467b530b883d4a00574fe1a898b3d121ed72764ae28cf66941080ac0badb9e",
+      "captured_at": "2026-09-29T14:35:32.823567+00:00"
+    }
+  ],
+  "faults": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "pydantic_strict",
+  "requested_url": "https://docs.pydantic.dev/latest/concepts/strict_mode/",
+  "final_url": "https://pydantic.dev/docs/validation/latest/concepts/strict_mode/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:31.347816+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:32 GMT",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "sha256": "3cc2f1b8004d578229e12ec25b50e3ac41c9decaf52dc4e1869d0bd5f0819fb2",
+  "bytes": 92625
+}

@@ -1,0 +1,17 @@
+{
+  "id": "pgvector_tags",
+  "requested_url": "https://api.github.com/repos/pgvector/pgvector/tags?per_page=10",
+  "final_url": "https://api.github.com/repos/pgvector/pgvector/tags?per_page=10",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:39:15.289837+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:39:15 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"6dce3f12c17a136501668a61a7f5eac825be3697f61788261042e1546b7233d4\"",
+    "Last-Modified": "Tue, 29 Sep 2026 13:52:23 GMT",
+    "Link": "<https://api.github.com/repositories/359952601/tags?per_page=10&page=2>; rel=\"next\", <https://api.github.com/repositories/359952601/tags?per_page=10&page=5>; rel=\"last\"",
+    "X-RateLimit-Remaining": "22"
+  },
+  "sha256": "ea120bb581ac0c852ca0f4bca31ffc314b3a746962b91db588572407e7caa3a6",
+  "bytes": 4151
+}

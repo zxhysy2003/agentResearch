@@ -1,0 +1,15 @@
+{
+  "id": "docker_depends",
+  "requested_url": "https://docs.docker.com/compose/how-tos/startup-order/",
+  "final_url": "https://docs.docker.com/compose/how-tos/startup-order/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:31.383306+00:00",
+  "headers": {
+    "Content-Type": "text/html",
+    "Date": "Tue, 29 Sep 2026 14:35:33 GMT",
+    "Last-Modified": "Tue, 29 Sep 2026 14:20:20 GMT",
+    "ETag": "\"215eda7932a151ce8aa26e11da66fb99\""
+  },
+  "sha256": "325929791ba27752b5838b7bed4509107b5c7f2a76135512ee87b29f686176a0",
+  "bytes": 525470
+}

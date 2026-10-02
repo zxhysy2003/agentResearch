@@ -1,0 +1,14 @@
+{
+  "id": "redis_persistence",
+  "requested_url": "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/",
+  "final_url": "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:32.226015+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:32 GMT",
+    "Content-Type": "text/html",
+    "Last-Modified": "Mon, 28 Sep 2026 20:53:02 GMT"
+  },
+  "sha256": "3f09e798c1fda2079fe59f27b67befdc15c152057149c8a8d7714745a0784eb0",
+  "bytes": 157850
+}

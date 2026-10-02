@@ -1,0 +1,15 @@
+{
+  "id": "flask_async",
+  "requested_url": "https://flask.palletsprojects.com/en/stable/async-await/",
+  "final_url": "https://flask.palletsprojects.com/en/stable/async-await/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:33.567348+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:34 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "ETag": "W/\"b7c19962f208c1e9c3e4b161d7819b8d\"",
+    "Last-Modified": "Thu, 19 Feb 2026 05:02:22 GMT"
+  },
+  "sha256": "f794743946f033730f2a434258fadfa35dd2f925c505b38ed97743bd16c4f886",
+  "bytes": 14080
+}

@@ -1,0 +1,15 @@
+{
+  "id": "crewai_mcp",
+  "requested_url": "https://docs.crewai.com/en/mcp/overview",
+  "final_url": "https://docs.crewai.com/v1.15.23/en/mcp/overview",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:39:15.507814+00:00",
+  "headers": {
+    "Content-Type": "text/html; charset=utf-8",
+    "Date": "Tue, 29 Sep 2026 14:39:17 GMT",
+    "Etag": "W/\"sc2qyd3qmmj9nu\"",
+    "Link": "</llms.txt>; rel=\"llms-txt\", </llms-full.txt>; rel=\"llms-full-txt\", </.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/mcp/server-card.json>; rel=\"mcp-server-card\", </.well-known/agent-card.json>; rel=\"agent-card\", </.well-known/agent-skills/index.json>; rel=\"agent-skills\""
+  },
+  "sha256": "ffb53235928538fba3c964a1d414b0412067dd47d5e3dc844fc908b7ee7cdfb0",
+  "bytes": 899341
+}

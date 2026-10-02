@@ -1,0 +1,15 @@
+{
+  "id": "qdrant_collections",
+  "requested_url": "https://qdrant.tech/documentation/concepts/collections/",
+  "final_url": "https://qdrant.tech/documentation/manage-data/collections/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:31.503138+00:00",
+  "headers": {
+    "Content-Type": "text/html; charset=UTF-8",
+    "Date": "Tue, 29 Sep 2026 14:35:33 GMT",
+    "Etag": "\"395864d8927945e2e55bf327334ebe68-ssl\"",
+    "Link": "<index.md>; rel=\"alternate\"; type=\"text/markdown\""
+  },
+  "sha256": "3011e002fd2c92f6aa2802eaa3992e2e7a00c266fa4756a61b43a36fa048fcfe",
+  "bytes": 373924
+}

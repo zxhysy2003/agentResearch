@@ -1,0 +1,14 @@
+{
+  "id": "pydantic_ai_readme",
+  "requested_url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/main/README.md",
+  "final_url": "https://raw.githubusercontent.com/pydantic/pydantic-ai/main/README.md",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:34.902186+00:00",
+  "headers": {
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"54050f35f696778a4c2aca1d430909be8c0aadb16f4748ca96d42845988ae073\"",
+    "Date": "Tue, 29 Sep 2026 14:35:35 GMT"
+  },
+  "sha256": "518369670ea0a105252618e453e6f14462dcfa179ce9c391ea7f3f764830a5bf",
+  "bytes": 22830
+}

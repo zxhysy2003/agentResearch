@@ -1,0 +1,13 @@
+{
+  "id": "fastapi_background",
+  "requested_url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+  "final_url": "https://fastapi.tiangolo.com/tutorial/background-tasks/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:30.361903+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:31 GMT",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "sha256": "54fa5fe46d5898e9215e54a8f672caf624f7bc4e9dd6deba487e64e4c248ef01",
+  "bytes": 124250
+}

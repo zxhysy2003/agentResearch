@@ -1,0 +1,16 @@
+{
+  "id": "releases_fastapi",
+  "requested_url": "https://api.github.com/repos/fastapi/fastapi/releases?per_page=10",
+  "final_url": "https://api.github.com/repos/fastapi/fastapi/releases?per_page=10",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:36.491101+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"55057a5b88c7cb37ee7c1ec0c757602588e9d16e8d12ff55ccd190cc005f697e\"",
+    "Link": "<https://api.github.com/repositories/160919119/releases?per_page=10&page=2>; rel=\"next\", <https://api.github.com/repositories/160919119/releases?per_page=10&page=30>; rel=\"last\"",
+    "X-RateLimit-Remaining": "34"
+  },
+  "sha256": "50890424846ad87eb899af9caf6f08340a95658778af57ee76a8f6234635b347",
+  "bytes": 25169
+}

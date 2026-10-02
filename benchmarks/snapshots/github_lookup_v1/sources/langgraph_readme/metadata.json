@@ -1,0 +1,14 @@
+{
+  "id": "langgraph_readme",
+  "requested_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/main/README.md",
+  "final_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/main/README.md",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:34.389368+00:00",
+  "headers": {
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"3456c05f33c69e739849c0292cd376f8f12f134823f128fbe89e9a7cf13fe004\"",
+    "Date": "Tue, 29 Sep 2026 14:35:34 GMT"
+  },
+  "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+  "bytes": 6395
+}

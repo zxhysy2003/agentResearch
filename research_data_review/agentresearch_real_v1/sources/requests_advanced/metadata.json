@@ -1,0 +1,15 @@
+{
+  "id": "requests_advanced",
+  "requested_url": "https://requests.readthedocs.io/en/latest/user/advanced/",
+  "final_url": "https://requests.readthedocs.io/en/latest/user/advanced/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:32.987545+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:33 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "ETag": "W/\"672693f29a02faf4ab944a2f90fc8911\"",
+    "Last-Modified": "Mon, 21 Sep 2026 20:23:23 GMT"
+  },
+  "sha256": "c9d568cbdf1700ffcb91e2c20bfab7583a964d51e64cbd27c5e50cf93eed1056",
+  "bytes": 111924
+}

@@ -1,0 +1,1414 @@
+[
+  {
+    "case_id": "github_lookup_01",
+    "title": "FastAPI stars",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_fastapi",
+        "pointer": "/stargazers_count",
+        "value": 102713
+      }
+    ]
+  },
+  {
+    "case_id": "github_lookup_02",
+    "title": "Qdrant 主语言",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_qdrant",
+        "pointer": "/language",
+        "value": "Rust"
+      }
+    ]
+  },
+  {
+    "case_id": "github_lookup_03",
+    "title": "HTTPX 许可证标识",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_httpx",
+        "pointer": "/license/spdx_id",
+        "value": "BSD-3-Clause"
+      }
+    ]
+  },
+  {
+    "case_id": "github_lookup_04",
+    "title": "Browser Use 最新 Release",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "latest_browser",
+        "pointer": "/tag_name",
+        "value": "0.13.10"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_browser",
+        "pointer": "/published_at",
+        "value": "2026-09-04T03:28:53Z"
+      }
+    ]
+  },
+  {
+    "case_id": "github_lookup_05",
+    "title": "Pydantic 最新 Release",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "latest_pydantic",
+        "pointer": "/tag_name",
+        "value": "v2.13.5"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_pydantic",
+        "pointer": "/published_at",
+        "value": "2026-08-28T14:06:45Z"
+      }
+    ]
+  },
+  {
+    "case_id": "github_lookup_06",
+    "title": "Qdrant Release 发布时间",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "latest_qdrant",
+        "pointer": "/tag_name",
+        "value": "v1.19.1"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_qdrant",
+        "pointer": "/published_at",
+        "value": "2026-09-04T07:59:14Z"
+      }
+    ]
+  },
+  {
+    "case_id": "github_lookup_07",
+    "title": "HTTPX 已关闭 bug",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "issues_httpx",
+        "pointer": "/0/number",
+        "value": 1171
+      },
+      {
+        "kind": "json_pointer",
+        "source": "issues_httpx",
+        "pointer": "/0/title",
+        "value": "PoolTimeout when num tasks in asyncio.gather() exceeds client max_connections"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "issues_httpx",
+        "pointer": "/0/closed_at",
+        "value": "2024-02-12T11:20:32Z"
+      }
+    ]
+  },
+  {
+    "case_id": "github_lookup_08",
+    "title": "Browser Use Python 安装说明",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "browser_readme",
+        "anchor": "Python >= 3.11",
+        "line": 99
+      },
+      {
+        "kind": "text_anchor",
+        "source": "browser_readme",
+        "anchor": "uv init --python 3.12",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "case_id": "github_lookup_09",
+    "title": "LangGraph README 能力",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "langgraph_readme",
+        "anchor": "Durable execution",
+        "line": 39
+      },
+      {
+        "kind": "text_anchor",
+        "source": "langgraph_readme",
+        "anchor": "Human-in-the-loop",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "case_id": "github_lookup_10",
+    "title": "CrewAI 仓库身份",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_crewai",
+        "pointer": "/full_name",
+        "value": "crewAIInc/crewAI"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_crewai",
+        "pointer": "/default_branch",
+        "value": "main"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_crewai",
+        "pointer": "/license/spdx_id",
+        "value": "MIT"
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_01",
+    "title": "asyncio.gather 异常",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "python_asyncio",
+        "anchor": "Other awaitables",
+        "line": 1141
+      },
+      {
+        "kind": "text_anchor",
+        "source": "python_asyncio",
+        "anchor": "exceptions are treated the\nsame as successful",
+        "line": 1150
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_02",
+    "title": "FastAPI BackgroundTasks",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_background",
+        "anchor": "after\nreturning a response",
+        "line": 231
+      },
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_background",
+        "anchor": "async def\nor normal",
+        "line": 348
+      },
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_background",
+        "anchor": "multiple processes",
+        "line": 889
+      },
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_background",
+        "anchor": "small background tasks",
+        "line": 892
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_03",
+    "title": "Qdrant 距离度量",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "qdrant_collections",
+        "anchor": "Manhattan distance",
+        "line": 248
+      },
+      {
+        "kind": "text_anchor",
+        "source": "qdrant_collections",
+        "anchor": "automatically normalized",
+        "line": 252
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_04",
+    "title": "Pydantic 正整数列表",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "pydantic_fields",
+        "anchor": "int_list: list[Annotated[int, Field(gt=0)]]",
+        "line": 291
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_05",
+    "title": "Compose 就绪条件",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "docker_depends",
+        "anchor": "only until",
+        "line": 999
+      },
+      {
+        "kind": "text_anchor",
+        "source": "docker_depends",
+        "anchor": "service_completed_successfully",
+        "line": 1008
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_06",
+    "title": "pgvector 距离算子",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_readme",
+        "anchor": "Supported distance functions",
+        "line": 138
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_readme",
+        "anchor": "negative inner product",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_07",
+    "title": "HTTPX 异步客户端生命周期",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "httpx_async",
+        "anchor": "hot loop",
+        "line": 146
+      },
+      {
+        "kind": "text_anchor",
+        "source": "httpx_async",
+        "anchor": "await client.aclose()",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_08",
+    "title": "Redis 持久化",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "redis_persistence",
+        "anchor": "point-in-time snapshots",
+        "line": 161
+      },
+      {
+        "kind": "text_anchor",
+        "source": "redis_persistence",
+        "anchor": "RDB + AOF",
+        "line": 166
+      },
+      {
+        "kind": "text_anchor",
+        "source": "redis_persistence",
+        "anchor": "one second worth of writes",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_09",
+    "title": "PostgreSQL 索引类型",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "postgres_indexes",
+        "anchor": "By default",
+        "line": 90
+      },
+      {
+        "kind": "text_anchor",
+        "source": "postgres_indexes",
+        "anchor": "inverted",
+        "line": 198
+      },
+      {
+        "kind": "text_anchor",
+        "source": "postgres_indexes",
+        "anchor": "well-correlated",
+        "line": 216
+      }
+    ]
+  },
+  {
+    "case_id": "official_docs_10",
+    "title": "SQLite WAL 限制",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "sqlite_wal",
+        "anchor": "readers do not block writers",
+        "line": 55
+      },
+      {
+        "kind": "text_anchor",
+        "source": "sqlite_wal",
+        "anchor": "only be one writer",
+        "line": 206
+      },
+      {
+        "kind": "text_anchor",
+        "source": "sqlite_wal",
+        "anchor": "same host computer",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_01",
+    "title": "Requests vs HTTPX 异步请求",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "requests_advanced",
+        "anchor": "does not provide any kind\nof non-blocking IO",
+        "line": 2250
+      },
+      {
+        "kind": "text_anchor",
+        "source": "httpx_async",
+        "anchor": "AsyncClient.stream(method, url, ...)",
+        "line": 164
+      },
+      {
+        "kind": "text_anchor",
+        "source": "requests_advanced",
+        "anchor": "within a session",
+        "line": 170
+      },
+      {
+        "kind": "text_anchor",
+        "source": "httpx_async",
+        "anchor": "hot loop",
+        "line": 146
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_02",
+    "title": "BackgroundTasks vs Celery",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_background",
+        "anchor": "Celery",
+        "line": 887
+      },
+      {
+        "kind": "text_anchor",
+        "source": "celery_tasks",
+        "anchor": "worker",
+        "line": 24
+      },
+      {
+        "kind": "text_anchor",
+        "source": "celery_tasks",
+        "anchor": "idempotent",
+        "line": 34
+      },
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_background",
+        "anchor": "message/job queue",
+        "line": 889
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_03",
+    "title": "FastAPI vs Flask 后台工作",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_background",
+        "anchor": "after\nreturning a response",
+        "line": 231
+      },
+      {
+        "kind": "text_anchor",
+        "source": "flask_async",
+        "anchor": "will be cancelled",
+        "line": 90
+      },
+      {
+        "kind": "text_anchor",
+        "source": "flask_async",
+        "anchor": "WsgiToAsgi",
+        "line": 97
+      },
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_background",
+        "anchor": "Celery",
+        "line": 887
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_04",
+    "title": "Qdrant vs pgvector 向量检索",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "qdrant_collections",
+        "anchor": "Manhattan",
+        "line": 248
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_readme",
+        "anchor": "Jaccard",
+        "line": 9
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_readme",
+        "anchor": "CREATE EXTENSION",
+        "line": 58
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_readme",
+        "anchor": "where",
+        "line": 55
+      },
+      {
+        "kind": "text_anchor",
+        "source": "qdrant_filtering",
+        "anchor": "you can impose conditions on both the",
+        "line": 231
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_05",
+    "title": "Docker volume vs bind mount",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "docker_volumes",
+        "anchor": "managed by\nDocker",
+        "line": 1009
+      },
+      {
+        "kind": "text_anchor",
+        "source": "docker_bind",
+        "anchor": "directory on the host",
+        "line": 994
+      },
+      {
+        "kind": "text_anchor",
+        "source": "docker_bind",
+        "anchor": "write access",
+        "line": 1027
+      },
+      {
+        "kind": "text_anchor",
+        "source": "docker_volumes",
+        "anchor": "remove the container",
+        "line": 1094
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_06",
+    "title": "asyncio.gather vs futures.as_completed",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "python_asyncio",
+        "anchor": "order of awaitables",
+        "line": 1130
+      },
+      {
+        "kind": "text_anchor",
+        "source": "python_futures",
+        "anchor": "Returns an iterator over the",
+        "line": 1319
+      },
+      {
+        "kind": "text_anchor",
+        "source": "python_asyncio",
+        "anchor": "automatically\nscheduled as a Task",
+        "line": 1126
+      },
+      {
+        "kind": "text_anchor",
+        "source": "python_futures",
+        "anchor": "pool of\nthreads",
+        "line": 344
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_07",
+    "title": "LangGraph vs CrewAI 编排",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "langgraph_readme",
+        "anchor": "Human-in-the-loop",
+        "line": 40
+      },
+      {
+        "kind": "text_anchor",
+        "source": "crewai_readme",
+        "anchor": "CrewAI Flows",
+        "line": 62
+      },
+      {
+        "kind": "text_anchor",
+        "source": "langgraph_readme",
+        "anchor": "stateful",
+        "line": 12
+      },
+      {
+        "kind": "text_anchor",
+        "source": "crewai_readme",
+        "anchor": "event-driven",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_08",
+    "title": "Pydantic 默认转换 vs strict",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "pydantic_strict",
+        "anchor": "'123'",
+        "line": 172
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pydantic_fields",
+        "anchor": "strict=True",
+        "line": 244
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pydantic_strict",
+        "anchor": "looser rules may apply",
+        "line": 185
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pydantic_fields",
+        "anchor": "name: str = Field(strict=True)",
+        "line": 733
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_09",
+    "title": "SQLite WAL vs Redis 持久化",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "sqlite_wal",
+        "anchor": "only be one writer",
+        "line": 206
+      },
+      {
+        "kind": "text_anchor",
+        "source": "redis_persistence",
+        "anchor": "point-in-time snapshots",
+        "line": 161
+      },
+      {
+        "kind": "text_anchor",
+        "source": "sqlite_wal",
+        "anchor": "same host computer",
+        "line": 62
+      },
+      {
+        "kind": "text_anchor",
+        "source": "redis_persistence",
+        "anchor": "one second worth",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "case_id": "comparison_10",
+    "title": "HTTP 流式响应 vs WebSocket",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_streaming",
+        "anchor": "normal generator/iterator",
+        "line": 944
+      },
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_websockets",
+        "anchor": "receive_text",
+        "line": 362
+      },
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_streaming",
+        "anchor": "streams the response body",
+        "line": 946
+      },
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_websockets",
+        "anchor": "accept",
+        "line": 352
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_01",
+    "title": "Python Agent 项目版本比较",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_browser",
+        "pointer": "/full_name",
+        "value": "browser-use/browser-use"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_browser",
+        "pointer": "/language",
+        "value": "Python"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_browser",
+        "pointer": "/license/spdx_id",
+        "value": "MIT"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_browser",
+        "pointer": "/tag_name",
+        "value": "0.13.10"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_browser",
+        "pointer": "/published_at",
+        "value": "2026-09-04T03:28:53Z"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_crewai",
+        "pointer": "/full_name",
+        "value": "crewAIInc/crewAI"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_crewai",
+        "pointer": "/language",
+        "value": "Python"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_crewai",
+        "pointer": "/license/spdx_id",
+        "value": "MIT"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_crewai",
+        "pointer": "/tag_name",
+        "value": "1.15.23"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_crewai",
+        "pointer": "/published_at",
+        "value": "2026-09-28T21:14:32Z"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_pydantic_ai",
+        "pointer": "/full_name",
+        "value": "pydantic/pydantic-ai"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_pydantic_ai",
+        "pointer": "/language",
+        "value": "Python"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_pydantic_ai",
+        "pointer": "/license/spdx_id",
+        "value": "MIT"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_pydantic_ai",
+        "pointer": "/tag_name",
+        "value": "v2.51.0"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_pydantic_ai",
+        "pointer": "/published_at",
+        "value": "2026-09-25T23:19:04Z"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "latest_crewai",
+        "anchor": "2026-09-28T21:14:32Z",
+        "line": 1
+      },
+      {
+        "kind": "text_anchor",
+        "source": "latest_pydantic_ai",
+        "anchor": "2026-09-25T23:19:04Z",
+        "line": 1
+      },
+      {
+        "kind": "text_anchor",
+        "source": "latest_browser",
+        "anchor": "2026-09-04T03:28:53Z",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_02",
+    "title": "向量项目实现与能力关联",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_qdrant",
+        "pointer": "/full_name",
+        "value": "qdrant/qdrant"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_qdrant",
+        "pointer": "/language",
+        "value": "Rust"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_pgvector",
+        "pointer": "/full_name",
+        "value": "pgvector/pgvector"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_pgvector",
+        "pointer": "/language",
+        "value": "C"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "qdrant_collections",
+        "anchor": "Cosine",
+        "line": 240
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_readme",
+        "anchor": "CREATE EXTENSION",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_03",
+    "title": "从归档项目追踪替代库",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_requests_async",
+        "pointer": "/archived",
+        "value": true
+      },
+      {
+        "kind": "text_anchor",
+        "source": "requests_async_readme",
+        "anchor": "httpx.AsyncClient()",
+        "line": 3
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_httpx",
+        "pointer": "/full_name",
+        "value": "encode/httpx"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_httpx",
+        "pointer": "/license/spdx_id",
+        "value": "BSD-3-Clause"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_httpx",
+        "pointer": "/tag_name",
+        "value": "0.28.1"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_httpx",
+        "pointer": "/published_at",
+        "value": "2024-12-06T15:36:24Z"
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_04",
+    "title": "Browser Use Python 版本交叉核验",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "browser_readme",
+        "anchor": "Python >= 3.11",
+        "line": 99
+      },
+      {
+        "kind": "text_anchor",
+        "source": "browser_readme",
+        "anchor": "uv init --python 3.12",
+        "line": 101
+      },
+      {
+        "kind": "text_anchor",
+        "source": "browser_pyproject",
+        "anchor": "requires-python = \">=3.11,<4.0\"",
+        "line": 7
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_browser",
+        "pointer": "/tag_name",
+        "value": "0.13.10"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_browser",
+        "pointer": "/published_at",
+        "value": "2026-09-04T03:28:53Z"
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_05",
+    "title": "LangGraph 持久化与仓库确认",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "langgraph_persistence",
+        "anchor": "short-term memory",
+        "line": 84
+      },
+      {
+        "kind": "text_anchor",
+        "source": "langgraph_persistence",
+        "anchor": "Pass a\nthread_id",
+        "line": 187
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_langgraph",
+        "pointer": "/full_name",
+        "value": "langchain-ai/langgraph"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_langgraph",
+        "pointer": "/license/spdx_id",
+        "value": "MIT"
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_06",
+    "title": "CrewAI MCP 支持与版本",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "crewai_mcp",
+        "anchor": "Stdio Transport (Local Servers)",
+        "line": 550
+      },
+      {
+        "kind": "text_anchor",
+        "source": "crewai_mcp",
+        "anchor": "Utilize flexible Streamable HTTP",
+        "line": 1501
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_crewai",
+        "pointer": "/language",
+        "value": "Python"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_crewai",
+        "pointer": "/tag_name",
+        "value": "1.15.23"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_crewai",
+        "pointer": "/published_at",
+        "value": "2026-09-28T21:14:32Z"
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_07",
+    "title": "Pydantic AI MCP 支持与版本",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "pydantic_ai_mcp",
+        "anchor": "can connect to MCP servers and use their tools",
+        "line": 392
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pydantic_ai_readme",
+        "anchor": "capabilities=[MCP(",
+        "line": 173
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_pydantic_ai",
+        "pointer": "/language",
+        "value": "Python"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_pydantic_ai",
+        "pointer": "/license/spdx_id",
+        "value": "MIT"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_pydantic_ai",
+        "pointer": "/tag_name",
+        "value": "v2.51.0"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_pydantic_ai",
+        "pointer": "/published_at",
+        "value": "2026-09-25T23:19:04Z"
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_08",
+    "title": "Celery 稳定版与消息语义",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "releases_celery",
+        "pointer": "/0/tag_name",
+        "value": "v5.7.0a1"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "releases_celery",
+        "pointer": "/0/prerelease",
+        "value": true
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_celery",
+        "pointer": "/tag_name",
+        "value": "v5.6.3"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_celery",
+        "pointer": "/published_at",
+        "value": "2026-03-26T12:21:23Z"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "celery_tasks",
+        "anchor": "idempotent",
+        "line": 34
+      },
+      {
+        "kind": "text_anchor",
+        "source": "celery_tasks",
+        "anchor": "even when",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_09",
+    "title": "pgvector 发布渠道与兼容性",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "releases_pgvector",
+        "pointer": "",
+        "value": []
+      },
+      {
+        "kind": "json_pointer",
+        "source": "pgvector_tags",
+        "pointer": "/0/name",
+        "value": "v0.8.6"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_readme",
+        "anchor": "supports Postgres 13+",
+        "line": 22
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_tags",
+        "anchor": "v0.8.6",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "case_id": "multi_hop_10",
+    "title": "FastAPI 仓库迁移后查版本",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_old_fastapi",
+        "pointer": "/full_name",
+        "value": "fastapi/fastapi"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_fastapi",
+        "pointer": "/tag_name",
+        "value": "0.141.1"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_fastapi",
+        "pointer": "/published_at",
+        "value": "2026-07-29T17:17:26Z"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "fastapi_background",
+        "anchor": "async def\nor normal",
+        "line": 348
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_01",
+    "title": "归档不等于不存在",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_requests_async",
+        "pointer": "/archived",
+        "value": true
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_requests_async",
+        "pointer": "/full_name",
+        "value": "encode/requests-async"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "requests_async_readme",
+        "anchor": "httpx.AsyncClient()",
+        "line": 3
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_02",
+    "title": "Auto-GPT-Plugins 归档状态",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_autogpt_plugins",
+        "pointer": "/archived",
+        "value": true
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_autogpt_plugins",
+        "pointer": "/default_branch",
+        "value": "master"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "repo_autogpt_plugins",
+        "pointer": "/language",
+        "value": "Python"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "repo_autogpt_plugins",
+        "anchor": "Significant-Gravitas/Auto-GPT-Plugins",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_03",
+    "title": "pgvector 没有 Release 但有 tag",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "releases_pgvector",
+        "pointer": "",
+        "value": []
+      },
+      {
+        "kind": "json_pointer",
+        "source": "pgvector_tags",
+        "pointer": "/0/name",
+        "value": "v0.8.6"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_tags",
+        "anchor": "v0.8.6",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_04",
+    "title": "awesome-python 没有 Release",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "releases_awesome_python",
+        "pointer": "",
+        "value": []
+      },
+      {
+        "kind": "text_anchor",
+        "source": "repo_awesome_python",
+        "anchor": "vinta/awesome-python",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_05",
+    "title": "FastAPI 旧 owner",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_old_fastapi",
+        "pointer": "/full_name",
+        "value": "fastapi/fastapi"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "repo_old_fastapi",
+        "anchor": "fastapi/fastapi",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_06",
+    "title": "LangChain 旧 owner",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_old_langchain",
+        "pointer": "/full_name",
+        "value": "langchain-ai/langchain"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "repo_old_langchain",
+        "anchor": "langchain-ai/langchain",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_07",
+    "title": "LangGraph 组件与 prerelease 标志",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "releases_langgraph",
+        "pointer": "/0/tag_name",
+        "value": "cli==0.4.32.dev0"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "releases_langgraph",
+        "pointer": "/0/prerelease",
+        "value": false
+      },
+      {
+        "kind": "text_anchor",
+        "source": "releases_langgraph",
+        "anchor": "cli==0.4.32.dev0",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_08",
+    "title": "Celery 预发布混入列表",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "releases_celery",
+        "pointer": "/0/tag_name",
+        "value": "v5.7.0a1"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "releases_celery",
+        "pointer": "/0/prerelease",
+        "value": true
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_celery",
+        "pointer": "/tag_name",
+        "value": "v5.6.3"
+      },
+      {
+        "kind": "json_pointer",
+        "source": "latest_celery",
+        "pointer": "/published_at",
+        "value": "2026-03-26T12:21:23Z"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "releases_celery",
+        "anchor": "v5.7.0a1",
+        "line": 1
+      },
+      {
+        "kind": "text_anchor",
+        "source": "latest_celery",
+        "anchor": "v5.6.3",
+        "line": 1
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_09",
+    "title": "NOASSERTION 不等于无许可证",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "json_pointer",
+        "source": "repo_pgvector",
+        "pointer": "/license/spdx_id",
+        "value": "NOASSERTION"
+      },
+      {
+        "kind": "text_anchor",
+        "source": "pgvector_license",
+        "anchor": "Permission to use, copy, modify, and distribute",
+        "line": 5
+      }
+    ]
+  },
+  {
+    "case_id": "edge_case_10",
+    "title": "Python 3.12 误用 3.13 API",
+    "review_status": "pending_human_review",
+    "checks": [
+      {
+        "kind": "text_anchor",
+        "source": "python_queue_313",
+        "anchor": "Added in version 3.13",
+        "line": 255
+      },
+      {
+        "kind": "text_anchor",
+        "source": "python_queue",
+        "anchor": "Queue",
+        "line": 1
+      }
+    ]
+  }
+]

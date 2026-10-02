@@ -1,0 +1,16 @@
+{
+  "id": "repo_httpx",
+  "requested_url": "https://api.github.com/repos/encode/httpx",
+  "final_url": "https://api.github.com/repos/encode/httpx",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:35.421495+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:36 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"ec3226663d52e797383e7d61d3e4fb2c2f2522ea2f87d26d9ea8aecd1df98ac8\"",
+    "Last-Modified": "Tue, 29 Sep 2026 08:46:11 GMT",
+    "X-RateLimit-Remaining": "47"
+  },
+  "sha256": "537c7ec813a6e0aefe62caa97ea206a405b8a153242da88f0489c541e167b09d",
+  "bytes": 6063
+}

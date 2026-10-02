@@ -1,0 +1,15 @@
+{
+  "id": "python_futures",
+  "requested_url": "https://docs.python.org/3.12/library/concurrent.futures.html",
+  "final_url": "https://docs.python.org/3.12/library/concurrent.futures.html",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:30.360506+00:00",
+  "headers": {
+    "content-type": "text/html",
+    "last-modified": "Wed, 16 Sep 2026 13:40:14 GMT",
+    "etag": "\"6aaa9c3e-161da\"",
+    "Date": "Tue, 29 Sep 2026 14:35:31 GMT"
+  },
+  "sha256": "ae2b7586bdeab585ebab7e1b1dd2f6de415789f95800b310fd8ec6ad5308e401",
+  "bytes": 90586
+}

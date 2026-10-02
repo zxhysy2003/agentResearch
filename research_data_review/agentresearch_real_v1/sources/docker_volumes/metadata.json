@@ -1,0 +1,15 @@
+{
+  "id": "docker_volumes",
+  "requested_url": "https://docs.docker.com/engine/storage/volumes/",
+  "final_url": "https://docs.docker.com/engine/storage/volumes/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:31.410332+00:00",
+  "headers": {
+    "Content-Type": "text/html",
+    "Date": "Tue, 29 Sep 2026 14:34:31 GMT",
+    "Last-Modified": "Tue, 29 Sep 2026 14:20:44 GMT",
+    "ETag": "\"cf9a7f70fb65c94718d1327324858b5b\""
+  },
+  "sha256": "274dc8568ffa1599513a1b4656facfca027d997e82dc3b85cd7410839dc997b8",
+  "bytes": 673535
+}

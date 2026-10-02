@@ -1,0 +1,14 @@
+{
+  "id": "browser_readme",
+  "requested_url": "https://raw.githubusercontent.com/browser-use/browser-use/main/README.md",
+  "final_url": "https://raw.githubusercontent.com/browser-use/browser-use/main/README.md",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:34.768675+00:00",
+  "headers": {
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"372132f707f3d8aba565a14bb9d0a962941339f11125457c575786bf8769a56d\"",
+    "Date": "Tue, 29 Sep 2026 14:35:35 GMT"
+  },
+  "sha256": "0cf61424017e5d88361b33dcbc6e1326c9eb52a1501e857caebe92b80f78f64f",
+  "bytes": 14959
+}

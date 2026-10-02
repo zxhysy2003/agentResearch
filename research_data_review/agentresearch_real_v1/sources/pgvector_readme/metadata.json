@@ -1,0 +1,14 @@
+{
+  "id": "pgvector_readme",
+  "requested_url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+  "final_url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:32.158204+00:00",
+  "headers": {
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"d902b00174e07ed03f2d26cb392944f5d1f1dab77db728f3ef32f759c961776d\"",
+    "Date": "Tue, 29 Sep 2026 14:35:32 GMT"
+  },
+  "sha256": "54cb3a5f4344308476cb2378469ac77d10fbff415d1b5be66608bb386ce8f527",
+  "bytes": 42305
+}

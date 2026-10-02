@@ -1,0 +1,16 @@
+{
+  "id": "repo_autogpt_plugins",
+  "requested_url": "https://api.github.com/repos/Significant-Gravitas/Auto-GPT-Plugins",
+  "final_url": "https://api.github.com/repos/Significant-Gravitas/Auto-GPT-Plugins",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:35.880432+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:36 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"99c45c719b4cb50c3bb848e441ed65d0e412818face4c346a9c1412a01b27732\"",
+    "Last-Modified": "Mon, 28 Sep 2026 07:22:33 GMT",
+    "X-RateLimit-Remaining": "41"
+  },
+  "sha256": "971b46d3084319096e9b1eaa640f8fe4b132284e54eab79f5d9251ffe5442223",
+  "bytes": 7259
+}

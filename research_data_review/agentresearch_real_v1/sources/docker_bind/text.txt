@@ -1,0 +1,1700 @@
+Bind mounts | Docker Docs
+Get started
+Guides
+Manuals
+Reference
+Gordon
+Gordon, your AI assistant for Docker docs
+Search
+Start a new chat
+What can I help you with?
+I'm Gordon, your AI assistant for Docker and documentation
+questions.
+Try asking
+Get started with Docker
+Docker Hardened Images
+MCP Toolkit
+Create an org
+Was this helpful?
+Helpful
+Not quite
+Copy
+remaining in this thread.
+You've reached the maximum of
+questions per thread. For
+better answer quality, start a new thread.
+Start a new thread
+When enabled, Gordon considers the current page you're viewing
+to provide more relevant answers.
+Share feedback
+Answers are generated based on the documentation.
+Back
+Manuals
+Get started
+Guides
+Reference
+AI and agents
+Overview
+Docker Agentic Platform
+Experimental
+Sign up
+Get started
+Kits
+Sandboxes
+MCP
+Secrets
+Policies
+FAQ
+Release notes
+Docker Sandboxes
+Install
+Get started locally
+Usage
+Cloud sandboxes
+Experimental
+Local and cloud
+Use cloud sandboxes
+Credentials
+Network policy
+Move a sandbox
+Agents
+Claude Code
+Codex
+Copilot
+Cursor
+Devin
+Docker Agent
+Droid
+Gemini
+Kiro
+OpenCode
+Shell
+Workflows
+Git workflows
+Local development
+Authenticate tools
+Agent skills
+CI and headless
+Configuration
+Settings
+Credentials
+Models
+Environment files
+Experimental
+GPU passthrough
+Upstream proxy
+Registry mirror
+Integrations
+VS Code
+Cursor
+Claude Desktop
+ChatGPT
+T3 Code
+MCP gateway
+Kits
+Use kits
+Author kits
+Compose a kit set
+Base images
+Build an agent workload
+Build a tool mixin
+Authoring patterns
+Build and distribute kits
+Kits v2
+Architecture
+Security model
+Isolation layers
+Defaults
+Governance
+Policy concepts
+Access controls
+Local policy
+Org policies
+Network access
+Filesystem access
+MCP access
+Audit logs
+Local audit logs
+Configure delivery
+View and export
+SIEM forwarding
+Record reference
+Monitor and enforce
+Monitoring policies
+Sign-in enforcement
+Reference
+API reference
+MCP policy
+Troubleshooting
+FAQ
+Release notes
+Sandboxes API and SDK
+Experimental
+Install the SDK
+Get started
+API concepts
+Authentication and authorization
+Errors and retries
+Compute sizes and limits
+Cookbook
+API reference
+Model Runner
+Get started with DMR
+DMR REST API
+Configuration options
+DMR examples
+IDE and tool integrations
+Open WebUI integration
+Inference engines
+Gordon
+Use cases
+Concepts
+Capabilities
+Data privacy
+How-to guides
+Docker Desktop
+CLI
+Permissions
+Configure tools
+Usage limits
+Docker Agent
+Getting Started
+Introduction
+Installation
+Set Up a Model
+Quick Start
+Core Concepts
+Agents
+Models
+Tools
+Multi-Agent
+Agent Distribution
+Configuration
+Overview
+HCL Configuration
+Agent Config
+Model Config
+Tool Config
+Custom Commands
+Hooks
+Permissions
+Budget
+Ignoring files
+Sandbox Mode
+Structured Output
+Flavors
+Model Routing
+User Settings
+Built-in Tools
+Filesystem
+Shell
+Background Jobs
+Script
+Open URL
+Fetch
+A2A
+Handoff
+Transfer Task
+Background Agents
+Memory
+RAG
+MCP Catalog
+Git
+MCP
+Scheduler
+Think
+Webhook
+Plan
+Session Plan
+Todo
+Tasks
+User Prompt
+Model Picker
+Session Context
+LSP
+OpenAPI
+API
+Features
+Terminal UI
+Kanban Board
+Snapshots
+Sessions
+CLI Reference
+MCP Mode
+Coding Harnesses
+A2A Protocol
+ACP
+API Server
+Chat Server
+Evaluation
+Skills
+Code Mode
+Remote MCP Servers
+Model Providers
+Overview
+Anthropic
+AWS Bedrock
+Baseten
+Cerebras
+ChatGPT (OpenAI account)
+Cloudflare AI Gateway
+Cloudflare Workers AI
+DeepSeek
+Docker Model Runner
+Fireworks AI
+GitHub Copilot
+Google Gemini
+Groq
+Hugging Face
+Local Models
+MiniMax
+Mistral
+Moonshot AI
+Nebius
+OpenAI
+OpenCode Go
+OpenCode Zen
+OpenRouter
+OVHcloud
+Together AI
+Vercel AI Gateway
+xAI (Grok)
+Provider Definitions
+NVIDIA NIM
+Guides
+Tips & Best Practices
+Thinking / Reasoning
+Managing Secrets
+Go SDK
+Managing Context & Compaction
+Running Agents Headless & in CI
+Community
+Contributing
+Troubleshooting
+Telemetry
+OpenTelemetry Tracing
+Docker Skills
+Install
+Application development
+Docker Desktop
+Setup
+Install
+Mac
+Mac permission requirements
+Windows
+Windows permission requirements
+Linux
+Ubuntu
+Debian
+Fedora
+Arch
+RHEL
+VM or VDI environments
+Sign in
+Explore Docker Desktop
+Containers
+Images
+Volumes
+Builds
+Kubernetes
+Logs
+Resource Saver mode
+Features and capabilities
+MCP Catalog and Toolkit
+Beta
+Get started
+Catalog
+Profiles
+Toolkit UI
+Use with CLI
+Dynamic discovery
+Gateway
+FAQs
+E2B sandboxes
+Networking
+How-tos
+GPU support
+USB/IP support
+Synchronized file shares
+containerd image store
+Wasm workloads
+Beta
+Docker Desktop CLI
+Virtual Machine Manager
+Updated
+WSL
+Best practices
+Custom kernels
+Use WSL
+Settings and maintenance
+Change settings
+Backup and restore data
+Troubleshoot and support
+Troubleshoot and diagnose
+Common topics
+FAQs
+General
+Mac
+Windows
+Linux
+Releases
+Give feedback
+Uninstall
+Release notes
+Enterprise
+Deploy Docker Desktop
+MSI installer
+PKG installer
+MS Store
+Deploy with Intune
+Deploy with Jamf Pro
+Microsoft Dev Box
+FAQs
+Allowlist
+Enforce sign-in
+Configure
+Hardened Docker Desktop
+Enhanced Container Isolation
+Enable ECI
+Configure advanced settings
+Limitations
+FAQs
+Settings Management
+Use a JSON file
+Use Docker Home
+Desktop settings reporting
+Settings reference
+Air-gapped containers
+Registry Access Management
+Image Access Management
+Namespace access
+Manage unassociated machines
+Docker Engine
+Install
+Ubuntu
+Debian
+RHEL
+Fedora
+Raspberry Pi OS (32-bit / armhf)
+CentOS
+Binaries
+Post-installation steps
+Storage
+Volumes
+Bind mounts
+tmpfs mounts
+Image mounts
+Storage drivers
+Select a storage driver
+BTRFS storage driver
+Device Mapper storage driver (deprecated)
+OverlayFS storage driver
+VFS storage driver
+windowsfilter storage driver
+ZFS storage driver
+containerd image store
+Networking
+Docker with iptables
+Docker with nftables
+Packet filtering and firewalls
+Port publishing and mapping
+Network drivers
+Bridge network driver
+Host network driver
+IPvlan network driver
+Macvlan network driver
+None network driver
+Overlay network driver
+CA certificates
+Legacy container links
+Containers
+Start containers automatically
+Run multiple processes in a container
+Resource constraints
+GPU access
+Runtime metrics
+Running containers
+CLI
+Completion
+Proxy configuration
+Filter commands
+Format command and log output
+OpenTelemetry for the Docker CLI
+Daemon
+Start the daemon
+Use IPv6 networking
+Daemon proxy configuration
+Embedded containerd
+Experimental
+Live restore
+Alternative container runtimes
+Collect Docker metrics with Prometheus
+Configure remote access for Docker daemon
+Read the daemon logs
+Troubleshooting the Docker daemon
+Manage resources
+Docker contexts
+Docker object labels
+Prune unused Docker objects
+Logs and metrics
+Configure logging drivers
+Customize log driver output
+Logging drivers
+Amazon CloudWatch Logs logging driver
+ETW logging driver
+Fluentd logging driver
+Google Cloud Logging driver
+Graylog Extended Format logging driver
+Journald logging driver
+JSON File logging driver
+Local file logging driver
+Splunk logging driver
+Syslog logging driver
+Use a logging driver plugin
+Use docker logs with remote logging drivers
+Security
+Rootless mode
+UID/GID mapping
+Tips
+Troubleshooting
+Antivirus software and Docker
+AppArmor security profiles for Docker
+Content trust in Docker
+Automation with content trust
+Delegations for content trust
+Deploy Notary Server with Compose
+Manage keys for content trust
+Play in a content trust sandbox
+Docker security non-events
+Isolate containers with a user namespace
+Protect the Docker daemon socket
+Seccomp security profiles for Docker
+Verify repository client with certificates
+Swarm mode
+Administer and maintain a swarm of Docker Engines
+Deploy a stack to a swarm
+Deploy services to a swarm
+Getting started with Swarm mode
+Create a swarm
+Add nodes to the swarm
+Deploy a service to the swarm
+Inspect a service on the swarm
+Scale the service in the swarm
+Delete the service running on the swarm
+Apply rolling updates to a service
+Drain a node on the swarm
+How swarm works
+How nodes work
+How services work
+Manage swarm security with public key infrastructure (PKI)
+Swarm task states
+Join nodes to a swarm
+Lock your swarm to protect its encryption key
+Manage nodes in a swarm
+Manage sensitive data with Docker secrets
+Manage swarm service networks
+Raft consensus in swarm mode
+Run Docker Engine in swarm mode
+Store configuration data using Docker Configs
+Swarm mode key concepts
+Use Swarm mode routing mesh
+Deprecated features
+Docker Engine plugins
+Access authorization plugin
+Docker log driver plugins
+Docker network driver plugins
+Docker Plugin API
+Docker volume plugins
+Plugin Config Version 1 of Plugin V2
+Use Docker Engine plugins
+Release notes
+Engine v29
+Engine v28
+Engine v27
+Engine v26.1
+Engine v26.0
+Engine v25.0
+Engine v24.0
+Engine v23.0
+Engine v20.10
+Engine v19.03
+Engine v18.09
+Engine v18.06
+Engine v18.05
+Engine v18.04
+Engine v18.03
+Engine v18.02
+Engine v18.01
+Engine v17.12
+Engine v17.11
+Engine v17.10
+Engine v17.09
+Engine v17.07
+Engine v17.06
+Engine v17.05
+Engine v17.04
+Engine v17.03
+Prior releases
+Docker Offload
+Quickstart
+About
+Configure
+Usage
+Optimize usage
+Troubleshoot
+Give feedback
+Docker Build
+Core concepts
+Docker Build Overview
+Dockerfile overview
+Build context
+Build checks
+Building
+Multi-stage
+Variables
+Secrets
+Multi-platform
+Export binaries
+Container Device Interface (CDI)
+Best practices
+Base images
+Builders
+Build drivers
+Cloud driver
+Docker container driver
+Docker driver
+Kubernetes driver
+Remote driver
+Manage builders
+Bake
+Introduction
+Targets
+Inheritance
+Variables
+Expressions
+Functions
+Matrix targets
+Contexts
+Bake file reference
+Bake standard library functions
+Building with Bake from a Compose file
+Overriding configurations
+Remote Bake file definition
+Cache
+Build cache invalidation
+Build garbage collection
+Cache storage backends
+Amazon S3 cache
+Azure Blob Storage cache
+GitHub Actions cache
+Inline cache
+Local cache
+Registry cache
+Optimize cache usage in builds
+CI
+GitHub Actions
+Annotations
+Attestations
+Build checks
+Build secrets
+Build summary
+BuildKit configuration
+Cache management
+Copy image between registries
+Export to Docker
+GitHub Builder
+New
+Architecture
+Build workflow
+Bake workflow
+Local registry
+Multi-platform image
+Named contexts
+Push to multiple registries
+Reproducible builds
+Share image between jobs
+Tags and labels
+Test before push
+Update Docker Hub description
+Validating builds
+Experimental
+Introduction
+Usage
+Image validation
+Git validation
+Templates & examples
+Testing
+Debugging
+Input reference
+Built-in functions
+Metadata
+Annotations
+Build attestations
+Image attestation storage
+Provenance attestations
+SBOM attestations
+SLSA definitions
+Exporters
+Image and registry exporters
+Local and tar exporters
+OCI and Docker exporters
+BuildKit
+buildkitd.toml
+Configure BuildKit
+Custom Dockerfile syntax
+Dockerfile release notes
+Debugging
+OpenTelemetry support
+Build release notes
+Docker Build Cloud
+Setup
+Usage
+Continuous integration
+Optimization
+Builder settings
+Release notes
+Docker Compose
+Introduction to Compose
+How Compose works
+Why use Compose?
+History and development
+Install
+Plugin
+Standalone (Legacy)
+Uninstall
+Quickstart
+How-tos
+Specify a project name
+Use service profiles
+Use AI models in Compose
+Control startup order
+Use environment variables
+Set environment variables
+Environment variables precedence
+Pre-defined environment variables
+Interpolation
+Best practices
+Build dependent images
+Use Compose Watch
+Secrets in Compose
+Networking
+Use multiple Compose files
+Merge
+Extend
+Include
+Enable GPU support
+Use Compose in production
+OCI artifact applications
+Use lifecycle hooks
+Use init containers
+New
+Use provider services
+Compose Bridge
+Usage
+Customize
+Use Model Runner
+Compose SDK
+Trust model for Compose files
+Support and feedback
+FAQs
+Give feedback
+Release notes
+Docker Extensions
+Marketplace extensions
+Non-marketplace extensions
+Configure a private marketplace
+Settings and feedback
+Extensions SDK
+The build and publish process
+Quickstart
+Part one: Build
+Create a simple extension
+Create an advanced frontend extension
+Add a backend to your extension
+Part two: Publish
+Add labels
+Validate
+Package and release your extension
+Share your extension
+Publish in the Marketplace
+Build multi-arch extensions
+Architecture
+Metadata
+Security
+Design and UI styling
+Guidelines
+Docker design principles
+MUI best practices
+Developer Guides
+Authentication
+Interacting with Kubernetes
+Invoke host binaries
+Use the Docker socket
+Developer SDK tools
+Test and debug
+Continuous Integration (CI)
+CLI reference
+Extension APIs
+Dashboard
+Docker
+Extension Backend
+Extension UI API
+Navigation
+Deprecated products and features
+Release lifecycle
+Supply chain security
+Docker Hardened Images
+Quickstart
+Explore
+Hardened images
+Build process
+Image types
+Scanner integrations
+Image testing
+Responsibility overview
+Malware scanning
+Security concepts
+Attestations
+CIS Benchmark
+Code signing
+CVEs
+Distroless images
+FIPS
+glibc and musl
+Hardening
+Image digests
+Image provenance
+Immutability
+SBOMs
+SLSA
+Software Supply Chain Security
+SSDLC
+STIG
+VEX
+Migration
+Migration checklist
+AI-assisted migration
+Experimental
+Migrate from Alpine or Debian
+Migrate from Ubuntu
+Migrate from Wolfi
+Migration examples
+Go
+Python
+Node.js
+.NET
+Java
+How-tos
+Search and evaluate
+Mirror a repository
+Customize an image or chart
+Create and build an image
+Use an image
+Use a Helm chart
+Use hardened packages
+Verify an image or chart
+Scan an image
+Query VEX suppressions via API
+Apply image policies
+Troubleshoot
+Use DHI Select & Enterprise
+Tools
+Docker Hub
+CLI
+MCP server
+Terraform
+API
+Release notes
+CLI release notes
+Platform release notes
+Resources and feedback
+Docker Hub
+Quickstart
+Library
+Search
+Trusted content
+Generative AI
+Mirror
+Repositories
+Create
+Manage
+Repository information
+Access
+Images
+Tags
+Immutable tags
+Image Management
+Software artifacts
+Push images
+Move images
+Bulk migrate images
+Image security insights
+Webhooks
+Automated builds
+Deprecated
+Migrate
+Set up
+Link accounts
+Automated repository tests
+Advanced options
+Manage autobuilds
+Troubleshoot
+Trusted content
+Docker Official Images
+Docker Verified Publisher Program
+Docker-Sponsored Open Source Program
+Insights and analytics
+Export repositories
+Archive
+Delete
+Settings
+Usage and limits
+Pulls
+Optimize usage
+Hub MCP server
+Troubleshoot
+Release notes
+Docker Scout
+Install
+Quickstart
+Explore
+Dashboard
+Docker Scout image analysis
+Docker Scout metrics exporter
+Image details view
+Manage vulnerability exceptions
+How-tos
+Create an exception using the GUI
+Create an exception using the VEX
+Docker Scout environment variables
+Docker Scout SBOMs
+Use Scout with different artifact types
+Deep dive
+Advisory database sources and matching service
+Data collection and storage in Docker Scout
+Policy Evaluation
+Evaluate policies
+Integrations
+Container registries
+Continuous Integration
+Azure DevOps Pipelines
+Circle CI
+GitHub Actions
+GitLab CI/CD
+Jenkins
+Integrating Docker Scout with environments
+Generic (CLI)
+Release notes
+CLI release notes
+Platform release notes
+Accounts and admin
+Accounts
+Individual
+Setup
+Manage
+Deactivate
+Organization
+Setup
+Create
+Onboard
+Convert account
+Manage
+Members
+Teams
+License assignment
+Seats
+Product usage and access
+Change information
+Deactivate
+Activity logs
+Insights
+Company
+Setup
+Manage
+Subscription and billing
+Plans
+Docker
+Docker Agentic Platform
+Gordon
+Docker Hardened Images
+AI Governance
+Docker Verified Publisher
+Manage
+Plans
+Payment methods
+3D Secure
+Billing details
+Invoice history
+Taxes
+Docker Desktop license agreement
+Security
+Announcements
+Access tokens
+Personal access tokens
+Organization access tokens
+Authentication
+Single sign-on
+Setup
+Manage connections
+Troubleshoot
+Two-factor authentication
+Recover your Docker account
+OIDC connections
+Create and manage connections
+Rulesets and subject claims
+Provision
+Add and manage domains
+SCIM
+Setup
+Group mapping
+Migrate
+Just-in-Time
+Auto-provision
+Troubleshoot
+Roles and permissions
+Core roles
+Custom roles
+Manage
+Permissions reference
+FAQs
+Accounts
+Security
+Subscription and billing
+Platform
+Support
+Release notes
+Home
+/
+Manuals
+/
+Docker Engine
+/
+Storage
+/
+Bind mounts
+Bind mounts
+Ask Gordon
+Copy Markdown
+View Markdown
+Table of contents
+When to use bind mounts
+Bind-mounting over existing data
+Considerations and constraints
+Syntax
+Options for --mount
+Options for --volume
+Start a container with a bind mount
+Mount into a non-empty directory on the container
+Use a read-only bind mount
+Recursive mounts
+Configure bind propagation
+Configure the SELinux label
+Use a bind mount with Docker Compose
+Next steps
+When you use a bind mount, a file or directory on the host machine is mounted
+from the host into a container. By contrast, when you use a volume, a new
+directory is created within Docker's storage directory on the host machine.
+Docker creates and maintains this storage location, but containers access it
+directly using standard filesystem operations.
+When to use bind mounts
+Bind mounts are appropriate for the following types of use case:
+Sharing source code or build artifacts between a development environment on
+the Docker host and a container.
+When you want to create or generate files in a container and persist the
+files onto the host's filesystem.
+Sharing configuration files from the host machine to containers. This is how
+Docker provides DNS resolution to containers by default, by mounting
+/etc/resolv.conf
+from the host machine into each container.
+Bind mounts are also available for builds: you can bind mount source code from
+the host into the build container to test, lint, or compile a project.
+Bind-mounting over existing data
+If you bind mount file or directory into a directory in the container in which
+files or directories exist, the pre-existing files are obscured by the mount.
+This is similar to if you were to save files into
+/mnt
+on a Linux host, and
+then mounted a USB drive into
+/mnt
+. The contents of
+/mnt
+would be obscured
+by the contents of the USB drive until the USB drive was unmounted.
+With containers, there's no straightforward way of removing a mount to reveal
+the obscured files again. Your best option is to recreate the container without
+the mount.
+Considerations and constraints
+Bind mounts have write access to files on the host by default.
+One side effect of using bind mounts is that you can change the host
+filesystem via processes running in a container, including creating,
+modifying, or deleting important system files or directories. This capability
+can have security implications. For example, it may affect non-Docker
+processes on the host system.
+You can use the
+readonly
+or
+ro
+option to prevent the container from
+writing to the mount.
+Bind mounts are created to the Docker daemon host, not the client.
+If you're using a remote Docker daemon, you can't create a bind mount to
+access files on the client machine in a container.
+For Docker Desktop, the daemon runs inside a Linux VM, not directly on the
+native host. Docker Desktop has built-in mechanisms that transparently handle
+bind mounts, allowing you to share native host filesystem paths with
+containers running in the virtual machine.
+Containers with bind mounts are strongly tied to the host.
+Bind mounts rely on the host machine's filesystem having a specific directory
+structure available. This reliance means that containers with bind mounts may
+fail if run on a different host without the same directory structure.
+Syntax
+To create a bind mount, you can use either the
+--mount
+or
+--volume
+flag.
+$
+docker run --mount
+type
+=
+bind,src
+=
+<host-path>,dst
+=
+<container-path>
+$
+docker run --volume <host-path>:<container-path>
+In general,
+--mount
+is preferred. The main difference is that the
+--mount
+flag is more explicit and supports all the available options.
+If you use
+--volume
+to bind-mount a file or directory that does not yet
+exist on the Docker host, Docker automatically creates the directory on the
+host for you. It's always created as a directory. If the Docker daemon doesn't
+have permission to create the source directory, create it before starting the
+container.
+By default,
+--mount
+does not automatically create a directory if the specified mount
+path does not exist on the host. Instead, it produces an error:
+$
+docker run --mount
+type
+=
+bind,src
+=
+/dev/noexist,dst
+=
+/mnt/foo alpine
+docker: Error response from daemon: invalid mount config for type "bind": bind source path does not exist: /dev/noexist.
+You can use the
+bind-create-src
+option to automatically create the source directory
+on the host if it doesn't exist:
+$
+docker run --mount
+type
+=
+bind,src
+=
+/home/user/mydir,dst
+=
+/mnt/foo,bind-create-src alpine
+Options for --mount
+The
+--mount
+flag consists of multiple key-value pairs, separated by commas
+and each consisting of a
+<key>=<value>
+tuple. The order of the keys isn't
+significant.
+$
+docker run --mount
+type
+=
+bind,src
+=
+<host-path>,dst
+=
+<container-path>
+[
+,<key>
+=
+<value>...
+]
+Valid options for
+--mount type=bind
+include:
+Option
+Description
+source
+,
+src
+The location of the file or directory on the host. This can be an absolute or relative path.
+destination
+,
+dst
+,
+target
+The path where the file or directory is mounted in the container. Must be an absolute path.
+readonly
+,
+ro
+If present, causes the bind mount to be
+mounted into the container as read-only
+.
+bind-propagation
+If present, changes the
+bind propagation
+.
+bind-create-src
+Automatically creates the source directory on the host if it doesn't exist. By default,
+--mount
+produces an error if the source path doesn't exist on the daemon.
+Example
+$
+docker run --mount
+type
+=
+bind,src
+=
+.,dst
+=
+/project,ro,bind-propagation
+=
+rshared
+Options for --volume
+The
+--volume
+or
+-v
+flag consists of three fields, separated by colon
+characters (
+:
+). The fields must be in the correct order.
+$
+docker run -v <host-path>:<container-path>
+[
+:opts
+]
+The first field is the path on the host to bind mount into the container. The
+second field is the path where the file or directory is mounted in the
+container.
+The third field is optional, and is a comma-separated list of options. Valid
+options for
+--volume
+with a bind mount include:
+Option
+Description
+readonly
+,
+ro
+If present, causes the bind mount to be
+mounted into the container as read-only
+.
+z
+,
+Z
+Configures SELinux labeling. See
+Configure the SELinux label
+rprivate
+(default)
+Sets bind propagation to
+rprivate
+for this mount. See
+Configure bind propagation
+.
+private
+Sets bind propagation to
+private
+for this mount. See
+Configure bind propagation
+.
+rshared
+Sets bind propagation to
+rshared
+for this mount. See
+Configure bind propagation
+.
+shared
+Sets bind propagation to
+shared
+for this mount. See
+Configure bind propagation
+.
+rslave
+Sets bind propagation to
+rslave
+for this mount. See
+Configure bind propagation
+.
+slave
+Sets bind propagation to
+slave
+for this mount. See
+Configure bind propagation
+.
+Example
+$
+docker run -v .:/project:ro,rshared
+Start a container with a bind mount
+Consider a case where you have a directory
+source
+and that when you build the
+source code, the artifacts are saved into another directory,
+source/target/
+.
+You want the artifacts to be available to the container at
+/app/
+, and you
+want the container to get access to a new build each time you build the source
+on your development host. Use the following command to bind-mount the
+target/
+directory into your container at
+/app/
+. Run the command from within the
+source
+directory. The
+$(pwd)
+sub-command expands to the current working
+directory on Linux or macOS hosts.
+If you're on Windows, see also
+Path conversions on Windows
+.
+The following
+--mount
+and
+-v
+examples produce the same result. You can't
+run them both unless you remove the
+devtest
+container after running the first
+one.
+--mount
+-v
+$
+docker run -d
+\
+-it \
+--name devtest \
+--mount type=bind,source="$(pwd)"/target,target=/app \
+nginx:latest
+$
+docker run -d
+\
+-it \
+--name devtest \
+-v "$(pwd)"/target:/app \
+nginx:latest
+Use
+docker inspect devtest
+to verify that the bind mount was created
+correctly. Look for the
+Mounts
+section:
+"Mounts"
+:
+[
+{
+"Type"
+:
+"bind"
+,
+"Source"
+:
+"/tmp/source/target"
+,
+"Destination"
+:
+"/app"
+,
+"Mode"
+:
+""
+,
+"RW"
+:
+true
+,
+"Propagation"
+:
+"rprivate"
+}
+]
+,
+This shows that the mount is a
+bind
+mount, it shows the correct source and
+destination, it shows that the mount is read-write, and that the propagation is
+set to
+rprivate
+.
+Stop and remove the container:
+$
+docker container rm -fv devtest
+Mount into a non-empty directory on the container
+If you bind-mount a directory into a non-empty directory on the container, the
+directory's existing contents are obscured by the bind mount. This can be
+beneficial, such as when you want to test a new version of your application
+without building a new image. However, it can also be surprising and this
+behavior differs from that of
+volumes
+.
+This example is contrived to be extreme, but replaces the contents of the
+container's
+/usr/
+directory with the
+/tmp/
+directory on the host machine. In
+most cases, this would result in a non-functioning container.
+The
+--mount
+and
+-v
+examples have the same end result.
+--mount
+-v
+$
+docker run -d
+\
+-it \
+--name broken-container \
+--mount type=bind,source=/tmp,target=/usr \
+nginx:latest
+docker: Error response from daemon: oci runtime error: container_linux.go:262:
+starting container process caused "exec: \"nginx\": executable file not found in $PATH".
+$
+docker run -d
+\
+-it \
+--name broken-container \
+-v /tmp:/usr \
+nginx:latest
+docker: Error response from daemon: oci runtime error: container_linux.go:262:
+starting container process caused "exec: \"nginx\": executable file not found in $PATH".
+The container is created but does not start. Remove it:
+$
+docker container rm broken-container
+Use a read-only bind mount
+For some development applications, the container needs to
+write into the bind mount, so changes are propagated back to the
+Docker host. At other times, the container only needs read access.
+This example modifies the previous one, but mounts the directory as a read-only
+bind mount, by adding
+ro
+to the (empty by default) list of options, after the
+mount point within the container. Where multiple options are present, separate
+them by commas.
+The
+--mount
+and
+-v
+examples have the same result.
+--mount
+-v
+$
+docker run -d
+\
+-it \
+--name devtest \
+--mount type=bind,source="$(pwd)"/target,target=/app,readonly \
+nginx:latest
+$
+docker run -d
+\
+-it \
+--name devtest \
+-v "$(pwd)"/target:/app:ro \
+nginx:latest
+Use
+docker inspect devtest
+to verify that the bind mount was created
+correctly. Look for the
+Mounts
+section:
+"Mounts"
+:
+[
+{
+"Type"
+:
+"bind"
+,
+"Source"
+:
+"/tmp/source/target"
+,
+"Destination"
+:
+"/app"
+,
+"Mode"
+:
+"ro"
+,
+"RW"
+:
+false
+,
+"Propagation"
+:
+"rprivate"
+}
+]
+,
+Stop and remove the container:
+$
+docker container rm -fv devtest
+Recursive mounts
+When you bind mount a path that itself contains mounts, those submounts are
+also included in the bind mount by default. This behavior is configurable,
+using the
+bind-recursive
+option for
+--mount
+. This option is only supported
+with the
+--mount
+flag, not with
+-v
+or
+--volume
+.
+If the bind mount is read-only, the Docker Engine makes a best-effort attempt
+at making the submounts read-only as well. This is referred to as recursive
+read-only mounts. Recursive read-only mounts require Linux kernel version 5.12
+or later. If you're running an older kernel version, submounts are
+automatically mounted as read-write by default. Attempting to set submounts to
+be read-only on a kernel version earlier than 5.12, using the
+bind-recursive=readonly
+option, results in an error.
+Supported values for the
+bind-recursive
+option are:
+Value
+Description
+enabled
+(default)
+Read-only mounts are made recursively read-only if kernel is v5.12 or later. Otherwise, submounts are read-write.
+disabled
+Submounts are ignored (not included in the bind mount).
+writable
+Submounts are read-write.
+readonly
+Submounts are read-only. Requires kernel v5.12 or later.
+Configure bind propagation
+Bind propagation defaults to
+rprivate
+for both bind mounts and volumes. It is
+only configurable for bind mounts, and only on Linux host machines. Bind
+propagation is an advanced topic and many users never need to configure it.
+Bind propagation refers to whether or not mounts created within a given
+bind-mount can be propagated to replicas of that mount. Consider
+a mount point
+/mnt
+, which is also mounted on
+/tmp
+. The propagation settings
+control whether a mount on
+/tmp/a
+would also be available on
+/mnt/a
+. Each
+propagation setting has a recursive counterpoint. In the case of recursion,
+consider that
+/tmp/a
+is also mounted as
+/foo
+. The propagation settings
+control whether
+/mnt/a
+and/or
+/tmp/a
+would exist.
+Note
+Mount propagation doesn't work with Docker Desktop.
+Propagation setting
+Description
+shared
+Sub-mounts of the original mount are exposed to replica mounts, and sub-mounts of replica mounts are also propagated to the original mount.
+slave
+similar to a shared mount, but only in one direction. If the original mount exposes a sub-mount, the replica mount can see it. However, if the replica mount exposes a sub-mount, the original mount cannot see it.
+private
+The mount is private. Sub-mounts within it are not exposed to replica mounts, and sub-mounts of replica mounts are not exposed to the original mount.
+rshared
+The same as shared, but the propagation also extends to and from mount points nested within any of the original or replica mount points.
+rslave
+The same as slave, but the propagation also extends to and from mount points nested within any of the original or replica mount points.
+rprivate
+The default. The same as private, meaning that no mount points anywhere within the original or replica mount points propagate in either direction.
+Before you can set bind propagation on a mount point, the host filesystem needs
+to already support bind propagation.
+For more information about bind propagation, see the
+Linux kernel documentation for shared subtree
+.
+The following example mounts the
+target/
+directory into the container twice,
+and the second mount sets both the
+ro
+option and the
+rslave
+bind propagation
+option.
+The
+--mount
+and
+-v
+examples have the same result.
+--mount
+-v
+$
+docker run -d
+\
+-it \
+--name devtest \
+--mount type=bind,source="$(pwd)"/target,target=/app \
+--mount type=bind,source="$(pwd)"/target,target=/app2,readonly,bind-propagation=rslave \
+nginx:latest
+$
+docker run -d
+\
+-it \
+--name devtest \
+-v "$(pwd)"/target:/app \
+-v "$(pwd)"/target:/app2:ro,rslave \
+nginx:latest
+Now if you create
+/app/foo/
+,
+/app2/foo/
+also exists.
+Configure the SELinux label
+If you use SELinux, you can add the
+z
+or
+Z
+options to modify the SELinux
+label of the host file or directory being mounted into the container. This
+affects the file or directory on the host machine itself and can have
+consequences outside of the scope of Docker.
+The
+z
+option indicates that the bind mount content is shared among multiple
+containers.
+The
+Z
+option indicates that the bind mount content is private and unshared.
+Use extreme caution with these options. Bind-mounting a system directory
+such as
+/home
+or
+/usr
+with the
+Z
+option renders your host machine
+inoperable and you may need to relabel the host machine files by hand.
+Important
+When using bind mounts with services, SELinux labels
+(
+:Z
+and
+:z
+), as well as
+:ro
+are ignored. See
+moby/moby #32579
+for details.
+This example sets the
+z
+option to specify that multiple containers can share
+the bind mount's contents:
+It is not possible to modify the SELinux label using the
+--mount
+flag.
+$
+docker run -d
+\
+-it \
+--name devtest \
+-v "$(pwd)"/target:/app:z \
+nginx:latest
+Use a bind mount with Docker Compose
+A single Docker Compose service with a bind mount looks like this:
+services
+:
+frontend
+:
+image
+:
+node:lts
+volumes
+:
+-
+type
+:
+bind
+source
+:
+./static
+target
+:
+/opt/app/static
+volumes
+:
+myapp:
+For more information about using volumes of the
+bind
+type with Compose, see
+Compose reference on the volumes top-level element
+.
+and
+Compose reference on the volume attribute
+.
+Next steps
+Learn about
+volumes
+.
+Learn about
+tmpfs mounts
+.
+Learn about
+image mounts
+.
+Learn about
+storage drivers
+.
+Edit this page
+Request changes
+Table of contents
+When to use bind mounts
+Bind-mounting over existing data
+Considerations and constraints
+Syntax
+Options for --mount
+Options for --volume
+Start a container with a bind mount
+Mount into a non-empty directory on the container
+Use a read-only bind mount
+Recursive mounts
+Configure bind propagation
+Configure the SELinux label
+Use a bind mount with Docker Compose
+Next steps
+Product offerings
+Pricing
+About us
+llms.txt
+llms-full.txt
+Cookies Settings
+|
+Terms of Use
+|
+Status
+|
+Legal
+Copyright © 2013-2026 Docker Inc. All rights reserved.
+Automated traffic detection

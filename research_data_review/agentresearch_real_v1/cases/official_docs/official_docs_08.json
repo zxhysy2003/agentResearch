@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "id": "official_docs_08",
+  "revision": 1,
+  "category": "official_docs",
+  "difficulty": "medium",
+  "tags": [
+    "real_sources",
+    "review_candidate"
+  ],
+  "split": "dev",
+  "task": {
+    "prompt": "解释 Redis RDB 与 AOF 的基本机制、能否同时启用，以及默认 every-second fsync 策略的数据丢失窗口。",
+    "as_of": "2026-09-29T14:35:32.226015Z",
+    "context": {
+      "time_scope": "仅依据此任务的采集快照回答；当前、最新及统计值均指各来源记录的采集时刻，不代表未来实时状态。"
+    },
+    "requirements": [
+      "引用可核验的一手来源。",
+      "区分材料直接记载、推断和不确定性；不编造。"
+    ]
+  },
+  "environment": {
+    "mode": "snapshot",
+    "snapshot_id": "agentresearch-real-review-v1",
+    "allowed_tools": [
+      "web_search",
+      "fetch_page",
+      "github_read"
+    ],
+    "limits": {
+      "max_tool_calls": 30,
+      "timeout_seconds": 180.0
+    },
+    "fault_scenario_id": null
+  },
+  "ground_truth": {
+    "expected_outcome": "answered",
+    "facts": [],
+    "evidence": [
+      {
+        "id": "e_1",
+        "source_type": "official_docs",
+        "url": "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/",
+        "artifact_id": "redis_persistence",
+        "locator": "text.txt:L161-L161; locate nearby section",
+        "captured_at": "2026-09-29T14:35:32.226015Z"
+      },
+      {
+        "id": "e_2",
+        "source_type": "official_docs",
+        "url": "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/",
+        "artifact_id": "redis_persistence",
+        "locator": "text.txt:L166-L166; locate nearby section",
+        "captured_at": "2026-09-29T14:35:32.226015Z"
+      },
+      {
+        "id": "e_3",
+        "source_type": "official_docs",
+        "url": "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/",
+        "artifact_id": "redis_persistence",
+        "locator": "text.txt:L186-L186; locate nearby section",
+        "captured_at": "2026-09-29T14:35:32.226015Z"
+      }
+    ],
+    "rubrics": [
+      {
+        "id": "r_1",
+        "criterion": "RDB 是按时间点保存的数据集快照；AOF 记录写操作并可重放；两者可同时启用。",
+        "evidence_ids": [
+          "e_1",
+          "e_2"
+        ],
+        "anchors": {
+          "0": "未回答或与原始证据矛盾。",
+          "0.5": "部分正确，但遗漏该评分项中的条件或限制。",
+          "1": "完整且正确地表述该评分项，保留适用范围与限制。"
+        }
+      },
+      {
+        "id": "r_2",
+        "criterion": "文档对默认每秒 fsync 的说明是可能丢失约一秒写入，不能声称绝对零丢失。",
+        "evidence_ids": [
+          "e_3"
+        ],
+        "anchors": {
+          "0": "未回答或与原始证据矛盾。",
+          "0.5": "部分正确，但遗漏该评分项中的条件或限制。",
+          "1": "完整且正确地表述该评分项，保留适用范围与限制。"
+        }
+      }
+    ],
+    "entity_requirements": null
+  },
+  "evaluation_rule": {
+    "checks": [
+      {
+        "id": "c_r_1",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_1"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_r_2",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_citations",
+        "dimension": "evidence",
+        "evaluator": "citation_support",
+        "target": [
+          "r_1",
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_trace",
+        "dimension": "process",
+        "evaluator": "trace_assertion",
+        "target": [
+          "r_1",
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": "supporting_source_observed"
+      }
+    ],
+    "dimension_weights": {
+      "correctness": 0.7,
+      "evidence": 0.2,
+      "process": 0.1
+    },
+    "pass_threshold": 0.8
+  }
+}

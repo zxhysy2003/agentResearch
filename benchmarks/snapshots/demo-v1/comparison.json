@@ -1,0 +1,12 @@
+{
+  "Alpha": {
+    "persistence": "disk",
+    "filtering": "metadata",
+    "deployment": "server"
+  },
+  "Beta": {
+    "persistence": "memory",
+    "filtering": "none",
+    "deployment": "embedded"
+  }
+}

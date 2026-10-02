@@ -1,0 +1,14 @@
+{
+  "id": "requests_async_readme",
+  "requested_url": "https://raw.githubusercontent.com/encode/requests-async/master/README.md",
+  "final_url": "https://raw.githubusercontent.com/encode/requests-async/master/README.md",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:34.294892+00:00",
+  "headers": {
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"a096edc6884b4be3979086b2f390a65e6e589bba0a9156b08ebb80aae7f6dfd2\"",
+    "Date": "Tue, 29 Sep 2026 14:35:34 GMT"
+  },
+  "sha256": "ef174ee1266ca05fe6983a31ae59f6505e85c25a9fb33051ef80fc9735525e2c",
+  "bytes": 4210
+}

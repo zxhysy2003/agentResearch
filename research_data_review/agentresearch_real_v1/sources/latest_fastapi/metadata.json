@@ -1,0 +1,16 @@
+{
+  "id": "latest_fastapi",
+  "requested_url": "https://api.github.com/repos/fastapi/fastapi/releases/latest",
+  "final_url": "https://api.github.com/repos/fastapi/fastapi/releases/latest",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:39:16.232056+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:39:16 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"3192f2581671ef20a60d4d6a0c945236b7135858b729d82115fd24f42aaf3526\"",
+    "Last-Modified": "Wed, 29 Jul 2026 17:17:26 GMT",
+    "X-RateLimit-Remaining": "16"
+  },
+  "sha256": "746ff2040f95f5b6f18242ac0956d5a332f45af540412d45574967159bce5348",
+  "bytes": 2513
+}

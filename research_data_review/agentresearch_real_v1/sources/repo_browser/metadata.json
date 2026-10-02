@@ -1,0 +1,16 @@
+{
+  "id": "repo_browser",
+  "requested_url": "https://api.github.com/repos/browser-use/browser-use",
+  "final_url": "https://api.github.com/repos/browser-use/browser-use",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:35.142178+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:35 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"99d1d9e39dc09d80d44c2d5fba67b7352f344906a276f10df22ff79309f6c082\"",
+    "Last-Modified": "Tue, 29 Sep 2026 14:18:50 GMT",
+    "X-RateLimit-Remaining": "51"
+  },
+  "sha256": "a99f1ac25e7265ddc33edab04df7ac5968a04cae508664a0920acb9a5a39ac12",
+  "bytes": 6566
+}

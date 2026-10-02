@@ -1,0 +1,153 @@
+{
+  "dataset_id": "github_lookup_v1",
+  "recorded_at": "2026-10-01T15:45:00.520098+00:00",
+  "reviewer": "user",
+  "confirmation_basis": "用户在本次会话明确表示 github_lookup 十条数据已检查无问题，github_lookup.md 审阅项均可打勾，并授权整理。",
+  "scope": "仅原审阅集 github_lookup 十条题目的人工审阅确认；不扩展到其余四类，也不表示已实现或验证自动评测器。",
+  "snapshot_manifest": "../../snapshots/github_lookup_v1/manifest.json",
+  "split": "dev",
+  "packaging_changes": [
+    "case revision: 1 -> 2",
+    "snapshot_id: agentresearch-real-review-v1 -> github_lookup_v1",
+    "tags: remove review_candidate; add human_reviewed and mvp"
+  ],
+  "preserved": [
+    "task",
+    "ground_truth",
+    "evaluation_rule",
+    "raw source bytes",
+    "source URL and collection timestamp"
+  ],
+  "cases": [
+    {
+      "case_id": "github_lookup_01",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_01.json",
+      "source_revision": 1,
+      "source_sha256": "50a11c520504d663c5f47cc52360d3a8baba6dcb92ed68a8a73668878aafec78",
+      "packaged_path": "cases/github_lookup_01.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "5e46c50703644785597537c6969fa2c6d73f24d44cb217fd8fa8bee9eb78f39d",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "repo_fastapi"
+      ]
+    },
+    {
+      "case_id": "github_lookup_02",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_02.json",
+      "source_revision": 1,
+      "source_sha256": "8bf6937763ae6acf47153b5220f194adeab48a5ab6596afe9c980e9cd03c381a",
+      "packaged_path": "cases/github_lookup_02.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "d3fbdef17b4fce86f7ffc9e6f73a35ba7b6033d44976932b6249ac0cbbf34a84",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "repo_qdrant"
+      ]
+    },
+    {
+      "case_id": "github_lookup_03",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_03.json",
+      "source_revision": 1,
+      "source_sha256": "ff47b9477dc52df32146d448991579cbcd030379cd50f7b898f8fbcad422697a",
+      "packaged_path": "cases/github_lookup_03.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "8c16b49059dd85105c7a3986d94480e96020db6f02cd19a24a3d9d90666c1808",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "repo_httpx"
+      ]
+    },
+    {
+      "case_id": "github_lookup_04",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_04.json",
+      "source_revision": 1,
+      "source_sha256": "56187ea5bcc8bed42c54dd14494fe732b2eaf1ac77300dc4b1eebd02eb63954b",
+      "packaged_path": "cases/github_lookup_04.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "3abee405c943a0f7f993ded88681e86c538ef3f6525d453a0f3467df6f2b412a",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "latest_browser"
+      ]
+    },
+    {
+      "case_id": "github_lookup_05",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_05.json",
+      "source_revision": 1,
+      "source_sha256": "b167273351a011996a6174e0ba9af7ddafeb3acd3c602bcbc7cbba1222b10f8a",
+      "packaged_path": "cases/github_lookup_05.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "9e25618a80dd1a4e3d51429b56ab012925b7c0712434c8f8301c187dacd21f48",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "latest_pydantic"
+      ]
+    },
+    {
+      "case_id": "github_lookup_06",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_06.json",
+      "source_revision": 1,
+      "source_sha256": "5e805658728f09f0bfcaa5718bbec50f339affb469452949d6c3366992b33e86",
+      "packaged_path": "cases/github_lookup_06.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "cbfd12c7c45d9189eca4030eebcb4a432503b1254d0fa6c97df3b365db3377f0",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "latest_qdrant"
+      ]
+    },
+    {
+      "case_id": "github_lookup_07",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_07.json",
+      "source_revision": 1,
+      "source_sha256": "4d311e867289e6647528c36b234cf9d4d013ca55f343cc0bfdb7412b54e8c8db",
+      "packaged_path": "cases/github_lookup_07.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "a04fd7c6d8bb58f76d8ac0048e5f30b320757117a0935af6043349245c7af256",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "issues_httpx"
+      ]
+    },
+    {
+      "case_id": "github_lookup_08",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_08.json",
+      "source_revision": 1,
+      "source_sha256": "4df01d1b829499cf530bab34618c05b467b4bb6974c84631c8f902c0ceaae4af",
+      "packaged_path": "cases/github_lookup_08.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "79540d053c03984ef5f6b483852219fcb4c448605f7ed695462f08bedbab631e",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "browser_readme"
+      ]
+    },
+    {
+      "case_id": "github_lookup_09",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_09.json",
+      "source_revision": 1,
+      "source_sha256": "efc37054ffab3b8c3a29e2523f9e9452e18936b23f69ab1276ab1361df2b55a5",
+      "packaged_path": "cases/github_lookup_09.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "19f23fd421b2638659b9e454caf7ba4db3b1414ae1c192a9a40b82fe4d6dc2c8",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "langgraph_readme"
+      ]
+    },
+    {
+      "case_id": "github_lookup_10",
+      "source_path": "research_data_review/agentresearch_real_v1/cases/github_lookup/github_lookup_10.json",
+      "source_revision": 1,
+      "source_sha256": "daf9f56f63ea2d01899db5cbdc5fba3e8d5b04f4abe11bbadb73a3d2b39732e6",
+      "packaged_path": "cases/github_lookup_10.json",
+      "packaged_revision": 2,
+      "packaged_sha256": "7ae7ecdf32aabcec546e66e73f9972e9743fae2de64a67e3960def359a326c67",
+      "review_status": "approved_by_user",
+      "artifact_ids": [
+        "repo_crewai"
+      ]
+    }
+  ]
+}

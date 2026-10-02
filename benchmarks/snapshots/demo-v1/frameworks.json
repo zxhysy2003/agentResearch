@@ -1,0 +1,26 @@
+[
+  {
+    "repository": "example-org/alpha",
+    "language": "Python",
+    "mcp": true,
+    "release_date": "2026-08-02T00:00:00Z"
+  },
+  {
+    "repository": "example-org/beta",
+    "language": "Python",
+    "mcp": true,
+    "release_date": "2026-08-06T00:00:00Z"
+  },
+  {
+    "repository": "example-org/gamma",
+    "language": "Python",
+    "mcp": true,
+    "release_date": "2026-08-12T00:00:00Z"
+  },
+  {
+    "repository": "example-org/delta",
+    "language": "Python",
+    "mcp": true,
+    "release_date": "2026-08-18T00:00:00Z"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "releases_celery",
+  "requested_url": "https://api.github.com/repos/celery/celery/releases?per_page=10",
+  "final_url": "https://api.github.com/repos/celery/celery/releases?per_page=10",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:37.291850+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"2890b1ecc64d2fa1cafe06bed2af9e675098baa4322105e33a1df1a474bf5230\"",
+    "Link": "<https://api.github.com/repositories/184460/releases?per_page=10&page=2>; rel=\"next\", <https://api.github.com/repositories/184460/releases?per_page=10&page=7>; rel=\"last\"",
+    "X-RateLimit-Remaining": "26"
+  },
+  "sha256": "4c785215dd5b1ce3aab04d7c57b4e320e33caee588184272e975f4e3bbf521bb",
+  "bytes": 105520
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "id": "github_release_001",
+  "revision": 1,
+  "category": "github_lookup",
+  "difficulty": "medium",
+  "tags": [
+    "synthetic"
+  ],
+  "split": "dev",
+  "task": {
+    "prompt": "查询 example-org/demo-agent 最新稳定 Release 的版本和 UTC 发布日期；排除 draft 和 prerelease。",
+    "as_of": "2026-09-01T00:00:00Z",
+    "context": {
+      "fixture": "All projects are fictional; use the provided snapshot."
+    },
+    "requirements": [
+      "Cite supporting sources and report uncertainty."
+    ]
+  },
+  "environment": {
+    "mode": "snapshot",
+    "snapshot_id": "demo-v1",
+    "allowed_tools": [
+      "web_search",
+      "fetch_page",
+      "github_read"
+    ],
+    "limits": {
+      "max_tool_calls": 15,
+      "timeout_seconds": 120
+    },
+    "fault_scenario_id": null
+  },
+  "ground_truth": {
+    "expected_outcome": "answered",
+    "facts": [
+      {
+        "id": "f_version",
+        "subject": "example-org/demo-agent",
+        "predicate": "latest_stable_release",
+        "expected": {
+          "type": "string",
+          "value": "v1.4.0"
+        },
+        "evidence_ids": [
+          "e_release"
+        ]
+      },
+      {
+        "id": "f_date",
+        "subject": "example-org/demo-agent",
+        "predicate": "published_at",
+        "expected": {
+          "type": "datetime",
+          "value": "2026-08-20T08:00:00Z"
+        },
+        "evidence_ids": [
+          "e_release"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e_release",
+        "source_type": "github_release",
+        "url": "https://example.invalid/release",
+        "artifact_id": "release",
+        "locator": "$",
+        "captured_at": "2026-09-01T00:00:00Z"
+      }
+    ],
+    "rubrics": [],
+    "entity_requirements": null
+  },
+  "evaluation_rule": {
+    "checks": [
+      {
+        "id": "c_version",
+        "dimension": "correctness",
+        "evaluator": "fact_match",
+        "target": [
+          "f_version"
+        ],
+        "weight": 1,
+        "required": true,
+        "normalizer": "version_tag"
+      },
+      {
+        "id": "c_date",
+        "dimension": "correctness",
+        "evaluator": "fact_match",
+        "target": [
+          "f_date"
+        ],
+        "weight": 1,
+        "required": true,
+        "precision": "day"
+      },
+      {
+        "id": "c_citation",
+        "dimension": "evidence",
+        "evaluator": "citation_support",
+        "target": [
+          "f_version",
+          "f_date"
+        ],
+        "weight": 1,
+        "required": true,
+        "accepted_source_types": [
+          "github_release"
+        ]
+      },
+      {
+        "id": "c_observed",
+        "dimension": "process",
+        "evaluator": "trace_assertion",
+        "target": [
+          "f_version",
+          "f_date"
+        ],
+        "weight": 1,
+        "required": true,
+        "assertion": "supporting_source_observed"
+      }
+    ],
+    "dimension_weights": {
+      "correctness": 0.7,
+      "evidence": 0.2,
+      "process": 0.1
+    },
+    "pass_threshold": 0.8
+  }
+}

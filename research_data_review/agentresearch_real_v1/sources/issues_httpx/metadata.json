@@ -1,0 +1,16 @@
+{
+  "id": "issues_httpx",
+  "requested_url": "https://api.github.com/repos/encode/httpx/issues?state=closed&labels=bug&sort=updated&direction=desc&per_page=10",
+  "final_url": "https://api.github.com/repos/encode/httpx/issues?state=closed&labels=bug&sort=updated&direction=desc&per_page=10",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:37.798713+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:38 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"ab79bdd052af68a49ce33c2ad22796e6d449cfa1cc9dd8cff4cfeb5abcf41cd3\"",
+    "Link": "<https://api.github.com/repositories/179492861/issues?state=closed&labels=bug&sort=updated&direction=desc&per_page=10&after=Y3Vyc29yOnYyOpLPAAABh52j_djOWmE6-A%3D%3D&page=2>; rel=\"next\"",
+    "X-RateLimit-Remaining": "23"
+  },
+  "sha256": "993891c2e3aeb8b77063e0c64da2bde8969b21a609e2480ba4017e6d5c3f1460",
+  "bytes": 59603
+}

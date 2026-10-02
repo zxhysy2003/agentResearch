@@ -1,0 +1,15 @@
+{
+  "id": "qdrant_filtering",
+  "requested_url": "https://qdrant.tech/documentation/concepts/filtering/",
+  "final_url": "https://qdrant.tech/documentation/search/filtering/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:32.096213+00:00",
+  "headers": {
+    "Content-Type": "text/html; charset=UTF-8",
+    "Date": "Tue, 29 Sep 2026 14:35:33 GMT",
+    "Etag": "\"d0a6b3cf93b87df26dc6f51d2b29e57e-ssl\"",
+    "Link": "<index.md>; rel=\"alternate\"; type=\"text/markdown\""
+  },
+  "sha256": "5942d3f242d24d6f1455f9bbde33e0587d92b9e3c960430b14ca6c6f13f6de97",
+  "bytes": 520622
+}

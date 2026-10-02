@@ -1,0 +1,475 @@
+Model Context Protocol (MCP) | Pydantic Docs
+Skip to content
+/
+Docs
+Pydantic Docs
+Pydantic Validation
+Pydantic AI
+Pydantic Logfire
+HTTPX2
+Monty
+More
+HTTPX2
+Monty
+Search
+Ctrl
+K
+Pydantic Validation
+Pydantic AI
+Pydantic Logfire
+HTTPX2
+Monty
+Pydantic Validation
+Pydantic AI
+Pydantic Logfire
+HTTPX2
+Monty
+Theme
+pydantic/pydantic-ai
+Pydantic Validation
+Pydantic AI
+Pydantic Logfire
+HTTPX2
+Monty
+Theme
+pydantic/pydantic-ai
+Pydantic AI
+Installation
+Coding Agent Skills
+Getting Help
+Enterprise Support
+Troubleshooting
+Core Concepts
+Agents
+Dependencies
+Output
+Multimodal Input
+Hooks
+Capabilities
+On-Demand Capabilities
+Building Custom Capabilities
+Agent Specs
+Messages and chat history
+Persistence
+Direct Model Requests
+Retries
+Timeouts
+Multi-Agent Patterns
+Models & Providers
+Overview
+Pydantic AI Gateway
+OpenAI
+Anthropic
+Google
+xAI
+Bedrock
+Cerebras
+Cohere
+Crusoe
+GitHub Copilot
+Groq
+Hugging Face
+Mistral
+Ollama
+OpenAI Codex
+OpenRouter
+Snowflake Cortex
+Decision models
+TypeSafe (Jev)
+Z.AI
+Tools & Toolsets
+Function Tools
+Advanced Tool Features
+Toolsets
+Deferred Tools
+Native Tools
+Common Tools
+Third-Party Tools
+Capabilities
+Pydantic AI Harness
+Harnesses
+Coder
+Researcher
+Execution Environments
+FileSystem
+Shell
+Modal Sandbox
+Tools & Native Abilities
+MCP
+Image Generation
+StackOne
+LocalStack
+Macroscope
+GitHub
+Google Workspace
+Linear
+Logfire MCP
+Notion
+Ordinal
+Slack
+Web & Research
+Web Search
+Web Fetch
+X Search
+Exa Search
+You.com
+Browser Use
+Playwright Browser
+Reasoning, Planning & Delegation
+Thinking
+Planning
+Subagents
+Dynamic Workflow
+Advisor
+Background Tools
+Context Management
+Code Mode
+Tool Search
+Provider-Native Compaction
+Compaction Strategies
+Tool Output Limits
+Warn On Cache Busts
+Knowledge & Memory
+Memory
+Conversation Search
+Skills
+Repo Context
+Pydantic AI Docs
+Control & Safety
+Guardrails
+Prompt Injection Defender
+Spend Limits
+Handle Deferred Tool Calls
+Ask User
+System Reminders
+Trajectory Judge
+Runtime Capability Creation
+Execution Runtime
+Instrumentation
+Step Persistence
+Media Stores
+Managed Prompt
+Repair Tool Arguments
+Thread Executor
+Loop Customization
+Select Model
+Resolve Model ID
+Prepare Tools
+Prefix Tools
+Include Tool Return Schemas
+Set Tool Metadata
+Raise Content Filter Error
+Reinject System Prompt
+Process History
+Process Event Stream
+Examples
+Third-Party Capabilities
+Realtime (speech-to-speech)
+Overview
+Audio, images, and transcripts
+Events
+Turns and interruptions
+Tools
+Capabilities and hooks
+History and handoff
+Connecting a frontend
+Connection lifecycle
+Usage and observability
+Troubleshooting
+OpenAI
+OpenAI GPT-Live
+Azure
+Google Gemini
+xAI
+Durable Execution
+Overview
+Building a backend
+Temporal
+DBOS
+Prefect
+Restate
+AWS Lambda
+Kitaru
+Apache Airflow
+Interfaces
+Overview
+Web Chat UI
+UI Event Streams
+Overview
+AG-UI
+Vercel AI
+Command Line Interface (CLI)
+GitHub Agentic Workflows
+ACP
+Extensibility
+Observability
+Image Generation
+Embeddings
+Testing
+MCP
+Overview
+Client
+Server
+Pydantic Evals
+Overview
+Getting Started
+Quick Start
+Core Concepts
+Evaluators
+Overview
+Built-in Evaluators
+LLM Judge
+Third-Party Integrations
+Custom Evaluators
+Report Evaluators
+Span-Based
+Agentic Evaluators
+Standard Quality Metrics
+Online Evaluation
+How-To Guides
+Logfire Integration
+Dataset Management
+Dataset Serialization
+Concurrency & Performance
+Multi-Run Evaluation
+Retry Strategies
+Metrics & Attributes
+Case Lifecycle Hooks
+Simple Validation
+Pydantic Graph
+Overview
+Graph Builder
+Getting Started
+Steps
+Joins & Reducers
+Decisions
+Parallel Execution
+Examples
+Setup
+Getting Started
+Pydantic Model
+Weather Agent
+Conversational Agents
+Chat App with FastAPI
+Bank Support
+Data & Analytics
+SQL Generation
+Data Analyst
+RAG
+TwelveLabs Video Agent
+Streaming
+Stream Markdown
+Stream Whales
+Realtime
+Voice Assistant
+Text to Audio
+Agent Handoff
+Camera Agent
+Browser WebRTC
+Complex Workflows
+Flight Booking
+Medical Agent Delegation
+Business Applications
+UI Examples
+Comparisons
+Overview
+Migrate to Pydantic AI
+vs LangChain & LangGraph
+vs Claude Agent SDK
+vs Vercel AI SDK
+vs OpenAI Agents SDK
+vs Google ADK
+vs Mastra
+vs LiveKit Agents
+vs Pipecat
+vs Pi
+vs Agno
+vs CrewAI
+API Reference
+pydantic_ai
+agent
+native_tools
+capabilities
+common_tools
+concurrency
+direct
+durable_exec
+embeddings
+exceptions
+ext
+format_prompt
+function_signature
+images
+mcp
+messages
+models
+anthropic
+base
+bedrock
+bedrock_mantle
+cerebras
+cohere
+crusoe
+fallback
+function
+google
+github_copilot
+xai
+groq
+huggingface
+instrumented
+mcp-sampling
+mistral
+ollama
+openai
+openai_codex
+openrouter
+snowflake
+test
+decision
+typesafe
+zai
+wrapper
+output
+profiles
+providers
+realtime
+realtime
+codec
+openai
+live
+google
+xai
+azure
+result
+retries
+run
+settings
+template
+tools
+toolsets
+ui
+ag_ui
+base
+vercel_ai
+usage
+pydantic_evals
+pydantic_evals.dataset
+pydantic_evals.evaluators
+pydantic_evals.lifecycle
+pydantic_evals.online
+pydantic_evals.online_capability
+pydantic_evals.reporting
+pydantic_evals.otel
+pydantic_evals.generation
+pydantic_graph
+pydantic_graph.basenode
+pydantic_graph.graph_builder
+pydantic_graph.step
+pydantic_graph.join
+pydantic_graph.decision
+pydantic_graph.node
+pydantic_graph.util
+pydantic_graph.exceptions
+Project
+Contributing
+Upgrade Guide
+V1 → V2 Migration Map
+Version Policy
+On this page
+Overview
+What is MCP?
+Use MCP servers
+On this page
+Overview
+What is MCP?
+Use MCP servers
+Model Context Protocol (MCP)
+Pydantic AI supports
+Model Context Protocol (MCP)
+in multiple ways:
+Agents
+can connect to MCP servers and use their tools — see
+Use MCP servers
+below.
+Agents can be used within MCP servers.
+Learn more
+What is MCP?
+The Model Context Protocol is a standardized protocol that allows AI applications (including programmatic agents like Pydantic AI, coding agents like
+cursor
+, and desktop applications like
+Claude Desktop
+) to connect to external tools and services using a common interface.
+As with other protocols, the dream of MCP is that a wide range of applications can speak to each other without the need for specific integrations.
+There is a great list of MCP servers at
+github.com/modelcontextprotocol/servers
+.
+Some examples of what this means:
+Pydantic AI could use a web search service implemented as an MCP server to implement a deep research agent
+Cursor could connect to the
+Pydantic Logfire
+MCP server to search logs, traces and metrics to gain context while fixing a bug
+Pydantic AI, or any other MCP client could connect to our
+Run Python
+MCP server to run arbitrary Python code in a sandboxed environment
+Use MCP servers
+The recommended way to give an agent access to an MCP server is the
+MCP
+capability
+. It runs the MCP server locally by default — keeping credentials, hooks, and tracing under your control — and lets you opt into the model provider’s
+native MCP support
+with a single
+native=True
+flag, so the same agent works across providers without code changes:
+mcp_capability.py
+from pydantic_ai import Agent
+from pydantic_ai.capabilities import MCP
+
+agent = Agent(
+    'openai:gpt-5.2',
+    capabilities=[
+        # Runs the MCP server locally by default
+        MCP(url='https://mcp.example.com/api'),
+
+        # Opt into native MCP — falls back to local if the model doesn't support it
+        MCP(url='https://mcp.example.com/other', native=True),
+    ],
+)
+Pass a URL as the first argument to enable both the local fallback and (with
+native=True
+) provider-native MCP. On the local side,
+local=
+accepts any
+MCPToolset
+input — a URL, FastMCP transport, pre-built
+fastmcp.Client
+, in-process
+FastMCP
+server, or local script path. See the
+capability documentation
+for the full set of inputs and configuration options.
+For lower-level access — managing the toolset lifecycle directly, sharing one MCP server across multiple agents, or passing advanced transport or client configuration the
+MCP
+capability
+does not expose — use
+MCPToolset
+directly via
+toolsets=[...]
+. See the
+MCP client documentation
+for details.
+If you only need the model provider’s native MCP support without a local fallback, you can use
+MCPServerTool
+as a
+native tool
+directly.
+For building MCP servers with Pydantic AI agents, see the
+MCP server documentation
+.
+Was this page helpful?
+Thanks for your feedback!
+Previous
+Testing
+Next
+Client
+© Pydantic Services Inc. 2025 to present

@@ -1,0 +1,54 @@
+{
+  "id": "demo-v1",
+  "synthetic": true,
+  "artifacts": [
+    {
+      "id": "release",
+      "url": "https://example.invalid/release",
+      "path": "release.json",
+      "sha256": "b8979ff00e0655f59608b1863c08d3589a42a3bfb1f10159fd685023c90434dd",
+      "captured_at": "2026-09-01T00:00:00Z"
+    },
+    {
+      "id": "docs",
+      "url": "https://example.invalid/docs",
+      "path": "docs.json",
+      "sha256": "7a8d8a2c941c2fc0b1938824326696d8552acff804c489494c96e75c94401c67",
+      "captured_at": "2026-09-01T00:00:00Z"
+    },
+    {
+      "id": "comparison",
+      "url": "https://example.invalid/comparison",
+      "path": "comparison.json",
+      "sha256": "5d65b958298e95059366e1481e522ea2a8c530100c886cce329a76d7555144d0",
+      "captured_at": "2026-09-01T00:00:00Z"
+    },
+    {
+      "id": "frameworks",
+      "url": "https://example.invalid/frameworks",
+      "path": "frameworks.json",
+      "sha256": "3e00fdafb9af71a4b48d9b2b7d6c8cf49a4207307d7b736b3b0a1379a8dcb696",
+      "captured_at": "2026-09-01T00:00:00Z"
+    },
+    {
+      "id": "recovery",
+      "url": "https://example.invalid/recovery",
+      "path": "recovery.json",
+      "sha256": "5c3dc81fefa227179472ab937dea6b233cb31437cbfae3772e658924ab53f799",
+      "captured_at": "2026-09-01T00:00:00Z"
+    }
+  ],
+  "faults": [
+    {
+      "id": "timeout_once",
+      "tool": "github_read",
+      "arguments": {
+        "repository": "example-org/demo-agent"
+      },
+      "trigger_calls": [
+        1
+      ],
+      "error": "timeout"
+    }
+  ]
+}

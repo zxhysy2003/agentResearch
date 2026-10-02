@@ -1,0 +1,20 @@
+{
+  "dataset_id": "github_lookup_v1",
+  "validated_at": "2026-10-01T15:45:00.531737+00:00",
+  "case_count": 10,
+  "category_counts": {
+    "github_lookup": 10
+  },
+  "source_count": 10,
+  "checks": {
+    "pydantic_schema": "passed",
+    "source_references": "passed",
+    "source_sha256": "passed",
+    "task_ground_truth_rules_unchanged": "passed",
+    "original_review_directory_unchanged": "passed",
+    "snapshot_url_lookup": "passed",
+    "agent_input_allowlist": "passed"
+  },
+  "agent_evaluation_performed": false,
+  "note": "数据整理与完整性校验结果，不是 Agent 能力成绩，也不等价于工具运行时已隔离网络。"
+}

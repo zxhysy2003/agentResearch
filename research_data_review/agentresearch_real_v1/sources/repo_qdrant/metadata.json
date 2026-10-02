@@ -1,0 +1,16 @@
+{
+  "id": "repo_qdrant",
+  "requested_url": "https://api.github.com/repos/qdrant/qdrant",
+  "final_url": "https://api.github.com/repos/qdrant/qdrant",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:34.926097+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:35 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"58c3693a2ce2dbd606ae8dadaacd575297ee2d9d94fc685ed8072166241214a6\"",
+    "Last-Modified": "Tue, 29 Sep 2026 10:56:09 GMT",
+    "X-RateLimit-Remaining": "53"
+  },
+  "sha256": "bf843e66acb60290944c70ba89e0ff77696ded366802d40bfe23b8f1a711054a",
+  "bytes": 6470
+}

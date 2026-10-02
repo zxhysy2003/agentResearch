@@ -1,0 +1,6 @@
+{
+  "project": "DemoAgent",
+  "version": "1.4",
+  "checkpoint": "A durable store saves state by thread_id; an in-memory store loses state on restart.",
+  "configuration": "Pass a checkpoint store and a stable thread_id."
+}

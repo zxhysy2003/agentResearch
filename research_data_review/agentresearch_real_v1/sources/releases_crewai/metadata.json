@@ -1,0 +1,16 @@
+{
+  "id": "releases_crewai",
+  "requested_url": "https://api.github.com/repos/crewAIInc/crewAI/releases?per_page=10",
+  "final_url": "https://api.github.com/repos/crewAIInc/crewAI/releases?per_page=10",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:37.193136+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"05bea31f9d01af4eae48f05b302845cb4b2770a23136b1cb5117a3597c3d17ef\"",
+    "Link": "<https://api.github.com/repositories/710601088/releases?per_page=10&page=2>; rel=\"next\", <https://api.github.com/repositories/710601088/releases?per_page=10&page=24>; rel=\"last\"",
+    "X-RateLimit-Remaining": "28"
+  },
+  "sha256": "c5ae69ef41c37790ec307d203abe52232bc3e557c8c7a531b0a55d5f713b3078",
+  "bytes": 28494
+}

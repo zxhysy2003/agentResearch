@@ -1,0 +1,16 @@
+{
+  "id": "repo_pydantic",
+  "requested_url": "https://api.github.com/repos/pydantic/pydantic",
+  "final_url": "https://api.github.com/repos/pydantic/pydantic",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:35.384494+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:35 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"fc77d2aad96c6c2530017949eb1e3e029ef570d027f6dccd6306e6d6b0883aa5\"",
+    "Last-Modified": "Tue, 29 Sep 2026 14:06:59 GMT",
+    "X-RateLimit-Remaining": "49"
+  },
+  "sha256": "66e59c121f7530ee02331f5b18b4438f511f4bcefc95559bb5c41cf5c82c4767",
+  "bytes": 6310
+}

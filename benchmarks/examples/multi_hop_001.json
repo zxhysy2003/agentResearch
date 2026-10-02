@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "id": "multi_hop_001",
+  "revision": 1,
+  "category": "multi_hop",
+  "difficulty": "hard",
+  "tags": [
+    "synthetic"
+  ],
+  "split": "dev",
+  "task": {
+    "prompt": "找出三个支持 MCP 的 Python Agent 框架，并比较各自最近一次 Release 的时间。",
+    "as_of": "2026-09-01T00:00:00Z",
+    "context": {
+      "fixture": "All projects are fictional; use the provided snapshot."
+    },
+    "requirements": [
+      "Cite supporting sources and report uncertainty."
+    ]
+  },
+  "environment": {
+    "mode": "snapshot",
+    "snapshot_id": "demo-v1",
+    "allowed_tools": [
+      "web_search",
+      "fetch_page",
+      "github_read"
+    ],
+    "limits": {
+      "max_tool_calls": 15,
+      "timeout_seconds": 120
+    },
+    "fault_scenario_id": null
+  },
+  "ground_truth": {
+    "expected_outcome": "answered",
+    "facts": [],
+    "evidence": [
+      {
+        "id": "e_frameworks",
+        "source_type": "official_docs",
+        "url": "https://example.invalid/frameworks",
+        "artifact_id": "frameworks",
+        "locator": "$",
+        "captured_at": "2026-09-01T00:00:00Z"
+      }
+    ],
+    "rubrics": [],
+    "entity_requirements": {
+      "count": 3,
+      "dedup_key": "repository",
+      "required_fields": [
+        "language",
+        "mcp",
+        "release_date"
+      ],
+      "eligible_entities": [
+        {
+          "key": "example-org/alpha",
+          "facts": {
+            "language": {
+              "type": "string",
+              "value": "Python"
+            },
+            "mcp": {
+              "type": "boolean",
+              "value": true
+            },
+            "release_date": {
+              "type": "datetime",
+              "value": "2026-08-02T00:00:00Z"
+            }
+          },
+          "evidence_ids": [
+            "e_frameworks"
+          ]
+        },
+        {
+          "key": "example-org/beta",
+          "facts": {
+            "language": {
+              "type": "string",
+              "value": "Python"
+            },
+            "mcp": {
+              "type": "boolean",
+              "value": true
+            },
+            "release_date": {
+              "type": "datetime",
+              "value": "2026-08-06T00:00:00Z"
+            }
+          },
+          "evidence_ids": [
+            "e_frameworks"
+          ]
+        },
+        {
+          "key": "example-org/gamma",
+          "facts": {
+            "language": {
+              "type": "string",
+              "value": "Python"
+            },
+            "mcp": {
+              "type": "boolean",
+              "value": true
+            },
+            "release_date": {
+              "type": "datetime",
+              "value": "2026-08-12T00:00:00Z"
+            }
+          },
+          "evidence_ids": [
+            "e_frameworks"
+          ]
+        },
+        {
+          "key": "example-org/delta",
+          "facts": {
+            "language": {
+              "type": "string",
+              "value": "Python"
+            },
+            "mcp": {
+              "type": "boolean",
+              "value": true
+            },
+            "release_date": {
+              "type": "datetime",
+              "value": "2026-08-18T00:00:00Z"
+            }
+          },
+          "evidence_ids": [
+            "e_frameworks"
+          ]
+        }
+      ]
+    }
+  },
+  "evaluation_rule": {
+    "checks": [
+      {
+        "id": "c_content",
+        "dimension": "correctness",
+        "evaluator": "entity_constraint",
+        "target": [
+          "entities"
+        ],
+        "weight": 1,
+        "required": true
+      },
+      {
+        "id": "c_citation",
+        "dimension": "evidence",
+        "evaluator": "citation_support",
+        "target": [
+          "entities"
+        ],
+        "weight": 1,
+        "required": true,
+        "accepted_source_types": [
+          "official_docs"
+        ]
+      },
+      {
+        "id": "c_observed",
+        "dimension": "process",
+        "evaluator": "trace_assertion",
+        "target": [
+          "entities"
+        ],
+        "weight": 1,
+        "required": true,
+        "assertion": "supporting_source_observed"
+      }
+    ],
+    "dimension_weights": {
+      "correctness": 0.6,
+      "evidence": 0.25,
+      "process": 0.15
+    },
+    "pass_threshold": 0.8
+  }
+}

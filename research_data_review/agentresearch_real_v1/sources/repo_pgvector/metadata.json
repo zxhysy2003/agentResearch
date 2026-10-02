@@ -1,0 +1,16 @@
+{
+  "id": "repo_pgvector",
+  "requested_url": "https://api.github.com/repos/pgvector/pgvector",
+  "final_url": "https://api.github.com/repos/pgvector/pgvector",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:35.410943+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:35 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"059fe78bc8261b937a71cc52396b7532e87292d53fd4ab3ba034e5010a33f850\"",
+    "Last-Modified": "Tue, 29 Sep 2026 13:52:23 GMT",
+    "X-RateLimit-Remaining": "48"
+  },
+  "sha256": "878d6e01d9ad144b4e81b03cbe21cfcb42eb0672744f3fa564c6498671c583e1",
+  "bytes": 6186
+}

@@ -1,0 +1,13 @@
+{
+  "id": "postgres_indexes",
+  "requested_url": "https://www.postgresql.org/docs/17/indexes-types.html",
+  "final_url": "https://www.postgresql.org/docs/17/indexes-types.html",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:32.658607+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:29:05 GMT",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "sha256": "cbb93e57a87799bc9cebb933204bfd48923ab2085ad3b98daf0d7c08dc6ef6f2",
+  "bytes": 26179
+}

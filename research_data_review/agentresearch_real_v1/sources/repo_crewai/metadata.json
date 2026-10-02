@@ -1,0 +1,16 @@
+{
+  "id": "repo_crewai",
+  "requested_url": "https://api.github.com/repos/crewAIInc/crewAI",
+  "final_url": "https://api.github.com/repos/crewAIInc/crewAI",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:35.428989+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:36 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"ed9d732cb40e6946416f63b2b681485e2741a76a31201b980ab506de45119a39\"",
+    "Last-Modified": "Tue, 29 Sep 2026 14:34:53 GMT",
+    "X-RateLimit-Remaining": "46"
+  },
+  "sha256": "7d709af0cf7e718778a51744f7eb2180319f82aee1f1237f3dcaefbabe54a792",
+  "bytes": 6322
+}

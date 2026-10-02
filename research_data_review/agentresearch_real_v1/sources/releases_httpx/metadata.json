@@ -1,0 +1,16 @@
+{
+  "id": "releases_httpx",
+  "requested_url": "https://api.github.com/repos/encode/httpx/releases?per_page=10",
+  "final_url": "https://api.github.com/repos/encode/httpx/releases?per_page=10",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:37.183311+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"e962c90bf18996f904103b4365367ecbdd82f8ae5c4ccc8768d583b44ab46ab4\"",
+    "Link": "<https://api.github.com/repositories/179492861/releases?per_page=10&page=2>; rel=\"next\", <https://api.github.com/repositories/179492861/releases?per_page=10&page=6>; rel=\"last\"",
+    "X-RateLimit-Remaining": "29"
+  },
+  "sha256": "6ac6409314c4574a8098ac0100b0e019a136e6210c2c1b77097d522cb65b4ab9",
+  "bytes": 24568
+}

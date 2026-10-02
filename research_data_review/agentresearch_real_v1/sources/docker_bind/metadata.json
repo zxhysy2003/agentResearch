@@ -1,0 +1,15 @@
+{
+  "id": "docker_bind",
+  "requested_url": "https://docs.docker.com/engine/storage/bind-mounts/",
+  "final_url": "https://docs.docker.com/engine/storage/bind-mounts/",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:31.440616+00:00",
+  "headers": {
+    "Content-Type": "text/html",
+    "Date": "Tue, 29 Sep 2026 14:35:33 GMT",
+    "Last-Modified": "Tue, 29 Sep 2026 14:20:44 GMT",
+    "ETag": "\"11327ba118675bd21f30b6b860bc081a\""
+  },
+  "sha256": "1bf7670016fb827992a59cc57b9b4d7faa6bc7bd9e57dbd6452b11b92861c969",
+  "bytes": 599520
+}

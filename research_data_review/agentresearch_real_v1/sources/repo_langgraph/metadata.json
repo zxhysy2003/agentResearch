@@ -1,0 +1,16 @@
+{
+  "id": "repo_langgraph",
+  "requested_url": "https://api.github.com/repos/langchain-ai/langgraph",
+  "final_url": "https://api.github.com/repos/langchain-ai/langgraph",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:34.907820+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:35 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"6bd9753c2efd04a0c6f76c8f61b845b6a539f1ceb1930c007dff96131c650f90\"",
+    "Last-Modified": "Tue, 29 Sep 2026 14:27:37 GMT",
+    "X-RateLimit-Remaining": "52"
+  },
+  "sha256": "bfbedf5c97e0d110573933d12ab3c1076ea24ac95748b36aa6a94662f89d2f37",
+  "bytes": 6664
+}

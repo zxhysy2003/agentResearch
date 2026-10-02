@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "id": "comparison_001",
+  "revision": 1,
+  "category": "comparison",
+  "difficulty": "medium",
+  "tags": [
+    "synthetic"
+  ],
+  "split": "dev",
+  "task": {
+    "prompt": "比较 Alpha 与 Beta 的持久化、过滤和部署方式，为需要重启后保留数据且按元数据过滤的服务提出建议。",
+    "as_of": "2026-09-01T00:00:00Z",
+    "context": {
+      "fixture": "All projects are fictional; use the provided snapshot."
+    },
+    "requirements": [
+      "Cite supporting sources and report uncertainty."
+    ]
+  },
+  "environment": {
+    "mode": "snapshot",
+    "snapshot_id": "demo-v1",
+    "allowed_tools": [
+      "web_search",
+      "fetch_page",
+      "github_read"
+    ],
+    "limits": {
+      "max_tool_calls": 15,
+      "timeout_seconds": 120
+    },
+    "fault_scenario_id": null
+  },
+  "ground_truth": {
+    "expected_outcome": "answered",
+    "facts": [],
+    "evidence": [
+      {
+        "id": "e_comparison",
+        "source_type": "official_docs",
+        "url": "https://example.invalid/comparison",
+        "artifact_id": "comparison",
+        "locator": "$",
+        "captured_at": "2026-09-01T00:00:00Z"
+      }
+    ],
+    "rubrics": [
+      {
+        "id": "r_persistence",
+        "criterion": "Correctly compare both projects on persistence.",
+        "evidence_ids": [
+          "e_comparison"
+        ],
+        "anchors": {
+          "0": "Missing or contradicts the source.",
+          "0.5": "Partially correct but omits a required condition.",
+          "1": "All stated requirements are correct and supported."
+        }
+      },
+      {
+        "id": "r_filtering",
+        "criterion": "Correctly compare both projects on filtering.",
+        "evidence_ids": [
+          "e_comparison"
+        ],
+        "anchors": {
+          "0": "Missing or contradicts the source.",
+          "0.5": "Partially correct but omits a required condition.",
+          "1": "All stated requirements are correct and supported."
+        }
+      },
+      {
+        "id": "r_deployment",
+        "criterion": "Correctly compare both projects on deployment.",
+        "evidence_ids": [
+          "e_comparison"
+        ],
+        "anchors": {
+          "0": "Missing or contradicts the source.",
+          "0.5": "Partially correct but omits a required condition.",
+          "1": "All stated requirements are correct and supported."
+        }
+      },
+      {
+        "id": "r_recommend",
+        "criterion": "Recommendation must meet durable persistence and metadata filtering constraints.",
+        "evidence_ids": [
+          "e_comparison"
+        ],
+        "anchors": {
+          "0": "Missing or contradicts the source.",
+          "0.5": "Partially correct but omits a required condition.",
+          "1": "All stated requirements are correct and supported."
+        }
+      }
+    ],
+    "entity_requirements": null
+  },
+  "evaluation_rule": {
+    "checks": [
+      {
+        "id": "c_content",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_persistence",
+          "r_filtering",
+          "r_deployment",
+          "r_recommend"
+        ],
+        "weight": 1,
+        "required": true
+      },
+      {
+        "id": "c_citation",
+        "dimension": "evidence",
+        "evaluator": "citation_support",
+        "target": [
+          "r_persistence",
+          "r_filtering",
+          "r_deployment",
+          "r_recommend"
+        ],
+        "weight": 1,
+        "required": true,
+        "accepted_source_types": [
+          "official_docs"
+        ]
+      },
+      {
+        "id": "c_observed",
+        "dimension": "process",
+        "evaluator": "trace_assertion",
+        "target": [
+          "r_persistence",
+          "r_filtering",
+          "r_deployment",
+          "r_recommend"
+        ],
+        "weight": 1,
+        "required": true,
+        "assertion": "supporting_source_observed"
+      }
+    ],
+    "dimension_weights": {
+      "correctness": 0.6,
+      "evidence": 0.25,
+      "process": 0.15
+    },
+    "pass_threshold": 0.8
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "repo_old_langchain",
+  "requested_url": "https://api.github.com/repos/hwchase17/langchain",
+  "final_url": "https://api.github.com/repositories/552661142",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:36.284111+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"e0c3d0f0905c3349a7adc606f869bab2bd8cb3302be8eec5546b342c26a3d5ae\"",
+    "Last-Modified": "Tue, 29 Sep 2026 14:31:14 GMT",
+    "X-RateLimit-Remaining": "33"
+  },
+  "sha256": "d3dabbe51783c424369a3d720d28b5eba5a952214006916bdba12be351398495",
+  "bytes": 6695
+}

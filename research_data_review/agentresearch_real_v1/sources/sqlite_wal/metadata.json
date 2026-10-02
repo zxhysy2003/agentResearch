@@ -1,0 +1,15 @@
+{
+  "id": "sqlite_wal",
+  "requested_url": "https://www.sqlite.org/wal.html",
+  "final_url": "https://www.sqlite.org/wal.html",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:32.823567+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:34 GMT",
+    "Last-Modified": "Fri, 11 Sep 2026 11:09:53 GMT",
+    "ETag": "\"m6aa3e181sa49f\"",
+    "Content-type": "text/html; charset=utf-8"
+  },
+  "sha256": "f3467b530b883d4a00574fe1a898b3d121ed72764ae28cf66941080ac0badb9e",
+  "bytes": 42143
+}

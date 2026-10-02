@@ -1,0 +1,25 @@
+{
+  "validated_at": "2026-09-29T14:48:13.345422+00:00",
+  "cases": 50,
+  "category_counts": {
+    "comparison": 10,
+    "edge_case": 10,
+    "github_lookup": 10,
+    "multi_hop": 10,
+    "official_docs": 10
+  },
+  "cited_sources": 59,
+  "downloaded_sources": 70,
+  "machine_checked_fact_values": 76,
+  "matched_source_anchors": 101,
+  "schema_validation": "passed",
+  "source_hashes": "passed",
+  "factual_extraction_consistency": "passed",
+  "derived_text_consistency": "passed",
+  "synthetic": false,
+  "semantic_annotation_review": "pending_human_review",
+  "limitations": [
+    "Text anchors prove location, not semantic entailment.",
+    "These are benchmark candidates; no Agent run or grading result is fabricated."
+  ]
+}

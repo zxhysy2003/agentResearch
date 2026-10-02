@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "id": "comparison_10",
+  "revision": 1,
+  "category": "comparison",
+  "difficulty": "hard",
+  "tags": [
+    "real_sources",
+    "review_candidate"
+  ],
+  "split": "dev",
+  "task": {
+    "prompt": "在 FastAPI 中比较 StreamingResponse 和 WebSocket：持续输出 Agent token 与同一连接上的双向交互分别如何实现？",
+    "as_of": "2026-09-29T14:35:30.361537Z",
+    "context": {
+      "time_scope": "仅依据此任务的采集快照回答；当前、最新及统计值均指各来源记录的采集时刻，不代表未来实时状态。"
+    },
+    "requirements": [
+      "引用可核验的一手来源。",
+      "区分材料直接记载、推断和不确定性；不编造。"
+    ]
+  },
+  "environment": {
+    "mode": "snapshot",
+    "snapshot_id": "agentresearch-real-review-v1",
+    "allowed_tools": [
+      "web_search",
+      "fetch_page",
+      "github_read"
+    ],
+    "limits": {
+      "max_tool_calls": 30,
+      "timeout_seconds": 180.0
+    },
+    "fault_scenario_id": null
+  },
+  "ground_truth": {
+    "expected_outcome": "answered",
+    "facts": [],
+    "evidence": [
+      {
+        "id": "e_1",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/advanced/custom-response/",
+        "artifact_id": "fastapi_streaming",
+        "locator": "text.txt:L944-L944; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361537Z"
+      },
+      {
+        "id": "e_2",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/advanced/websockets/",
+        "artifact_id": "fastapi_websockets",
+        "locator": "text.txt:L362-L362; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361291Z"
+      },
+      {
+        "id": "e_3",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/advanced/custom-response/",
+        "artifact_id": "fastapi_streaming",
+        "locator": "text.txt:L946-L946; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361537Z"
+      },
+      {
+        "id": "e_4",
+        "source_type": "official_docs",
+        "url": "https://fastapi.tiangolo.com/advanced/websockets/",
+        "artifact_id": "fastapi_websockets",
+        "locator": "text.txt:L352-L352; locate nearby section",
+        "captured_at": "2026-09-29T14:35:30.361291Z"
+      }
+    ],
+    "rubrics": [
+      {
+        "id": "r_1",
+        "criterion": "StreamingResponse 消费普通或异步生成器并流式返回 HTTP 响应体；WebSocket 示例在连接内接收文本并发送文本，适合双向交互。",
+        "evidence_ids": [
+          "e_1",
+          "e_2"
+        ],
+        "anchors": {
+          "0": "未回答或与原始证据矛盾。",
+          "0.5": "部分正确，但遗漏该评分项中的条件或限制。",
+          "1": "完整且正确地表述该评分项，保留适用范围与限制。"
+        }
+      },
+      {
+        "id": "r_2",
+        "criterion": "WebSocket 示例先接受连接，再循环接收和发送文本；StreamingResponse 则通过迭代生成器发送响应体，二者的接口使用方式不同。",
+        "evidence_ids": [
+          "e_3",
+          "e_4"
+        ],
+        "anchors": {
+          "0": "未回答或与原始证据矛盾。",
+          "0.5": "部分正确，但遗漏该评分项中的条件或限制。",
+          "1": "完整且正确地表述该评分项，保留适用范围与限制。"
+        }
+      }
+    ],
+    "entity_requirements": null
+  },
+  "evaluation_rule": {
+    "checks": [
+      {
+        "id": "c_r_1",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_1"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_r_2",
+        "dimension": "correctness",
+        "evaluator": "rubric_judge",
+        "target": [
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_citations",
+        "dimension": "evidence",
+        "evaluator": "citation_support",
+        "target": [
+          "r_1",
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": null
+      },
+      {
+        "id": "c_trace",
+        "dimension": "process",
+        "evaluator": "trace_assertion",
+        "target": [
+          "r_1",
+          "r_2"
+        ],
+        "weight": 1.0,
+        "required": true,
+        "normalizer": "identity",
+        "precision": "instant",
+        "tolerance": 0.0,
+        "set_match": "exact",
+        "accepted_source_types": [],
+        "assertion": "supporting_source_observed"
+      }
+    ],
+    "dimension_weights": {
+      "correctness": 0.6,
+      "evidence": 0.25,
+      "process": 0.15
+    },
+    "pass_threshold": 0.8
+  }
+}

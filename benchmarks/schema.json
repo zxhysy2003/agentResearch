@@ -1,0 +1,609 @@
+{
+  "$defs": {
+    "Check": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "dimension": {
+          "enum": [
+            "correctness",
+            "evidence",
+            "process"
+          ],
+          "title": "Dimension",
+          "type": "string"
+        },
+        "evaluator": {
+          "enum": [
+            "fact_match",
+            "rubric_judge",
+            "entity_constraint",
+            "citation_support",
+            "trace_assertion"
+          ],
+          "title": "Evaluator",
+          "type": "string"
+        },
+        "target": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Target",
+          "type": "array"
+        },
+        "weight": {
+          "default": 1,
+          "exclusiveMinimum": 0,
+          "title": "Weight",
+          "type": "number"
+        },
+        "required": {
+          "default": false,
+          "title": "Required",
+          "type": "boolean"
+        },
+        "normalizer": {
+          "default": "identity",
+          "enum": [
+            "identity",
+            "version_tag"
+          ],
+          "title": "Normalizer",
+          "type": "string"
+        },
+        "precision": {
+          "default": "instant",
+          "enum": [
+            "instant",
+            "day"
+          ],
+          "title": "Precision",
+          "type": "string"
+        },
+        "tolerance": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Tolerance",
+          "type": "number"
+        },
+        "set_match": {
+          "default": "exact",
+          "enum": [
+            "exact",
+            "contains"
+          ],
+          "title": "Set Match",
+          "type": "string"
+        },
+        "accepted_source_types": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Accepted Source Types",
+          "type": "array"
+        },
+        "assertion": {
+          "anyOf": [
+            {
+              "enum": [
+                "supporting_source_observed",
+                "outcome_matches",
+                "fault_recovered"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Assertion"
+        }
+      },
+      "required": [
+        "id",
+        "dimension",
+        "evaluator",
+        "target"
+      ],
+      "title": "Check",
+      "type": "object"
+    },
+    "Entity": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "facts": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Expected"
+          },
+          "title": "Facts",
+          "type": "object"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "key",
+        "facts",
+        "evidence_ids"
+      ],
+      "title": "Entity",
+      "type": "object"
+    },
+    "EntityRequirements": {
+      "additionalProperties": false,
+      "properties": {
+        "count": {
+          "exclusiveMinimum": 0,
+          "title": "Count",
+          "type": "integer"
+        },
+        "dedup_key": {
+          "title": "Dedup Key",
+          "type": "string"
+        },
+        "required_fields": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Required Fields",
+          "type": "array"
+        },
+        "eligible_entities": {
+          "items": {
+            "$ref": "#/$defs/Entity"
+          },
+          "minItems": 1,
+          "title": "Eligible Entities",
+          "type": "array"
+        }
+      },
+      "required": [
+        "count",
+        "dedup_key",
+        "required_fields",
+        "eligible_entities"
+      ],
+      "title": "EntityRequirements",
+      "type": "object"
+    },
+    "Environment": {
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "default": "snapshot",
+          "enum": [
+            "snapshot",
+            "live"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "allowed_tools": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Allowed Tools",
+          "type": "array"
+        },
+        "limits": {
+          "$ref": "#/$defs/Limits"
+        },
+        "fault_scenario_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fault Scenario Id"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "allowed_tools"
+      ],
+      "title": "Environment",
+      "type": "object"
+    },
+    "EvaluationRule": {
+      "additionalProperties": false,
+      "properties": {
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/Check"
+          },
+          "minItems": 1,
+          "title": "Checks",
+          "type": "array"
+        },
+        "dimension_weights": {
+          "additionalProperties": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number"
+          },
+          "propertyNames": {
+            "enum": [
+              "correctness",
+              "evidence",
+              "process"
+            ]
+          },
+          "title": "Dimension Weights",
+          "type": "object"
+        },
+        "pass_threshold": {
+          "default": 0.8,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Pass Threshold",
+          "type": "number"
+        }
+      },
+      "required": [
+        "checks",
+        "dimension_weights"
+      ],
+      "title": "EvaluationRule",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "github_release",
+            "github_api",
+            "official_docs",
+            "repository",
+            "blog"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "artifact_id": {
+          "title": "Artifact Id",
+          "type": "string"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "captured_at": {
+          "format": "date-time",
+          "title": "Captured At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_type",
+        "url",
+        "artifact_id",
+        "locator",
+        "captured_at"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Expected": {
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "string",
+            "number",
+            "boolean",
+            "datetime",
+            "set"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value"
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "title": "Expected",
+      "type": "object"
+    },
+    "Fact": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "subject": {
+          "title": "Subject",
+          "type": "string"
+        },
+        "predicate": {
+          "title": "Predicate",
+          "type": "string"
+        },
+        "expected": {
+          "$ref": "#/$defs/Expected"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "subject",
+        "predicate",
+        "expected",
+        "evidence_ids"
+      ],
+      "title": "Fact",
+      "type": "object"
+    },
+    "GroundTruth": {
+      "additionalProperties": false,
+      "properties": {
+        "expected_outcome": {
+          "enum": [
+            "answered",
+            "partial",
+            "needs_clarification",
+            "insufficient_evidence"
+          ],
+          "title": "Expected Outcome",
+          "type": "string"
+        },
+        "facts": {
+          "items": {
+            "$ref": "#/$defs/Fact"
+          },
+          "title": "Facts",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "rubrics": {
+          "items": {
+            "$ref": "#/$defs/Rubric"
+          },
+          "title": "Rubrics",
+          "type": "array"
+        },
+        "entity_requirements": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EntityRequirements"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "expected_outcome"
+      ],
+      "title": "GroundTruth",
+      "type": "object"
+    },
+    "Limits": {
+      "additionalProperties": false,
+      "properties": {
+        "max_tool_calls": {
+          "default": 15,
+          "exclusiveMinimum": 0,
+          "title": "Max Tool Calls",
+          "type": "integer"
+        },
+        "timeout_seconds": {
+          "default": 120,
+          "exclusiveMinimum": 0,
+          "title": "Timeout Seconds",
+          "type": "number"
+        }
+      },
+      "title": "Limits",
+      "type": "object"
+    },
+    "Rubric": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "criterion": {
+          "title": "Criterion",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "anchors": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "propertyNames": {
+            "enum": [
+              "0",
+              "0.5",
+              "1"
+            ]
+          },
+          "title": "Anchors",
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "criterion",
+        "anchors"
+      ],
+      "title": "Rubric",
+      "type": "object"
+    },
+    "Task": {
+      "additionalProperties": false,
+      "properties": {
+        "prompt": {
+          "minLength": 1,
+          "title": "Prompt",
+          "type": "string"
+        },
+        "as_of": {
+          "format": "date-time",
+          "title": "As Of",
+          "type": "string"
+        },
+        "context": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Context",
+          "type": "object"
+        },
+        "requirements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Requirements",
+          "type": "array"
+        }
+      },
+      "required": [
+        "prompt",
+        "as_of"
+      ],
+      "title": "Task",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "revision": {
+      "default": 1,
+      "exclusiveMinimum": 0,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "category": {
+      "enum": [
+        "github_lookup",
+        "official_docs",
+        "comparison",
+        "multi_hop",
+        "edge_case"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "difficulty": {
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "title": "Difficulty",
+      "type": "string"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    },
+    "split": {
+      "default": "dev",
+      "enum": [
+        "dev",
+        "test"
+      ],
+      "title": "Split",
+      "type": "string"
+    },
+    "task": {
+      "$ref": "#/$defs/Task"
+    },
+    "environment": {
+      "$ref": "#/$defs/Environment"
+    },
+    "ground_truth": {
+      "$ref": "#/$defs/GroundTruth"
+    },
+    "evaluation_rule": {
+      "$ref": "#/$defs/EvaluationRule"
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "difficulty",
+    "task",
+    "environment",
+    "ground_truth",
+    "evaluation_rule"
+  ],
+  "title": "BenchmarkCase",
+  "type": "object"
+}

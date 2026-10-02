@@ -1,0 +1,16 @@
+{
+  "id": "releases_pydantic_ai",
+  "requested_url": "https://api.github.com/repos/pydantic/pydantic-ai/releases?per_page=10",
+  "final_url": "https://api.github.com/repos/pydantic/pydantic-ai/releases?per_page=10",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:37.232517+00:00",
+  "headers": {
+    "Date": "Tue, 29 Sep 2026 14:35:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"f5ff1054085f1c82f85b529af8e9c134af9864656932434a31cc80dea43dfe9e\"",
+    "Link": "<https://api.github.com/repositories/818331198/releases?per_page=10&page=2>; rel=\"next\", <https://api.github.com/repositories/818331198/releases?per_page=10&page=34>; rel=\"last\"",
+    "X-RateLimit-Remaining": "27"
+  },
+  "sha256": "fd765a969c875b9d97fd2890ae83e4ebcdf5a3b3ed506a5cfc6eedcc63025112",
+  "bytes": 43390
+}

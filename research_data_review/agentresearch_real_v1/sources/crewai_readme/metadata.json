@@ -1,0 +1,14 @@
+{
+  "id": "crewai_readme",
+  "requested_url": "https://raw.githubusercontent.com/crewAIInc/crewAI/main/README.md",
+  "final_url": "https://raw.githubusercontent.com/crewAIInc/crewAI/main/README.md",
+  "status": 200,
+  "retrieved_at": "2026-09-29T14:35:34.768256+00:00",
+  "headers": {
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"126634dd37fdede9d856d23b57bf1c896825895cbf9085f9d3a19a8bc934fe89\"",
+    "Date": "Tue, 29 Sep 2026 14:35:35 GMT"
+  },
+  "sha256": "b0f39843f93676b12883d5821a34555e2146e62bd2c42dc12733fc41222de013",
+  "bytes": 32755
+}
