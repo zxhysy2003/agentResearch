@@ -38,6 +38,8 @@ class AzureOpenAIModelName(StrEnum):
 class DeepseekModelName(StrEnum):
     """https://api-docs.deepseek.com/quick_start/pricing"""
 
+    DEEPSEEK_FLASH = "deepseek-flash"
+    # Legacy API name retained for existing configurations.
     DEEPSEEK_V4_FLASH = "deepseek-v4-flash"
     DEEPSEEK_V4_PRO = "deepseek-v4-pro"
 
