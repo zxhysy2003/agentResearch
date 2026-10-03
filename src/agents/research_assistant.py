@@ -6,10 +6,11 @@ from langchain_community.utilities import OpenWeatherMapAPIWrapper
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import AIMessage, SystemMessage
 from langchain_core.runnables import RunnableConfig, RunnableLambda, RunnableSerializable
-from langgraph.graph import END, MessagesState, StateGraph
+from langgraph.graph import END, MessagesState
 from langgraph.managed import RemainingSteps
 from langgraph.prebuilt import ToolNode
 
+from agents.research_graph import build_research_graph
 from agents.safeguard import Safeguard, SafeguardOutput, SafetyAssessment
 from agents.tools import calculator
 from core import get_model, settings
@@ -97,9 +98,9 @@ async def block_unsafe_content(state: AgentState, config: RunnableConfig) -> Age
 
 
 # Define the graph
-agent = StateGraph(AgentState)
-agent.add_node("model", acall_model)
-agent.add_node("tools", ToolNode(tools))
+agent = build_research_graph(
+    acall_model, ToolNode(tools), state_schema=AgentState, entry_point=None
+)
 agent.add_node("guard_input", safeguard_input)
 agent.add_node("block_unsafe_content", block_unsafe_content)
 agent.set_entry_point("guard_input")
@@ -121,22 +122,5 @@ agent.add_conditional_edges(
 
 # Always END after blocking unsafe content
 agent.add_edge("block_unsafe_content", END)
-
-# Always run "model" after "tools"
-agent.add_edge("tools", "model")
-
-
-# After "model", if there are tool calls, run "tools". Otherwise END.
-def pending_tool_calls(state: AgentState) -> Literal["tools", "done"]:
-    last_message = state["messages"][-1]
-    if not isinstance(last_message, AIMessage):
-        raise TypeError(f"Expected AIMessage, got {type(last_message)}")
-    if last_message.tool_calls:
-        return "tools"
-    return "done"
-
-
-agent.add_conditional_edges("model", pending_tool_calls, {"tools": "tools", "done": END})
-
 
 research_assistant = agent.compile()

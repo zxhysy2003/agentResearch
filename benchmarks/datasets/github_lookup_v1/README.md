@@ -71,4 +71,4 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python -m benchmark validate 
 - 这套快照只含相关资料，是限定资料范围的评测，不能代表整个互联网搜索难度。stars 和 latest Release 均按原采集时刻回答。
 - 第 8、9 题使用 rubrics；初期可人工判分。引用和过程检查也需要评测适配器或人工给分。
 - 保留已有规则的局限，例如第 1 题未单设统计时间检查；本次人工审阅确认不等于所有评分细节都已完善。
-- 下一步才是接入 Agent 执行、轨迹保存和评分；本次整理没有生成运行记录或能力成绩。
+- 使用 [最小评测闭环](../../../docs/Benchmark_Run.md) 中的 `run` 命令执行题目、保存轨迹，再填写人工评分并运行 `grade`。本目录的整理与校验记录本身不是 Agent 能力成绩。
